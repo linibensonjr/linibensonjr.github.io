@@ -1,295 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Geospatial Analyst</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>John - Creative Technologist</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <span class="pin">📍</span> GeoPortfolio
-            </div>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#map">Map</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>Mapping the Future with Geospatial Innovation</h1>
-            <p>Geospatial specialist with expertise in GIS, remote sensing, and spatial data analysis.</p>
-            <div class="buttons">
-                <a href="#projects" class="btn primary">View Projects 🌍</a>
-                <a href="#contact" class="btn secondary">Get in Touch</a>
-            </div>
+  <header>
+    <nav class="navbar">
+        <div class="nav-left"></div>
+        <div class="nav-right">
+          <a href="index.html">Works</a>
+          <a href="blog.html">Blog</a>
+          <a href="#">Contact</a>
         </div>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Notebook and Pen">
-            </div>
-            <div class="about-text">
-                <h3>Passionate About Spatial Data</h3>
-                <p>I'm a geospatial specialist with over 8 years of experience in GIS, remote sensing, and spatial data analysis. My work focuses on leveraging geographic information to solve complex problems in urban planning, environmental conservation, and business intelligence.</p>
-                <p>With a background in both geography and computer science, I bridge the gap between technical expertise and practical applications, helping organizations make data-driven decisions with a spatial context.</p>
-                <div class="skills-grid">
-                    <div class="skill-box">
-                        <span class="icon">🗺️</span> GIS Analysis<br>Expert in spatial analysis and cartography
-                    </div>
-                    <div class="skill-box">
-                        <span class="icon">🌍</span> Remote Sensing<br>Satellite imagery processing and analysis
-                    </div>
-                    <div class="skill-box">
-                        <span class="icon">🗃️</span> Spatial Databases<br>Design and management of geospatial data
-                    </div>
-                    <div class="skill-box">
-                        <span class="icon">🎓</span> Certified Expert<br>Certified in ESRI, QGIS, and Google Earth Engine
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      </nav>
+  </header>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <p class="section-subtitle">A selection of my geospatial projects showcasing a range of applications across different industries and use cases.</p>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Urban Growth Analysis">
-                <h3>Urban Growth Analysis</h3>
-                <p>Analyzed 20 years of satellite imagery to track urban expansion patterns in metropolitan areas.</p>
-                <div class="tags">
-                    <span>Remote Sensing</span>
-                    <span>Urban Planning</span>
-                    <span>Time Series Analysis</span>
-                </div>
-                <a href="#" class="project-link">View Project Details ↗</a>
-            </div>
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Flood Risk Assessment">
-                <h3>Flood Risk Assessment</h3>
-                <p>Created flood risk models using elevation data, historical precipitation, and land use patterns.</p>
-                <div class="tags">
-                    <span>Hydrological Modeling</span>
-                    <span>Risk Assessment</span>
-                    <span>LIDAR</span>
-                </div>
-                <a href="#" class="project-link">View Project Details ↗</a>
-            </div>
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1559472520-7f7d2c1e5b8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Wildlife Migration Patterns">
-                <h3>Wildlife Migration Patterns</h3>
-                <p>Tracked and analyzed wildlife movement patterns using GPS collar data and habitat mapping.</p>
-                <div class="tags">
-                    <span>Wildlife Conservation</span>
-                    <span>Movement Analysis</span>
-                    <span>Habitat Mapping</span>
-                </div>
-                <a href="#" class="project-link">View Project Details ↗</a>
-            </div>
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Retail Location Intelligence">
-                <h3>Retail Location Intelligence</h3>
-                <p>Developed site suitability models for retail expansion based on demographic and market data.</p>
-                <div class="tags">
-                    <span>Business GIS</span>
-                    <span>Market Analysis</span>
-                    <span>Site Selection</span>
-                </div>
-                <a href="#" class="project-link">View Project Details ↗</a>
-            </div>
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Agricultural Yield Prediction">
-                <h3>Agricultural Yield Prediction</h3>
-                <p>Used multispectral imagery and soil data to predict crop yields and optimize irrigation.</p>
-                <div class="tags">
-                    <span>Precision Agriculture</span>
-                    <span>Multispectral Analysis</span>
-                    <span>Yield Modeling</span>
-                </div>
-                <a href="#" class="project-link">View Project Details ↗</a>
-            </div>
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Emergency Response Mapping">
-                <h3>Emergency Response Mapping</h3>
-                <p>Created real-time mapping tools for disaster response and evacuation planning.</p>
-                <div class="tags">
-                    <span>Emergency Management</span>
-                    <span>Real-time GIS</span>
-                    <span>Routing</span>
-                </div>
-                <a href="#" class="project-link">View Project Details ↗</a>
-            </div>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Hi, I am Iniobong,<br><span>Geospatial Specialist</span></h1>
+        <p>
+          I'm a geospatial full-stack developer and Earth observation specialist with a passion for building fast, intelligent, and purpose-driven digital tools. With a background in hydrology, drought risk, and satellite data analysis, I develop interactive web applications and analytical pipelines using React.js, Node.js, Python, and geospatial technologies
+        </p>
+        <a href="#" class="btn">Download Resume</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://media.licdn.com/dms/image/v2/D4E03AQHuKfvWIYtF1A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719133119718?e=1756339200&v=beta&t=MxmcbHZxtUbgZ62hvE0xEi9jrbZK8cBVr-UsTIGEJFo" alt="Profile photo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+<section class="skills">
+    <h2>Skills</h2>
+    <p>The skills, tools, and technologies I am really good at:</p>
+    <div class="skills-icons">
+      <div class="skill">
+        <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" />
+        <p>Javascript</p>
+      </div>
+      <div class="skill">
+        <img src="https://img.icons8.com/ios-filled/50/qgis.png" alt="Express.js" />
+        <p>QGIS</p>
+      </div>
+      <div class="skill">
+        <img src="https://img.icons8.com/color/48/000000/python.png" alt="Nest.js" />
+        <p>Python</p>
+      </div>
+      <div class="skill">
+        <img src="https://img.icons8.com/fluency/48/r-project.png" alt="Socket.io" />
+        <p>R</p>
+      </div>
+      <div class="skill">
+        <img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/24/external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-shadow-tal-revivo.png
+        " alt="Socket.io" />
+        <p>Django </p>
+      </div>
+      <div class="skill">
+        <img src="https://img.icons8.com/color/48/000000/postgresql.png" alt="PostgreSQL" />
+        <p>PostgreSQL</p>
+      </div>
+     
+      <div class="skill">
+        <img src="https://img.icons8.com/color/48/000000/tailwindcss.png" alt="Tailwindcss" />
+        <p>Tailwindcss</p>
+      </div>
+     
+      <div class="skill">
+        <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" />
+        <p>Git</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="posts">
+    <div class="posts-header">
+      <h2>Recent posts</h2>
+      <a href="#">View all</a>
+    </div>
+    <div class="post-cards">
+      <div class="post-card">
+        <h3>Making a design system from scratch</h3>
+        <p class="meta">12 Feb 2020 &nbsp; | &nbsp; Design, Pattern</p>
+        <p>
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+          Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </p>
+      </div>
+      <div class="post-card">
+        <h3>Creating pixel perfect icons in Figma</h3>
+        <p class="meta">12 Feb 2020 &nbsp; | &nbsp; Figma, Icon Design</p>
+        <p>
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+          Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Works Section -->
+<section class="featured-works">
+    <h2>Featured works</h2>
+    <div class="featured-cards">
+      <div class="featured-card">
+        <img src="https://via.placeholder.com/300x200" alt="Designing Dashboards" />
+        <div class="featured-info">
+          <h3>Designing Dashboards</h3>
+          <p class="meta">2020 &nbsp; | &nbsp; Dashboard</p>
+          <p>
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+          </p>
         </div>
-    </section>
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <p class="section-subtitle">My expertise spans a wide range of geospatial technologies, programming languages, and analytical methods.</p>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Software</h3>
-                <div class="skill">
-                    <span>QGIS</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>ArcGIS</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>Google Earth Engine</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Programming</h3>
-                <div class="skill">
-                    <span>Python</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>R</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>JavaScript</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>SQL</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Spatial Analysis</h3>
-                <div class="skill">
-                    <span>Geostatistics</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>Network Analysis</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>Geoprocessing</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Remote Sensing</h3>
-                <div class="skill">
-                    <span>Image Classification</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>Change Detection</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>Multispectral Analysis</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>LIDAR Processing</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;"></div>
-                    </div>
-                </div>
-            </div>
+      </div>
+  
+      <div class="featured-card">
+        <img src="https://via.placeholder.com/300x200" alt="Vibrant Portraits of 2020" />
+        <div class="featured-info">
+          <h3>Vibrant Portraits of 2020</h3>
+          <p class="meta">2019 &nbsp; | &nbsp; Illustration</p>
+          <p>
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+          </p>
         </div>
-        <div class="stats">
-            <div class="stat">
-                <span>50+</span>
-                <p>Projects Completed</p>
-            </div>
-            <div class="stat">
-                <span>15+</span>
-                <p>Years of Experience</p>
-            </div>
-            <div class="stat">
-                <span>5+</span>
-                <p>Certifications</p>
-            </div>
+      </div>
+  
+      <div class="featured-card">
+        <img src="https://via.placeholder.com/300x200" alt="36 Days of Malayalam Type" />
+        <div class="featured-info">
+          <h3>36 Days of Malayalam type</h3>
+          <p class="meta">2018 &nbsp; | &nbsp; Typography</p>
+          <p>
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+          </p>
         </div>
-    </section>
-    <section id="map">
-        <h2>Interactive Map</h2>
-        <p class="section-subtitle">Explore some of my project locations around the world. Click on markers to learn more about each project.</p>
-        <div id="map-container" style="height: 500px;"></div>
-        <div class="map-description">
-            <h3>About This Map</h3>
-            <p>The interactive map showcases my global project footprint. Each marker represents a major project location where I've applied geospatial analysis to solve real-world problems. The map is built using Leaflet.</p>
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Get in Touch</h2>
-        <p class="section-subtitle">Interested in working together? Have questions about my services or projects? Reach out and let's start a conversation.</p>
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                <p><span class="contact-icon">✉️</span> Email: contact@geospecialist.com</p>
-                <p><span class="contact-icon">📞</span> Phone: +1 (234) 567-890</p>
-                <p><span class="contact-icon">📍</span> Location: San Francisco, California, United States</p>
-                <div class="social-media">
-                    <h3>Connect on Social Media</h3>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon">📘</a>
-                        <a href="#" class="social-icon">🐦</a>
-                        <a href="#" class="social-icon">📷</a>
-                        <a href="#" class="social-icon">💬</a>
-                        <a href="#" class="social-icon">🔗</a>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form">
-                <h3>Send a Message</h3>
-                <div>
-                    <div class="form-row">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <input type="text" placeholder="Subject" required>
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn primary">Send Message ✈️</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="scripts/script.js"></script>
+      </div>
+    </div>
+  </section>
+  
 </body>
 </html>
