@@ -67,19 +67,116 @@
   
   .btn {
     display: inline-block;
-    background: #ff5c5c;
+    background: #333333;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 0;
     font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    min-width: 120px;
   }
 
   .btn:hover {
-    /* background: green; */
-    opacity: 1;
-    right: 0;
-    animation: 50ms;
-    animation: btn 24 timing-function 34 iteration-count direction fill-mode;
+    background: #555555;
+  }
+
+  /* Contact Section */
+  .contact {
+    background-color: #fff;
+    padding: 80px 40px;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .contact-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 60px;
+    align-items: flex-start;
+  }
+
+  .contact-left {
+    flex: 1;
+  }
+
+  .contact-left h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .contact-left p {
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  .contact-left .social-icons {
+    display: flex;
+    gap: 20px;
+  }
+
+  .contact-left .social-icons a {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+  }
+
+  .contact-left .social-icons a:hover {
+    opacity: 0.7;
+  }
+
+  .contact-left .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contact-right {
+    flex: 1;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 0;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: #f8f8f8;
+    color: #333;
+    transition: border-color 0.3s ease;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #333;
+    background-color: #fff;
+  }
+
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #999;
+  }
+
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .contact-form .btn {
+    align-self: flex-start;
+    margin-top: 10px;
   }
   
   .hero-image img {
@@ -349,6 +446,20 @@
   
     .footer .social-icons a {
       margin: 0 5px;
+    }
+
+    .contact-container {
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .contact-left .social-icons {
+      justify-content: center;
+    }
+
+    .contact-form .btn {
+      align-self: center;
     }
   }
   
