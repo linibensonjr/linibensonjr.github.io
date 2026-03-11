@@ -1,285 +1,1530 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Iniobong Benson - Geospatial Developer</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══════════════════════════════════════════
+     PRIMARY SEO
+════════════════════════════════════════════ -->
+<title>Iniobong Benson — Geospatial Analyst, Earth Observation & Podcast Host</title>
+<meta name="description"     content="Iniobong Benson is a geospatial analyst and earth observation specialist (GEM Erasmus+ MSc), working at Geolynx OÜ in Estonia. Founder and host of the Geospatially Africa podcast.">
+<meta name="keywords"        content="Iniobong Benson, geospatial analyst, earth observation, GEM Erasmus, ITC Twente, University of Tartu, Geospatially Africa podcast, drought index, GRACE TWS, GHDI, remote sensing Africa, GIS Nigeria, Deltares, Geolynx, spatial data science, QGIS, Google Earth Engine">
+<meta name="author"          content="Iniobong Benson">
+<meta name="robots"          content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical"        href="https://www.iniobongbenson.com">
+
+<!-- ═══════════════════════════════════════════
+     OPEN GRAPH — controls how links look on
+     LinkedIn, WhatsApp, Facebook, Slack etc.
+════════════════════════════════════════════ -->
+<meta property="og:type"         content="website">
+<meta property="og:url"          content="https://www.iniobongbenson.com">
+<meta property="og:title"        content="Iniobong — Geospatial PhD Researcher & Podcast Host">
+<meta property="og:description"  content="Geospatial PhD researcher and analyst specialising in remote sensing and GIS applied to Africa. Host of the Geospatially Africa podcast.">
+<meta property="og:image"        content="https://www.iniobongbenson.com/og-image.png">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt"    content="Iniobong — Geospatial Researcher & Podcast Host">
+<meta property="og:locale"       content="en_GB">
+<meta property="og:site_name"    content="Iniobong">
+
+<!-- ═══════════════════════════════════════════
+     TWITTER / X CARD
+     Controls how links look when shared on X
+════════════════════════════════════════════ -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:site"        content="@linibensonjr">
+<meta name="twitter:creator"     content="@linibensonjr">
+<meta name="twitter:title"       content="Iniobong — Geospatial PhD Researcher & Podcast Host">
+<meta name="twitter:description" content="Geospatial PhD researcher and analyst specialising in remote sensing and GIS applied to Africa. Host of the Geospatially Africa podcast.">
+<meta name="twitter:image"       content="https://www.iniobongbenson.com/og-image.png">
+<meta name="twitter:image:alt"   content="Iniobong — Geospatial Researcher">
+
+<!-- ═══════════════════════════════════════════
+     ACADEMIC / SCHOLAR SIGNALS
+     Helps Google Scholar and academic search
+════════════════════════════════════════════ -->
+<meta name="citation_author"         content="Iniobong">
+<meta name="citation_author_email"   content="iniobong.benson@siu.edu">
+<meta name="citation_language"       content="en">
+
+<!-- ════════════════════
+     STRUCTURED DATA — JSON-LD
+     This is what makes Google show rich results:
+     knowledge panel, sitelinks, podcast cards
+     Injected dynamically below in renderSEO()
+════════════════════════════════════════════ -->
+<script id="jsonld-person"  type="application/ld+json"></script>
+<script id="jsonld-podcast" type="application/ld+json"></script>
+<script id="jsonld-website" type="application/ld+json"></script>
+
+<!-- ══════════════════════════════════════════
+     PERFORMANCE
+════════════════════════════════════════════ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ─────────────────────────────────────────
+   DESIGN TOKENS
+───────────────────────────────────────── */
+:root {
+  --earth:   #243D1A;
+  --earth2:  #2D4A22;
+  --savanna: #C8983A;
+  --sand:    #F0E6CC;
+  --dark:    #0E1509;
+  --mid:     #4A6741;
+  --light:   #F7F3EC;
+  --accent:  #D9522A;
+  --muted:   #8A9E82;
+  --border:  rgba(45,74,34,0.13);
+  --max:     860px;
+  --fd: 'Playfair Display', Georgia, serif;
+  --fb: 'DM Sans', sans-serif;
+  --fm: 'Space Mono', monospace;
+}
+
+/* ─────────────────────────────────────────
+   RESET & BASE
+───────────────────────────────────────── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--light);color:var(--dark);font-family:var(--fb);font-weight:300;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+ul{list-style:none}
+button{cursor:pointer;border:none;background:none;font:inherit}
+
+/* ─────────────────────────────────────────
+   LAYOUT
+───────────────────────────────────────── */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 2rem}
+.pt-nav{padding-top:58px}
+
+/* ─────────────────────────────────────────
+   PAGE SYSTEM
+───────────────────────────────────────── */
+.page{display:none}
+.page.active{display:block;animation:fadeUp .45s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.fade1{animation:fadeUp .55s .08s ease both}
+.fade2{animation:fadeUp .55s .18s ease both}
+.fade3{animation:fadeUp .55s .28s ease both}
+.fade4{animation:fadeUp .55s .38s ease both}
+.fade5{animation:fadeUp .55s .48s ease both}
+
+/* ─────────────────────────────────────────
+   NAVIGATION
+───────────────────────────────────────── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:300;
+  background:rgba(247,243,236,.93);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+}
+.nav__inner{
+  max-width:var(--max);margin:0 auto;padding:0 2rem;
+  height:58px;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.nav__logo{font-family:var(--fd);font-size:1.12rem;color:var(--earth);letter-spacing:-.02em;cursor:pointer}
+.nav__links{display:flex;gap:.1rem}
+.nav__links button{
+  font-family:var(--fm);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--mid);padding:.4rem .65rem;border-radius:2px;transition:color .2s,background .2s;
+}
+.nav__links button:hover,.nav__links button.active{color:var(--accent);background:rgba(217,82,42,.07)}
+.nav__socials{display:flex;gap:.4rem}
+.sicon{
+  width:30px;height:30px;border-radius:50%;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--mid);transition:color .2s,border-color .2s,background .2s;
+}
+.sicon:hover{color:var(--accent);border-color:var(--accent);background:rgba(217,82,42,.06)}
+.sicon svg{width:13px;height:13px;fill:currentColor}
+
+/* ─────────────────────────────────────────
+   SHARED COMPONENTS
+───────────────────────────────────────── */
+/* Section label */
+.slabel{
+  font-family:var(--fm);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--savanna);display:flex;align-items:center;gap:.8rem;margin-bottom:2.5rem;
+}
+.slabel::after{content:'';flex:1;height:1px;background:var(--border)}
+.slabel--lt::after{background:rgba(200,152,58,.25)}
+
+/* Page header band */
+.phead{background:var(--earth);padding:5rem 0 4rem;position:relative;overflow:hidden}
+.phead::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(200,152,58,.12) 0%,transparent 70%);pointer-events:none}
+.phead .wrap{position:relative;z-index:2}
+.phead__tag{font-family:var(--fm);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--savanna);margin-bottom:1rem}
+.phead__title{font-family:var(--fd);font-size:clamp(2.2rem,4vw,3.2rem);color:var(--sand);line-height:1.1;letter-spacing:-.02em}
+.phead__title em{font-style:italic;color:var(--savanna)}
+.phead__desc{font-size:.92rem;color:rgba(240,230,204,.65);margin-top:.8rem;max-width:52ch;line-height:1.7}
+
+/* Buttons */
+.btn{display:inline-block;font-family:var(--fm);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:.75rem 1.6rem;border:none;cursor:pointer;transition:all .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark{background:var(--earth);color:var(--sand)}.btn-dark:hover{background:var(--accent)}
+.btn-gold{background:var(--savanna);color:var(--dark)}.btn-gold:hover{background:var(--accent);color:var(--sand)}
+.btn-outline{background:transparent;border:1px solid var(--earth);color:var(--earth)}.btn-outline:hover{background:var(--earth);color:var(--sand)}
+
+/* Tag pill */
+.tag{font-family:var(--fm);font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .6rem;background:rgba(200,152,58,.12);color:var(--savanna)}
+
+/* Pub link */
+.pub-link{font-family:var(--fm);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .8rem;border:1px solid var(--border);color:var(--mid);transition:all .2s}
+.pub-link:hover{background:var(--earth);color:var(--sand);border-color:var(--earth)}
+
+/* Social icon large */
+.sicon-lg{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--mid);transition:all .2s}
+.sicon-lg:hover{color:var(--accent);border-color:var(--accent)}
+.sicon-lg svg{width:15px;height:15px;fill:currentColor}
+
+/* Filter buttons */
+.filter-bar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.fbtn{font-family:var(--fm);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.4rem 1rem;border:1px solid var(--border);background:transparent;color:var(--mid);cursor:pointer;transition:all .2s}
+.fbtn:hover,.fbtn.active{background:var(--earth);color:var(--sand);border-color:var(--earth)}
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
+.footer{background:var(--dark);padding:2.5rem 0;border-top:1px solid rgba(200,152,58,.12)}
+.footer__inner{max-width:var(--max);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.footer__logo{font-family:var(--fd);color:var(--sand);font-size:1rem;cursor:pointer}
+.footer__socials{display:flex;gap:.45rem}
+.footer__si{width:30px;height:30px;border-radius:50%;border:1px solid rgba(200,152,58,.2);display:flex;align-items:center;justify-content:center;color:rgba(240,230,204,.45);transition:all .2s}
+.footer__si:hover{color:var(--savanna);border-color:var(--savanna)}
+.footer__si svg{width:12px;height:12px;fill:currentColor}
+.footer__copy{font-family:var(--fm);font-size:.58rem;letter-spacing:.1em;color:rgba(240,230,204,.3);text-transform:uppercase}
+
+/* ══════════════════════════════════════════
+   HOME
+══════════════════════════════════════════ */
+.hero{min-height:calc(100vh - 58px);display:grid;grid-template-columns:1fr 400px;max-width:var(--max);margin:0 auto;padding:0 2rem;align-items:center}
+.hero__l{padding:4rem 3rem 4rem 0}
+.hero__tag{font-family:var(--fm);font-size:.6rem;letter-spacing:.2em;color:var(--savanna);text-transform:uppercase;margin-bottom:1.4rem;display:flex;align-items:center;gap:.7rem}
+.hero__tag::before{content:'';width:1.8rem;height:1px;background:var(--savanna)}
+.hero__name{font-family:var(--fd);font-size:clamp(3rem,5.5vw,4.8rem);line-height:1;color:var(--earth);letter-spacing:-.03em;margin-bottom:.2rem}
+.hero__name em{font-style:italic;color:var(--accent)}
+.hero__sub{font-size:1rem;color:var(--mid);font-weight:400;margin-bottom:1.5rem;line-height:1.6}
+.hero__desc{font-size:.92rem;color:#627558;line-height:1.85;margin-bottom:2rem;max-width:44ch}
+.hero__cta{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.hero__link{font-family:var(--fm);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--earth);border-bottom:1px solid var(--earth);padding-bottom:2px;transition:color .2s,border-color .2s;cursor:pointer}
+.hero__link:hover{color:var(--accent);border-color:var(--accent)}
+
+.hero__r{height:calc(100vh - 58px);position:relative;overflow:hidden;background:var(--earth)}
+.hero__r::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(200,152,58,.18) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(123,175,212,.15) 0%,transparent 50%)}
+.hero__grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,152,58,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(200,152,58,.07) 1px,transparent 1px);background-size:36px 36px}
+.hero__map{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68%;opacity:.15;fill:var(--savanna)}
+.hdot{position:absolute;width:5px;height:5px;border-radius:50%;background:var(--savanna);animation:pdot 3s ease-in-out infinite}
+@keyframes pdot{0%,100%{opacity:.3;transform:scale(1)}50%{opacity:.9;transform:scale(1.7)}}
+.hero__badge{position:absolute;bottom:2.5rem;left:-1.5rem;background:var(--sand);padding:1.2rem 1.6rem;box-shadow:0 16px 48px rgba(0,0,0,.25);max-width:210px;animation:floatB 5s ease-in-out infinite}
+@keyframes floatB{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hero__badge-l{font-family:var(--fm);font-size:.55rem;letter-spacing:.15em;color:var(--savanna);text-transform:uppercase;margin-bottom:.3rem}
+.hero__badge-v{font-family:var(--fd);font-size:.92rem;color:var(--earth)}
+
+/* Skills strip */
+.skills-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3.5rem 0;background:white}
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.skill-block{padding:1.5rem 1.8rem;border-right:1px solid var(--border);transition:background .2s}
+.skill-block:last-child{border-right:none}
+.skill-block:hover{background:rgba(200,152,58,.04)}
+.skill-block__icon{font-size:1.4rem;margin-bottom:.7rem}
+.skill-block__name{font-family:var(--fd);font-size:.95rem;color:var(--earth);margin-bottom:.45rem}
+.skill-block__tags{display:flex;flex-wrap:wrap;gap:.35rem}
+.skill-block__tag{font-family:var(--fm);font-size:.52rem;letter-spacing:.06em;text-transform:uppercase;padding:.2rem .55rem;border:1px solid var(--border);color:var(--mid)}
+
+/* Home sections */
+.home-sec{padding:4rem 0}
+.home-sec__head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2rem}
+.home-sec__h{font-family:var(--fd);font-size:clamp(1.6rem,2.5vw,2rem);color:var(--earth);letter-spacing:-.02em}
+.home-sec__h em{font-style:italic;color:var(--accent)}
+.home-sec__more{font-family:var(--fm);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);border-bottom:1px solid var(--border);padding-bottom:2px;cursor:pointer;transition:color .2s,border-color .2s;white-space:nowrap}
+.home-sec__more:hover{color:var(--accent);border-color:var(--accent)}
+
+/* Project cards */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.pcard{border:1px solid var(--border);background:white;overflow:hidden;transition:transform .25s,box-shadow .25s;cursor:pointer}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(45,74,34,.1)}
+.pcard__top{height:110px;position:relative;overflow:hidden;background:var(--earth);display:flex;align-items:center;justify-content:center}
+.pcard__geo{position:absolute;inset:0;background-image:linear-gradient(rgba(200,152,58,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(200,152,58,.07) 1px,transparent 1px);background-size:28px 28px}
+.pcard__icon{font-size:2.2rem;position:relative;z-index:2}
+.pcard__body{padding:1.2rem 1.3rem}
+.pcard__status{font-family:var(--fm);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--savanna);margin-bottom:.4rem}
+.pcard__title{font-family:var(--fd);font-size:.95rem;color:var(--earth);margin-bottom:.45rem;line-height:1.3}
+.pcard__desc{font-size:.8rem;color:var(--muted);line-height:1.6;margin-bottom:.8rem}
+.pcard__tech{display:flex;flex-wrap:wrap;gap:.35rem}
+.pcard__tech span{font-family:var(--fm);font-size:.52rem;letter-spacing:.06em;text-transform:uppercase;padding:.2rem .55rem;border:1px solid var(--border);color:var(--mid)}
+
+/* Blog cards (home) */
+.blog-list{display:flex;flex-direction:column}
+.bcard{border-bottom:1px solid var(--border)}
+.bcard__inner{display:grid;grid-template-columns:80px 1fr;gap:1.5rem;padding:1.6rem 0;align-items:start;cursor:pointer;transition:background .2s}
+.bcard__inner:hover{background:rgba(200,152,58,.04)}
+.bcard__date{font-family:var(--fm);font-size:.58rem;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;line-height:1.6;padding-top:.2rem}
+.bcard__date strong{display:block;font-size:.65rem;color:var(--savanna);font-weight:700}
+.bcard__tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.45rem}
+.bcard__title{font-family:var(--fd);font-size:1.1rem;color:var(--earth);margin-bottom:.35rem;line-height:1.3;transition:color .2s}
+.bcard__inner:hover .bcard__title{color:var(--accent)}
+.bcard__exc{font-size:.83rem;color:var(--muted);line-height:1.7}
+.bcard__meta{display:flex;align-items:center;gap:1rem;margin-top:.5rem}
+.bcard__rt{font-size:.75rem;color:var(--muted)}
+.bcard__rd{font-family:var(--fm);font-size:.58rem;color:var(--accent);letter-spacing:.06em}
+
+/* Podcast strip */
+.pod-strip{background:var(--earth);padding:4rem 0;position:relative;overflow:hidden}
+.pod-strip::before{content:'GEO';position:absolute;bottom:-1rem;right:-.5rem;font-family:var(--fd);font-size:10rem;color:rgba(200,152,58,.05);letter-spacing:-.05em;pointer-events:none;line-height:1}
+.pod-strip .wrap{position:relative;z-index:2}
+.pod-strip .slabel{color:var(--savanna)}
+.pod-strip .slabel::after{background:rgba(200,152,58,.25)}
+.pod-strip .home-sec__h{color:var(--sand)}
+.pod-strip .home-sec__more{color:rgba(240,230,204,.5);border-color:rgba(240,230,204,.2)}
+.pod-strip .home-sec__more:hover{color:var(--savanna);border-color:var(--savanna)}
+
+/* Episode rows */
+.ep-row{display:grid;grid-template-columns:50px 1fr 40px;gap:1.2rem;padding:1.2rem 0;border-bottom:1px solid rgba(200,152,58,.1);align-items:center;transition:background .2s;cursor:pointer}
+.ep-row:last-child{border-bottom:none}
+.ep-row:hover{background:rgba(200,152,58,.06)}
+.ep-row__num{font-family:var(--fm);font-size:.62rem;color:var(--savanna);text-align:center}
+.ep-row__date{font-family:var(--fm);font-size:.55rem;letter-spacing:.08em;color:rgba(240,230,204,.4);text-transform:uppercase;margin-bottom:.25rem}
+.ep-row__title{font-family:var(--fd);font-size:.98rem;color:var(--sand);margin-bottom:.25rem}
+.ep-row__desc{font-size:.8rem;color:rgba(240,230,204,.5);line-height:1.5}
+.ep-play{width:36px;height:36px;border-radius:50%;border:1.5px solid rgba(200,152,58,.4);display:flex;align-items:center;justify-content:center;color:var(--savanna);font-size:.7rem;flex-shrink:0;transition:all .2s}
+.ep-row:hover .ep-play{background:var(--savanna);color:var(--dark);border-color:var(--savanna)}
+
+/* ══════════════════════════════════════════
+   ABOUT / CV
+══════════════════════════════════════════ */
+.about-body{padding:3.5rem 0 5rem}
+.about-layout{display:grid;grid-template-columns:220px 1fr;gap:4rem;align-items:start}
+.avatar{width:180px;height:180px;background:var(--earth);overflow:hidden;margin-bottom:1.4rem;display:flex;align-items:center;justify-content:center}
+.avatar__init{font-family:var(--fd);font-size:2.5rem;color:var(--sand);background:radial-gradient(ellipse at 40% 40%,rgba(200,152,58,.2) 0%,transparent 70%),var(--earth);width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.sb__name{font-family:var(--fd);font-size:1.15rem;color:var(--earth);margin-bottom:.2rem}
+.sb__title{font-size:.82rem;color:var(--mid);line-height:1.55;margin-bottom:1.2rem}
+.sb__socials{display:flex;gap:.45rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.sb__info{display:flex;flex-direction:column;gap:.65rem;margin-bottom:1.8rem}
+.sb__info-item{display:flex;gap:.6rem;align-items:flex-start;font-size:.8rem;color:var(--mid)}
+.sb__info-icon{font-size:.9rem;min-width:18px}
+.cv-sec{margin-bottom:3rem}
+.cv-sec__title{font-family:var(--fd);font-size:1.2rem;color:var(--earth);margin-bottom:1.2rem;padding-bottom:.5rem;border-bottom:2px solid var(--savanna)}
+.cv-intro{font-size:.93rem;color:#5a6e52;line-height:1.88}
+.cv-entry{display:grid;grid-template-columns:110px 1fr;gap:1.5rem;padding:1.2rem 0;border-bottom:1px solid var(--border)}
+.cv-entry__period{font-family:var(--fm);font-size:.56rem;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;line-height:1.5;padding-top:.1rem}
+.cv-entry__year{display:block;font-size:.62rem;color:var(--savanna);font-weight:700;margin-bottom:.1rem}
+.cv-entry__role{font-family:var(--fd);font-size:1rem;color:var(--earth);margin-bottom:.2rem}
+.cv-entry__place{font-size:.82rem;color:var(--mid);margin-bottom:.45rem}
+.cv-entry__bullets{font-size:.82rem;color:var(--muted);line-height:1.75;margin-left:1rem}
+.cv-entry__bullets li{margin-bottom:.2rem;list-style:disc}
+.skills-block{margin-bottom:1.5rem}
+.skills-block__label{font-family:var(--fm);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--savanna);margin-bottom:.65rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{font-size:.8rem;padding:.35rem .9rem;border:1px solid var(--border);color:var(--mid);background:white}
+
+/* ══════════════════════════════════════════
+   BLOG LIST
+══════════════════════════════════════════ */
+.blog-body{padding:3.5rem 0 5rem}
+.blog-full-list{display:flex;flex-direction:column}
+.bitem{display:grid;grid-template-columns:90px 1fr;gap:1.5rem;padding:1.8rem 0;border-bottom:1px solid var(--border);cursor:pointer;transition:background .2s;align-items:start}
+.bitem:hover{background:rgba(200,152,58,.04)}
+.bitem__date{font-family:var(--fm);font-size:.58rem;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;line-height:1.6;padding-top:.2rem}
+.bitem__date strong{display:block;font-size:.65rem;color:var(--savanna);font-weight:700}
+.bitem__tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.5rem}
+.bitem__title{font-family:var(--fd);font-size:1.2rem;color:var(--earth);margin-bottom:.4rem;line-height:1.3;transition:color .2s}
+.bitem:hover .bitem__title{color:var(--accent)}
+.bitem__exc{font-size:.85rem;color:var(--muted);line-height:1.7}
+.bitem__meta{display:flex;align-items:center;gap:1rem;margin-top:.6rem;font-size:.75rem;color:var(--muted)}
+.bitem__rd{font-family:var(--fm);font-size:.6rem;color:var(--accent);letter-spacing:.06em}
+
+/* ══════════════════════════════════════════
+   BLOG POST
+══════════════════════════════════════════ */
+.post-header{background:var(--earth);padding:5rem 0 4rem;position:relative;overflow:hidden}
+.post-header::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 80%,rgba(200,152,58,.12) 0%,transparent 60%);pointer-events:none}
+.post-header .wrap{position:relative;z-index:2}
+.post-back{font-family:var(--fm);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--savanna);display:inline-flex;align-items:center;gap:.4rem;margin-bottom:1.5rem;cursor:pointer;transition:gap .2s}
+.post-back:hover{gap:.7rem}
+.post-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem}
+.post-title-h{font-family:var(--fd);font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--sand);line-height:1.2;letter-spacing:-.02em;margin-bottom:1rem}
+.post-meta{display:flex;gap:1.5rem;font-family:var(--fm);font-size:.6rem;letter-spacing:.08em;color:rgba(240,230,204,.5)}
+.post-body{padding:3.5rem 0 5rem}
+.post-layout{display:grid;grid-template-columns:1fr 190px;gap:4rem;align-items:start}
+.post-content{max-width:66ch}
+.post-content h2{font-family:var(--fd);font-size:1.5rem;color:var(--earth);margin:2.5rem 0 1rem}
+.post-content h3{font-family:var(--fd);font-size:1.15rem;color:var(--earth2);margin:2rem 0 .7rem}
+.post-content p{font-size:.95rem;line-height:1.9;color:#4a5e40;margin-bottom:1.2rem}
+.post-content a{color:var(--accent);border-bottom:1px solid rgba(217,82,42,.3)}
+.post-content blockquote{border-left:3px solid var(--savanna);padding:1rem 1.5rem;margin:2rem 0;background:rgba(200,152,58,.06);font-family:var(--fd);font-style:italic;font-size:1.05rem;color:var(--earth)}
+.post-content ul,.post-content ol{margin:1rem 0 1.2rem 1.2rem}
+.post-content li{font-size:.93rem;line-height:1.8;color:#4a5e40;margin-bottom:.3rem;list-style:disc}
+.post-content ol li{list-style:decimal}
+.post-content .callout{background:var(--earth);color:var(--sand);padding:1.4rem 1.8rem;margin:2rem 0;font-size:.9rem;line-height:1.8}
+.post-content .callout strong{color:var(--savanna)}
+.post-sidebar{position:sticky;top:76px}
+.sidebar-card{background:white;border:1px solid var(--border);padding:1.4rem;margin-bottom:1.2rem}
+.sidebar-card__label{font-family:var(--fm);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--savanna);margin-bottom:.8rem}
+.toc-list li+li{margin-top:.5rem}
+.toc-list a{font-size:.82rem;color:var(--mid);padding-left:.6rem;border-left:2px solid transparent;display:block;transition:color .2s,border-color .2s}
+.toc-list a:hover{color:var(--accent);border-left-color:var(--savanna)}
+.post-nav{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+.pnav-item{border:1px solid var(--border);padding:1.2rem;cursor:pointer;transition:border-color .2s}
+.pnav-item:hover{border-color:var(--savanna)}
+.pnav-dir{font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem}
+.pnav-title{font-family:var(--fd);font-size:.9rem;color:var(--earth);line-height:1.3}
+.pnav-item--next{text-align:right}
+
+/* ══════════════════════════════════════════
+   PUBLICATIONS
+══════════════════════════════════════════ */
+.pub-body{padding:3.5rem 0 5rem}
+.pub-year-group{margin-bottom:3rem}
+.pub-year{font-family:var(--fd);font-size:2.5rem;color:rgba(45,74,34,.1);font-style:italic;margin-bottom:1.2rem;letter-spacing:-.02em;line-height:1}
+.pub-item{display:grid;grid-template-columns:4px 1fr;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid var(--border);align-items:start}
+.pub-item__line{background:transparent;transition:background .25s;width:4px;margin-top:.3rem;border-radius:2px}
+.pub-item:hover .pub-item__line{background:var(--savanna)}
+.pub-item__type{font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--savanna);margin-bottom:.35rem}
+.pub-item__title{font-family:var(--fd);font-size:1.05rem;color:var(--earth);margin-bottom:.4rem;line-height:1.35}
+.pub-item__authors{font-size:.82rem;color:var(--muted);margin-bottom:.3rem;font-style:italic}
+.pub-item__authors strong{color:var(--mid);font-style:normal}
+.pub-item__venue{font-size:.82rem;color:var(--mid);margin-bottom:.7rem}
+.pub-item__links{display:flex;gap:.6rem;flex-wrap:wrap}
+
+/* ══════════════════════════════════════════
+   PROJECTS PAGE
+══════════════════════════════════════════ */
+.proj-body{padding:3.5rem 0 5rem}
+.proj-full-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.pcard-lg .pcard__top{height:130px}
+.pcard-lg .pcard__body{padding:1.5rem 1.6rem}
+.pcard-lg .pcard__title{font-size:1.05rem}
+.pcard-lg .pcard__desc{font-size:.83rem}
+
+/* ══════════════════════════════════════════
+   PODCAST PAGE
+══════════════════════════════════════════ */
+.pod-hero{background:var(--earth);padding:5rem 0 4rem;position:relative;overflow:hidden}
+.pod-hero::before{content:'GEOSPATIALLY';position:absolute;bottom:-1.5rem;right:-1rem;font-family:var(--fd);font-size:9rem;color:rgba(200,152,58,.05);letter-spacing:-.05em;pointer-events:none;line-height:1}
+.pod-hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.pod-hero__tag{font-family:var(--fm);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--savanna);margin-bottom:1rem}
+.pod-hero__title{font-family:var(--fd);font-size:clamp(2rem,3.5vw,3rem);color:var(--sand);line-height:1.15;margin-bottom:1rem;letter-spacing:-.02em}
+.pod-hero__title em{color:var(--savanna)}
+.pod-hero__desc{font-size:.9rem;line-height:1.85;color:rgba(240,230,204,.65);margin-bottom:1.5rem}
+.listen-links{display:flex;flex-wrap:wrap;gap:.7rem}
+.lbtn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fm);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;padding:.6rem 1.2rem;border:1px solid rgba(200,152,58,.4);color:var(--sand);transition:all .2s}
+.lbtn:hover{background:var(--savanna);border-color:var(--savanna);color:var(--dark)}
+.pod-art{background:rgba(200,152,58,.1);border:1px solid rgba(200,152,58,.2);height:260px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.pod-art__inner{text-align:center}
+.pod-art__icon{font-size:3.5rem;margin-bottom:.7rem}
+.pod-art__title{font-family:var(--fd);font-size:1.3rem;color:var(--sand)}
+.pod-art__sub{font-family:var(--fm);font-size:.6rem;letter-spacing:.15em;color:var(--savanna);text-transform:uppercase;margin-top:.3rem}
+.waves{display:flex;align-items:center;gap:3px;margin:.8rem auto 0;justify-content:center}
+.wave{width:3px;background:var(--savanna);border-radius:2px;animation:wv 1.2s ease-in-out infinite}
+.wave:nth-child(1){height:10px;animation-delay:0s}.wave:nth-child(2){height:20px;animation-delay:.1s}
+.wave:nth-child(3){height:14px;animation-delay:.2s}.wave:nth-child(4){height:24px;animation-delay:.3s}
+.wave:nth-child(5){height:16px;animation-delay:.15s}.wave:nth-child(6){height:10px;animation-delay:.25s}
+@keyframes wv{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1)}}
+.ep-body{padding:3.5rem 0 5rem}
+.ep-full-row{display:grid;grid-template-columns:52px 1fr 42px;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid var(--border);align-items:center;transition:background .2s}
+.ep-full-row:hover{background:rgba(200,152,58,.04)}
+.ep-full-row__num{font-family:var(--fm);font-size:.65rem;color:var(--savanna);text-align:center}
+.ep-full-row__date{font-family:var(--fm);font-size:.55rem;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;margin-bottom:.3rem}
+.ep-full-row__title{font-family:var(--fd);font-size:1rem;color:var(--earth);margin-bottom:.25rem}
+.ep-full-row__desc{font-size:.82rem;color:var(--muted);line-height:1.55}
+.ep-full-play{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--earth);display:flex;align-items:center;justify-content:center;color:var(--earth);font-size:.75rem;flex-shrink:0;transition:all .2s;text-decoration:none}
+.ep-full-row:hover .ep-full-play{background:var(--earth);color:var(--sand)}
+
+/* ══════════════════════════════════════════
+   CONTACT
+══════════════════════════════════════════ */
+.contact-body{padding:3.5rem 0 5rem}
+.contact-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start}
+.contact-heading{font-family:var(--fd);font-size:1.8rem;color:var(--earth);margin-bottom:1rem;line-height:1.25}
+.contact-text{font-size:.92rem;color:var(--muted);line-height:1.85;margin-bottom:2rem}
+.contact-links{display:flex;flex-direction:column}
+.clink{display:flex;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border);transition:all .2s;color:var(--earth)}
+.clink:hover{padding-left:.5rem;color:var(--accent)}
+.clink__icon{width:38px;height:38px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .2s}
+.clink__icon svg{width:14px;height:14px;fill:currentColor}
+.clink:hover .clink__icon{border-color:var(--accent)}
+.clink__label{font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.1rem}
+.clink__val{font-size:.88rem}
+.clink:hover .clink__val{color:var(--accent)}
+.form-card{background:white;padding:2rem;border:1px solid var(--border)}
+.form-card__title{font-family:var(--fd);font-size:1.1rem;color:var(--earth);margin-bottom:1.5rem}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem}
+.fl{font-family:var(--fm);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid)}
+.fi{background:var(--light);border:1px solid var(--border);padding:.72rem .9rem;font-family:var(--fb);font-size:.88rem;color:var(--dark);outline:none;transition:border-color .2s,background .2s;width:100%}
+.fi:focus{border-color:var(--savanna);background:white}
+textarea.fi{resize:vertical;min-height:110px}
+.success-msg{background:rgba(45,74,34,.08);border-left:3px solid var(--earth);padding:1rem 1.2rem;font-size:.88rem;color:var(--earth);margin-bottom:1.5rem;display:none}
+.success-msg.show{display:block}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+@media(max-width:760px){
+  .nav__links{display:none}
+  .hero{grid-template-columns:1fr}
+  .hero__r{display:none}
+  .hero__l{padding:3rem 0 2rem}
+  .skills-grid{grid-template-columns:1fr 1fr}
+  .skill-block:nth-child(2){border-right:none}
+  .proj-grid,.proj-full-grid{grid-template-columns:1fr}
+  .about-layout{grid-template-columns:1fr;gap:2rem}
+  .cv-entry{grid-template-columns:1fr;gap:.3rem}
+  .bitem,.bcard__inner{grid-template-columns:1fr}
+  .bitem__date,.bcard__date{display:flex;gap:.4rem;align-items:baseline}
+  .bitem__date strong,.bcard__date strong{display:inline}
+  .post-layout{grid-template-columns:1fr}
+  .post-sidebar{display:none}
+  .post-nav{grid-template-columns:1fr}
+  .pod-hero .wrap{grid-template-columns:1fr}
+  .pod-art{display:none}
+  .ep-full-row,.ep-row{grid-template-columns:44px 1fr 36px;gap:.8rem}
+  .contact-layout{grid-template-columns:1fr;gap:2.5rem}
+  .frow{grid-template-columns:1fr}
+  .footer__inner{flex-direction:column;text-align:center}
+}
+</style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-brand">
-        <a href="#home">Iniobong Benson</a>
-      </div>
-      <div class="nav-links">
-        <a href="#home" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="experience.html">Experience</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="nav-social">
-        <a href="https://linkedin.com/in/iniobong-benson" target="_blank" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width:22px;height:22px;"></a>
-        <a href="https://github.com/linibensonjr" target="_blank" aria-label="GitHub"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" style="width:22px;height:22px;"></a>
-        <a href="https://twitter.com/iniobong_benson" target="_blank" aria-label="Twitter"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" style="width:22px;height:22px;"></a>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-container hero-2col">
-      <div class="hero-left">
-        <h1 class="hero-title">
-          Iniobong Benson
-          <span class="title">Geospatial Developer</span>
-        </h1>
-        <p class="hero-description">
-          I build intelligent geospatial applications and analyze Earth observation data to solve real-world environmental challenges. Specializing in full-stack development, remote sensing, and hydrological modeling.
-        </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">Projects</a>
-          <a href="https://drive.google.com/file/d/1_6yCHbjnDmrkx2NBgbPN_92LQ79vCofe/view?usp=sharing" target="_blank" class="btn btn-secondary">Download CV</a>
+<!-- ═══════════════════════════════════════════════════════════
+     !! EDIT YOUR CONTENT HERE — No need to touch anything below
+═══════════════════════════════════════════════════════════ -->
+<script>
+/* ─── SITE URL ─────────────────────────────────────────────────
+   Set this to your real domain once deployed.
+   e.g. "https://iniobong.page"  or  "https://linibensonjr.github.io"
+──────────────────────────────────────────────────────────────── */
+const SITE_URL = "YOUR_SITE_URL";  // ← CHANGE THIS after deploying
+
+/* ─── PERSONAL INFO ─── */
+const ME = {
+  name:       "Iniobong",
+  fullName:   "Iniobong Benson",
+  nameItalic: "obong",
+  tagline:    "Mapping Africa's story — one dataset at a time.",
+  subtitle:   "Geospatial Analyst, MSc · Podcast Host · GEM Erasmus+ Alumni",
+  intro:      "I'm Iniobong Benson — a geospatial analyst and earth observation specialist with an MSc from the University of Tartu & ITC, University of Twente. I work at the intersection of remote sensing, hydrological modelling, and spatial data science, with a focus on Africa. I also founded and host <em>Geospatially Africa</em>, a podcast dedicated to geospatial innovation across the continent.",
+  location:   "Tartu, Estonia",
+  university: "University of Tartu & ITC, University of Twente",
+  email:      "m.iniobong.bensonjr@gmail.com",
+  cv_url:     "https://purl.utwente.nl/essays/108070",  /* update to a direct CV PDF link when ready */
+  jobTitle:   "Geospatial Analyst & Earth Observation Specialist",
+  description:"Geospatial analyst and earth observation specialist with an Erasmus+ MSc, specialising in remote sensing, hydrological modelling, and spatial data science applied to Africa. Founder and host of the Geospatially Africa podcast.",
+  sameAs: [
+    "https://linkedin.com/in/linibenson",
+    "https://github.com/linibensonjr",
+    "https://geospatiallyafrica.com",
+  ],
+};
+
+/* ─── SOCIAL LINKS ─── */
+const SOCIAL = {
+  twitter:     "",                                      /* add if you have one */
+  linkedin:    "https://linkedin.com/in/linibenson",
+  github:      "https://github.com/linibensonjr",
+  researchgate:"",                                      /* add if you have one */
+  orcid:       "",                                      /* add if you have one */
+};
+
+/* ─── PODCAST ─── */
+const PODCAST = {
+  spotify: "https://open.spotify.com/show/7aqyurtRoF42hTysOqNa9v",
+  apple:   "https://podcasts.apple.com/us/podcast/geospatially-africa-podcast-the-podcast-for/id1561204113",
+  rss:     "https://anchor.fm/s/4d881ba0/podcast/rss",
+  google:  "https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy80ZDg4MWJhMC9wb2RjYXN0L3Jzcw",
+};
+
+/* ─── SKILLS (home strip) ─── */
+const SKILLS = [
+  { icon:"🛰️", name:"Earth Observation",  tags:["Sentinel-1/2","Landsat","MODIS","GRACE"] },
+  { icon:"🗺️", name:"GIS & Modelling",    tags:["QGIS","ArcGIS","Delft3D FM","SNAP"] },
+  { icon:"💻", name:"Programming",        tags:["Python","R","GeoPandas","Django"] },
+  { icon:"💧", name:"Hydro & Climate",    tags:["Drought Indices","Copula Models","FEWS NET","SAR"] },
+];
+
+/* ─── FEATURED PROJECTS (shown on home — max 3) ─── */
+const FEATURED_PROJECTS = [
+  { icon:"💧", status:"MSc Thesis — 2025",      title:"GHDI: Multi-Variate Drought Index for the Greater Horn of Africa", desc:"Developed a probabilistic copula-based drought index integrating GRACE TWS, precipitation, evapotranspiration, and soil moisture. Validated against FEWS NET.", tech:["Python","GRACE","Copula","GEE"] },
+  { icon:"🌊", status:"Internship — Deltares 2024", title:"Delft3D FM Ocean Model Validation",                            desc:"Developed a validation framework for Deltares hydrodynamic ocean models using in situ data, and integrated geospatial workflows into modelling pipelines.", tech:["Python","Delft3D","NetCDF","GeoPandas"] },
+  { icon:"🗺️", status:"BSc Thesis — 2019",      title:"TourUyo: Web-based GIS Tourism System",                           desc:"Designed a web-based tourism information system for Uyo City using QGIS and Leaflet. Live at touruyo.github.io.", tech:["QGIS","Leaflet","JavaScript","HTML"] },
+];
+
+/* ─── ALL PROJECTS ─── */
+const ALL_PROJECTS = [
+  { icon:"💧", status:"MSc Thesis — 2025",         title:"GHDI: Multi-Variate Drought Index for the Greater Horn of Africa",   desc:"Developed the GHDI — a probabilistic copula-based drought index integrating GRACE TWS, precipitation, evapotranspiration, and soil moisture. Validated using FEWS NET and compared with SPI and ENSO across timescales.", tech:["Python","GRACE","Copula Models","GEE","R"] },
+  { icon:"🌊", status:"Internship — Deltares 2024", title:"Delft3D FM Ocean Model Validation Framework",                        desc:"Built a validation framework for Delft3D Flexible Mesh ocean models using in situ data. Processed and visualised hydrodynamic datasets, and integrated geospatial workflows into modelling pipelines at Deltares, Delft.", tech:["Python","Delft3D","NetCDF","GeoPandas","xarray"] },
+  { icon:"📻", status:"Active — 2021–Present",      title:"Geospatially Africa Podcast",                                        desc:"Founded and host a podcast platform showcasing African and global geospatial innovations. Built and maintained the website using Django, HTML, CSS, and PostgreSQL.", tech:["Django","PostgreSQL","HTML/CSS","Science Comm"], url:"https://geospatiallyafrica.com" },
+  { icon:"🗺️", status:"BSc Thesis — 2019",          title:"TourUyo: Web-based GIS Tourism System for Uyo City",                 desc:"Designed a web-based tourism information system for Uyo Metropolis using QGIS and Leaflet. Demonstrates spatial data integration for urban tourism planning.", tech:["QGIS","Leaflet","JavaScript","HTML"], url:"https://touruyo.github.io" },
+  { icon:"🌍", status:"Volunteer — GISCorps",        title:"Geohazard Risk Mapping — Lead Flood Analyst",                        desc:"Lead flood analyst for the Geohazard Risk Mapping Initiative. Volunteer GIS analysis for URISA GISCorps and GIS-E across humanitarian and development contexts.", tech:["QGIS","ArcGIS","Flood Mapping","OSM"] },
+  { icon:"🔗", status:"Professional — ipNX 2023",    title:"Enterprise Geospatial Database & Network Routing — ipNX Nigeria",   desc:"Designed and optimised enterprise geospatial databases. Implemented network routing optimisation for fibre optic infrastructure across Nigeria.", tech:["ArcGIS","Python","SQL","Network Analysis"] },
+];
+
+/* ─── EPISODES — all 21 from geospatiallyafrica.com (newest first) ─── */
+const EPISODES = [
+  { num:21, season:3, ep:3, date:"Jul 2025",  tags:["Mapping","Software & Tools"], title:"OpenAerialMap: Building a Global Hub for Free Aerial Imagery",                          desc:"Discover OpenAerialMap (OAM), the 'OpenStreetMap of imagery,' with HOT's Christiana and DK. How OAM empowers drone pilots and satellite providers to share openly licensed imagery for humanitarian mapping.", url:"https://geospatiallyafrica.com/episodes/slug-21" },
+  { num:20, season:3, ep:2, date:"Sep 2023",  tags:["GIS","Mapping"],              title:"Accelerating New Space With Affordable Satellite Systems — A Satellogic Story",          desc:"How modern state-of-the-art satellite technology is enabling constant monitoring of anywhere on the planet, and the question of affordability in the new space economy.", url:"https://geospatiallyafrica.com/episodes/slug-20" },
+  { num:19, season:3, ep:1, date:"Jan 2023",  tags:["Software & Tools"],           title:"The Intersection of GIS and SQL: How Spatial SQL is Changing the Game",                 desc:"Exploring the capabilities of Spatial SQL with Matt Forrest, and how it unlocks the power of geospatial data across fields and industries.", url:"https://geospatiallyafrica.com/episodes/slug-19" },
+  { num:18, season:2, ep:10,date:"Dec 2022",  tags:["GIS"],                        title:"Africa Geospatial Innovation — a spotlight on Locana in Africa",                         desc:"Geospatial innovation in Africa is growing and Locana is learning a lot from this through their work on the continent. With Todd Slind.", url:"https://geospatiallyafrica.com/episodes/slug-18" },
+  { num:17, season:2, ep:9, date:"Nov 2022",  tags:["Software & Tools"],           title:"Geospatial Data Version Control with Kart",                                               desc:"Kart provides distributed version control for geospatial and tabular data, storing it in Git at the row and cell level — enabling GIS workflows without plugins.", url:"https://geospatiallyafrica.com/episodes/slug-17" },
+  { num:16, season:2, ep:8, date:"Oct 2022",  tags:["GIS","Software & Tools"],     title:"Getting Started with Africa Geoportal",                                                   desc:"How young African geospatial professionals can access ESRI tools, ArcGIS Online, Story Map, Digital Earth Africa datasets and more — completely free.", url:"https://geospatiallyafrica.com/episodes/slug-16" },
+  { num:15, season:2, ep:7, date:"Sep 2022",  tags:["Others"],                     title:"Volunteering to Build Your Profile",                                                       desc:"Building your portfolio as a geospatial professional through volunteering — improving skills, gaining experience, and building a meaningful career foundation.", url:"https://geospatiallyafrica.com/episodes/slug-15" },
+  { num:14, season:2, ep:6, date:"Aug 2022",  tags:["Software & Tools"],           title:"Spatialnode — A Portfolio Platform for Geospatial People",                                desc:"Conversation with Emmanuel Jolaiya, founder of Spatial Node, on building a portfolio platform purpose-built for the geospatial community.", url:"https://geospatiallyafrica.com/episodes/slug-14" },
+  { num:13, season:2, ep:5, date:"Jul 2022",  tags:["Software & Tools"],           title:"Getting Started with OSGeoLive",                                                          desc:"OSGeoLive is a self-contained bootable environment that lets you try a wide variety of open source geospatial software without installing anything.", url:"https://geospatiallyafrica.com/episodes/slug-13" },
+  { num:12, season:2, ep:4, date:"Jun 2022",  tags:["GIS"],                        title:"GIS in Business — AddisMap",                                                              desc:"How Alazar Tekle and the AddisMap team used open source geospatial data to build an interactive city guide of Addis Ababa, Ethiopia.", url:"https://geospatiallyafrica.com/episodes/slug-12" },
+  { num:11, season:2, ep:3, date:"May 2022",  tags:["Mapping"],                    title:"Using Drones in Remote Sensing",                                                           desc:"The role of drones in remote sensing — from small to large scale mapping projects, monitoring, and disaster response.", url:"https://geospatiallyafrica.com/episodes/slug-11" },
+  { num:10, season:2, ep:2, date:"Apr 2022",  tags:["GIS"],                        title:"GIS for Energy Needs Assessment",                                                          desc:"The role of GIS in the energy sector — from needs assessment to supply planning and distribution.", url:"https://geospatiallyafrica.com/episodes/slug-10" },
+  { num:9,  season:2, ep:1, date:"Jan 2022",  tags:["Others"],                     title:"The Future is Geospatial",                                                                 desc:"A discussion of geospatial trends to look forward to in 2022 — the first episode of Season 2.", url:"https://geospatiallyafrica.com/episodes/slug-9" },
+  { num:8,  season:1, ep:8, date:"Dec 2021",  tags:["Others"],                     title:"2021 in Reviews and Awards in the Geosphere",                                             desc:"Highlights of the podcast's first year: geospatial engineering, mentoring, State of the Map Africa, and recognition awards in the geosphere.", url:"https://geospatiallyafrica.com/episodes/slug-8" },
+  { num:7,  season:1, ep:7, date:"Nov 2021",  tags:["Others"],                     title:"Being a Geospatial Engineer",                                                              desc:"Laura Mugeha on what it takes to be a geospatial engineer, her journey, and advice for those looking to start out in the field.", url:"https://geospatiallyafrica.com/episodes/slug-7" },
+  { num:6,  season:1, ep:6, date:"Oct 2021",  tags:["Mapping","Humanitarian"],     title:"Digital Mapping in the Humanitarian Context with Janet Chapman (Crowd2Map)",             desc:"Crowd2Map Tanzania — an entirely volunteer crowdsourced mapping project that has been mapping rural Tanzania on OpenStreetMap since 2015.", url:"https://geospatiallyafrica.com/episodes/slug-6" },
+  { num:5,  season:1, ep:5, date:"Sep 2021",  tags:["Others"],                     title:"Mentoring and Volunteering in the Geospatial Industry",                                   desc:"Why everyone needs a mentor, whether just starting out or already an expert — exploring mentorship and volunteering in geospatial.", url:"https://geospatiallyafrica.com/episodes/slug-5" },
+  { num:4,  season:1, ep:4, date:"Aug 2021",  tags:["Others"],                     title:"Introductions, Our Why and Some News",                                                    desc:"The founding episode of Geospatially Africa — answering the Why behind the podcast and introducing the hosts.", url:"https://geospatiallyafrica.com/episodes/slug-4" },
+  { num:3,  season:1, ep:3, date:"Jul 2021",  tags:["Mapping"],                    title:"State of the Map Africa — Bringing OSM Communities in Africa Together",                  desc:"The State of the Map Africa conference celebrates the culture of open mapping, open data, GIS and its impact across Africa.", url:"https://geospatiallyafrica.com/episodes/slug-3" },
+  { num:2,  season:1, ep:2, date:"Jun 2021",  tags:["GIS","Mapping"],              title:"Introducing the Digital Earth Africa Platform",                                            desc:"Digital Earth Africa provides analysis-ready satellite data to address sustainable development challenges across all 54 countries in Africa.", url:"https://geospatiallyafrica.com/episodes/slug-2" },
+  { num:1,  season:1, ep:1, date:"May 2021",  tags:["Mapping","Humanitarian"],     title:"Using Geospatial Technology in Geohazard Mapping Saves Lives",                          desc:"How geospatial technology is applied in mapping, visualising, and identifying geohazards — contributing to early warning systems and risk management.", url:"https://geospatiallyafrica.com/episodes/slug" },
+];
+
+/* ─── BLOG POSTS ─── */
+const POSTS = [
+  {
+    slug:"grace-tws-drought-monitoring-horn-of-africa",
+    date:"Feb 2025", dateSort:"2025-02-01",
+    tags:["Drought","Remote Sensing","Research"],
+    title:"What GRACE Gravity Data Can Tell Us About Drought in the Horn of Africa",
+    excerpt:"How measuring tiny changes in Earth's gravitational field from space gives us one of the best tools for monitoring terrestrial water storage — and drought — at continental scale.",
+    readTime:9,
+    content:`
+      <p>The Horn of Africa is no stranger to drought. The region experiences some of the most severe and recurrent drought cycles on the planet, affecting food security and livelihoods for hundreds of millions of people. Yet monitoring drought here is genuinely difficult — ground-based hydrological station networks are sparse, and satellite optical imagery tells you about the land surface but not what's happening underground.</p>
+      <h2>Enter GRACE — Gravity Recovery and Climate Experiment</h2>
+      <p>GRACE and its successor GRACE-FO are perhaps the most underappreciated satellite missions in earth observation. Instead of imaging the land surface, they measure tiny changes in Earth's gravitational field caused by shifting masses of water. When groundwater is depleted, when soil moisture drops, when lakes shrink — the mass of water in that region decreases, and GRACE detects it.</p>
+      <blockquote>GRACE is essentially a scale for the planet. It weighs water — and it tells us when water is disappearing.</blockquote>
+      <h2>Building the GHDI — A Multi-Variate Drought Index</h2>
+      <p>For my MSc thesis, I developed the GHDI (Greater Horn Drought Index) — a probabilistic drought index that integrates GRACE Terrestrial Water Storage (TWS) anomalies with precipitation, evapotranspiration, and soil moisture data. The core challenge with existing indices like SPI is that they're univariate — they measure one variable at a time. Real drought is multivariate: groundwater, soil moisture, and atmospheric demand all contribute simultaneously.</p>
+      <div class="callout"><strong>Copula modelling</strong> allows you to model the joint probability distribution of multiple correlated variables — capturing the combined drought signal that no single variable can represent alone. This is the mathematical foundation of the GHDI.</div>
+      <h2>Validation Against FEWS NET</h2>
+      <p>The GHDI was validated against FEWS NET (Famine Early Warning Systems Network) drought classifications — the gold standard for humanitarian drought assessment in the region. The index showed strong correspondence with documented drought events, including the 2010–2011 and 2016–2017 droughts, which were among the most severe in recorded history for the Horn.</p>
+      <ul>
+        <li>GHDI captured drought onset 1–3 months earlier than SPI in several test periods</li>
+        <li>Stronger correlation with FEWS NET IPC classifications than individual satellite variables</li>
+        <li>ENSO signal clearly captured — La Niña-driven droughts clearly identifiable in the index time series</li>
+      </ul>
+      <h2>Why This Matters</h2>
+      <p>Earlier drought detection means earlier humanitarian response — and in contexts where food insecurity escalates rapidly, weeks matter. Probabilistic indices also give decision-makers uncertainty estimates, not just point predictions. The GHDI is a step toward more operationally useful drought monitoring for one of the world's most climate-vulnerable regions.</p>
+    `
+  },
+  {
+    slug:"validating-ocean-models-deltares",
+    date:"Oct 2024", dateSort:"2024-10-01",
+    tags:["Hydrodynamics","Python","Earth Observation"],
+    title:"Validating Ocean Models with In Situ Data: Lessons from My Deltares Internship",
+    excerpt:"How you actually check whether a state-of-the-art hydrodynamic model is telling the truth — and what I learned building a validation framework at Deltares.",
+    readTime:7,
+    content:`
+      <p>Hydrodynamic models are everywhere in climate science, coastal engineering, and flood risk assessment. But how do you know if a model is actually right? That's the question I spent my internship at Deltares working on — building a systematic validation framework for Delft3D Flexible Mesh (FM) ocean models.</p>
+      <h2>What Deltares Does</h2>
+      <p>Deltares is a Dutch applied research institute specialising in water, subsurface, and infrastructure. Their Delft3D suite is one of the most widely used hydrodynamic modelling frameworks in the world — used for everything from flood forecasting to offshore engineering design. The FM variant handles flexible, unstructured grids that can represent complex coastal geometries much better than older rectangular grid models.</p>
+      <h2>The Validation Problem</h2>
+      <p>A model validation framework needs to answer a deceptively simple question: how well does the model reproduce reality? In practice, this requires collecting in situ observations (tide gauge data, current meter records, CTD casts), defining appropriate skill metrics, aligning temporal and spatial scales between model output and observations, and automating the whole process so it can run across multiple model runs and time periods.</p>
+      <blockquote>The hardest part of model validation isn't the statistics — it's the data engineering. Getting observations and model output to speak the same language is where most of the work lives.</blockquote>
+      <h2>Technical Stack</h2>
+      <p>The entire framework was built in Python — primarily xarray for handling NetCDF model output, pandas for observation time series, and matplotlib/cartopy for spatial visualisation. The most challenging part was handling the spatial interpolation needed to compare model output at grid cell centres with point observations from buoys and tide gauges.</p>
+      <ul>
+        <li>xarray + scipy.interpolate for spatial matching between model grids and in situ locations</li>
+        <li>Taylor diagrams for visualising model skill across multiple stations simultaneously</li>
+        <li>Automated HTML report generation for routine model runs</li>
+      </ul>
+      <h2>What I Took Away</h2>
+      <p>Beyond the technical skills, the internship showed me how scientific software is developed in a large applied research organisation — the importance of reproducibility, documentation, and building tools that other scientists can actually use without reading 200 lines of your undocumented code first.</p>
+    `
+  },
+  {
+    slug:"geospatially-africa-podcast-story",
+    date:"May 2024", dateSort:"2024-05-01",
+    tags:["Podcast","Africa","Community"],
+    title:"Three Years of Geospatially Africa — What Starting a Podcast Taught Me About the GIS Community",
+    excerpt:"In 2021 I started a podcast to spotlight geospatial innovation in Africa. Here's what I've learned about community, consistency, and the state of the discipline on the continent.",
+    readTime:6,
+    content:`
+      <p>In May 2021 I launched the first episode of Geospatially Africa from Nigeria with very little idea what I was doing. Three years and 21 episodes later, the podcast has grown into something I'm genuinely proud of — a platform that has hosted conversations with researchers, engineers, and practitioners from across Africa and the world.</p>
+      <h2>Why I Started It</h2>
+      <p>The immediate motivation was simple: I was consuming a lot of geospatial content — podcasts, YouTube channels, conferences — and very little of it reflected the African context I was working in. The tools being discussed were often inaccessible or irrelevant to practitioners in Lagos or Nairobi. The case studies were almost never African. I wanted to change that ratio, even by a small amount.</p>
+      <blockquote>There is an enormous amount of excellent geospatial work happening in Africa. It just wasn't being amplified the way comparable work in Europe or North America was.</blockquote>
+      <h2>What 21 Episodes Taught Me</h2>
+      <p>Consistency is the hardest part of any independent media project. Life — an MSc, internships, moving countries — competes with a production schedule. The episodes I'm most proud of are the ones that required the most preparation: the Spatial SQL conversation with Matt Forrest, the OpenAerialMap episode with HOT, the Digital Earth Africa platform introduction.</p>
+      <ul>
+        <li>The GIS community in Africa is deeply connected internationally — guests consistently led to other guests across the continent</li>
+        <li>Technical topics attract a smaller but more engaged audience than career and community episodes</li>
+        <li>Building a Django-backed website for the podcast was a project in itself — and taught me more about web development than any course did</li>
+      </ul>
+      <h2>What's Next</h2>
+      <p>Season 4 is in planning. I want to do more deep-dive technical episodes — bringing in researchers working on specific datasets, methods, and tools — alongside the broader community conversations. If you're doing interesting geospatial work in or about Africa, I'd love to hear from you.</p>
+    `
+  },
+  {
+    slug:"dggs-and-the-future-of-spatial-data",
+    date:"Jan 2024", dateSort:"2024-01-01",
+    tags:["GIS","Data Science","Software & Tools"],
+    title:"What is DGGS and Why Should Geospatial Analysts Care?",
+    excerpt:"Discrete Global Grid Systems are quietly reshaping how geospatial data is indexed, stored, and queried at global scale. Here's what they are and why they matter.",
+    readTime:8,
+    content:`
+      <p>If you've spent time in the geospatial world, you're used to data organised around rectangular grids, vector polygons, or point clouds. DGGS — Discrete Global Grid Systems — offer something fundamentally different: a globally consistent, hierarchical spatial index that covers the entire Earth without the distortions and edge effects that plague traditional projections and grids.</p>
+      <h2>The Problem DGGS Solves</h2>
+      <p>Traditional spatial data architectures were designed for regional or national scale. When you try to work at global scale — integrating data from multiple satellite sensors, multiple projections, multiple resolutions — the seams show. Tiles don't align, projections distort, queries become expensive. DGGS was designed for a world where global-scale spatial analysis is routine.</p>
+      <h2>How It Works</h2>
+      <p>A DGGS divides the Earth's surface into a hierarchy of discrete cells — typically hexagons or triangles — that tessellate without gaps or overlaps at each resolution level. Each cell has a unique identifier, and cells at different resolutions nest consistently. This makes multi-resolution analysis, data aggregation, and spatial joins fundamentally simpler operations than in traditional grid or vector systems.</p>
+      <blockquote>Think of DGGS like a postal code system for the entire planet — but hierarchical, globally consistent, and designed for computation rather than human readability.</blockquote>
+      <h2>Real-World Applications</h2>
+      <ul>
+        <li>H3 (Uber's hexagonal DGGS) is now widely used for mobility analytics, logistics, and urban data aggregation</li>
+        <li>ISEA3H and rHEALPix are used in global environmental monitoring and satellite data integration</li>
+        <li>Digital Earth Australia and Digital Earth Africa use DGGS concepts to provide consistent analysis-ready data</li>
+      </ul>
+      <h2>Getting Started</h2>
+      <p>The easiest entry point is H3-pandas — a Python library that bridges the H3 DGGS with the pandas/GeoPandas ecosystem. For global remote sensing applications, the OGC DGGS standard and associated open implementations are the more rigorous starting point. At Geolynx, I work directly on DGGS platform advocacy — helping developers and analysts understand and adopt these standards.</p>
+    `
+  },
+];
+
+/* ─── PUBLICATIONS ─── */
+const PUBLICATIONS = [
+  {
+    year:2025, type:"MSc Thesis",
+    title:"A Novel Multi-Variate Drought Index Based on GRACE TWS, Precipitation, Evapotranspiration, and Soil Moisture for Drought Monitoring in the Greater Horn of Africa",
+    authors:"<strong>Iniobong Benson</strong>",
+    venue:"University of Twente / ITC — GEM Erasmus+ MSc Thesis, 2025",
+    links:[{label:"Full Thesis",url:"https://purl.utwente.nl/essays/108070"}]
+  },
+  {
+    year:2021, type:"Preprint",
+    title:"Flood Susceptibility Mapping of Internally Displaced Person Camps in Maiduguri, Borno State, Nigeria",
+    authors:"Ogunwumi, T., Njoku, C., Uzoezie, A., & <strong>Benson, I.</strong>",
+    venue:"Research Square — Preprint, 2021",
+    links:[{label:"DOI",url:"https://doi.org/10.21203/rs.3.rs-1721944/v1"}]
+  },
+];
+
+/* ─── EDUCATION ─── */
+const EDUCATION = [
+  {
+    period:"2023 – 2025", short:"MSc",
+    role:"MSc in Geo-information Science and Earth Observation for Environmental Modelling and Management (GEM Erasmus+)",
+    place:"University of Tartu, Estonia & ITC, University of Twente, The Netherlands",
+    bullets:[
+      "Erasmus+ Scholarship recipient",
+      "Thesis: A Novel Multi-Variate Drought Index Based on GRACE TWS, Precipitation, Evapotranspiration, and Soil Moisture for Drought Monitoring in the Greater Horn of Africa",
+      "Developed the GHDI — a probabilistic copula-based drought index; validated using FEWS NET and compared with SPI and ENSO across timescales",
+      '<a href="https://purl.utwente.nl/essays/108070" target="_blank" style="color:var(--accent)">Read thesis →</a>',
+    ]
+  },
+  {
+    period:"2022 – 2023", short:"Dip.",
+    role:"Diploma in Backend Engineering",
+    place:"Altschool Africa, Nigeria",
+    bullets:["Udacity Fullstack Developer Nanodegree Scholarship (2022)"]
+  },
+  {
+    period:"2014 – 2019", short:"BSc",
+    role:"BSc in Geoinformatics and Surveying",
+    place:"University of Uyo, Nigeria",
+    bullets:[
+      "Thesis: A Web-based Tourism Information System Using GIS for Uyo Metropolis",
+      '<a href="https://touruyo.github.io" target="_blank" style="color:var(--accent)">View project →</a>',
+    ]
+  },
+];
+
+/* ─── EXPERIENCE ─── */
+const EXPERIENCE = [
+  {
+    period:"Sep 2025 – Present", short:"Advocate",
+    role:"DGGS & Geospatial Data Platform Advocate",
+    place:"Geolynx OÜ · Tartu, Estonia",
+    bullets:[
+      "Develop technical resources including Python notebooks, QGIS tutorials, and API documentation to support developers and GIS analysts",
+      "Produce promotional content (blogs, social media) to highlight platform features, datasets, and partnerships",
+    ]
+  },
+  {
+    period:"Jun 2024 – Aug 2024", short:"Intern",
+    role:"Geospatial Data Science Intern",
+    place:"Deltares · Delft, The Netherlands",
+    bullets:[
+      "Developed a validation framework for Delft3D Flexible Mesh (FM) ocean models using in situ data",
+      "Processed, analysed, and visualised hydrodynamic datasets",
+      "Integrated geospatial workflows into hydrodynamic modelling pipelines",
+    ]
+  },
+  {
+    period:"Mar 2023 – Jul 2023", short:"GIS Spec.",
+    role:"GIS Specialist",
+    place:"ipNX Nigeria Ltd · Nigeria",
+    bullets:[
+      "Designed and optimised enterprise geospatial databases",
+      "Implemented network routing optimisation for fibre optic systems",
+      "Conducted advanced spatial analyses for infrastructure planning",
+    ]
+  },
+  {
+    period:"Nov 2021 – Feb 2023", short:"Lead GIS",
+    role:"Lead GIS Analyst",
+    place:"Kyle Christian Nigeria Ltd · Nigeria",
+    bullets:[
+      "Automated workflows with Python, significantly reducing processing time",
+      "Built and deployed ArcGIS Field Apps for property data digitisation",
+      "Processed LiDAR data to generate elevation and topographic outputs",
+    ]
+  },
+  {
+    period:"Jun 2020 – Oct 2020", short:"GIS Tech.",
+    role:"GIS Technician",
+    place:"Global Education Infrastructure Service LLC",
+    bullets:[
+      "Integrated field-collected data for unified geospatial databases",
+      "Produced demographic and allocation maps for 50+ communities",
+    ]
+  },
+];
+
+/* ─── CV SKILLS ─── */
+const CV_SKILLS = [
+  { label:"GIS & Earth Observation",    chips:["QGIS","ArcGIS","Google Earth Engine","SNAP","GDAL / OGR","Delft3D FM"] },
+  { label:"Programming & Data Science", chips:["Python","R","GeoPandas","Rasterio","xarray","Django","PostgreSQL"] },
+  { label:"Satellite & Sensor Data",    chips:["Sentinel-1 SAR","Sentinel-2","Landsat 8/9","MODIS","GRACE TWS","SRTM DEM"] },
+  { label:"Hydrology & Climate",        chips:["Copula Modelling","Drought Indices","FEWS NET","SPI","Hydrodynamic Modelling"] },
+];
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════════════ -->
+<nav class="nav" id="main-nav">
+  <div class="nav__inner">
+    <span class="nav__logo" onclick="nav('home')">Iniobong</span>
+    <div class="nav__links" id="nav-links">
+      <button onclick="nav('home')"         data-page="home">Home</button>
+      <button onclick="nav('about')"        data-page="about">About</button>
+      <button onclick="nav('projects')"     data-page="projects">Projects</button>
+      <button onclick="nav('publications')" data-page="publications">Publications</button>
+      <button onclick="nav('blog')"         data-page="blog">Blog</button>
+      <button onclick="nav('podcast')"      data-page="podcast">Podcast</button>
+      <button onclick="nav('contact')"      data-page="contact">Contact</button>
+    </div>
+    <div class="nav__socials" id="nav-socials"></div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGES
+═══════════════════════════════════════════════════════════ -->
+<main>
+
+<!-- HOME -->
+<div id="page-home" class="page pt-nav">
+  <section>
+    <div class="hero">
+      <div class="hero__l">
+        <p class="hero__tag fade1" id="hero-tag"></p>
+        <h1 class="hero__name fade2" id="hero-name"></h1>
+        <p class="hero__sub fade3" id="hero-sub"></p>
+        <p class="hero__desc fade4" id="hero-desc"></p>
+        <div class="hero__cta fade5">
+          <button class="btn btn-dark" onclick="nav('projects')">View Projects →</button>
+          <span class="hero__link" onclick="nav('podcast')">Geospatially Africa Podcast ↗</span>
         </div>
       </div>
-      <div class="hero-right">
-        <img src="https://media.licdn.com/dms/image/v2/D4E03AQHuKfvWIYtF1A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719133119718?e=1756339200&v=beta&t=MxmcbHZxtUbgZ62hvE0xEi9jrbZK8cBVr-UsTIGEJFo" alt="Iniobong Benson" class="profile-image" />
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Skills Section (simple line) -->
-  <section id="skills" class="skills">
-    <div class="container">
-      <div class="section-header">
-        <h2>Skills & Technologies</h2>
-        <p>Python, JavaScript, QGIS, PostGIS, R, Django, FastAPI, Docker, Git, Tailwind CSS</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="experience">
-    <div class="container">
-      <div class="section-header">
-        <h2>My Work Experience</h2>
-        <p>My journey in geospatial technology</p>
-      </div>
-      
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-left">
-              <h3>Geospatial Intern</h3>
-              <p class="timeline-company">Deltares, Netherlands</p>
-              <span class="timeline-date">Jun - Aug 2024</span>
-            </div>
-            <div class="timeline-right">
-              <h4>Hydrological Modeling</h4>
-              <p>Developed hydrological modeling systems and spatial analysis tools for water management and flood prediction.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-left">
-              <h3>GIS Analyst</h3>
-              <p class="timeline-company">ipNX Nigeria Ltd</p>
-              <span class="timeline-date">Mar - Jul 2023</span>
-            </div>
-            <div class="timeline-right">
-              <h4>Spatial Infrastructure</h4>
-              <p>Created spatial data infrastructure and mapping solutions for telecommunications network planning.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-left">
-              <h3>Lead GIS Analyst</h3>
-              <p class="timeline-company">Kyle Christian Nigeria Ltd</p>
-              <span class="timeline-date">Nov 2021 - Feb 2023</span>
-            </div>
-            <div class="timeline-right">
-              <h4>Project Leadership</h4>
-              <p>Led spatial analysis projects and team coordination for environmental impact assessments.</p>
-            </div>
-          </div>
+      <div class="hero__r" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <svg class="hero__map" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+          <path d="M180,20 L220,18 L260,30 L290,55 L300,90 L310,130 L320,160 L315,200 L330,240 L340,280 L330,310 L310,340 L290,360 L270,380 L255,400 L240,420 L225,440 L215,460 L210,480 L205,460 L195,445 L185,425 L170,405 L155,385 L140,360 L120,335 L100,305 L85,275 L75,240 L70,205 L68,168 L75,130 L85,100 L100,70 L120,45 L150,28 Z"/>
+        </svg>
+        <div class="hdot" style="top:28%;left:44%;animation-delay:0s"></div>
+        <div class="hdot" style="top:54%;left:62%;animation-delay:.7s"></div>
+        <div class="hdot" style="top:40%;left:30%;animation-delay:1.4s"></div>
+        <div class="hdot" style="top:68%;left:48%;animation-delay:.3s"></div>
+        <div class="hdot" style="top:20%;left:68%;animation-delay:2s"></div>
+        <div class="hero__badge">
+          <div class="hero__badge-l">🎓 GEM Erasmus+ MSc</div>
+          <div class="hero__badge-v">ITC Twente & Univ. of Tartu</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Publications Section -->
-  <section id="publications" class="publications">
-    <div class="container">
-      <div class="section-header">
-        <h2>Publications</h2>
-      </div>
-      <div class="pub-grid">
-        <article class="pub-card">
-          <div class="pub-image">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=220&fit=crop" alt="Publication 1" />
-          </div>
-          <div class="pub-content">
-            <h3>Origins of the Modern MOOC (xMOOC)</h3>
-            <p>Online education at scale: lessons from the first 100,000+ learner courses. (Sample description)</p>
-            <a href="#" class="pub-link">Read more</a>
-          </div>
-        </article>
-        <article class="pub-card">
-          <div class="pub-image">
-            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=220&fit=crop" alt="Publication 2" />
-          </div>
-          <div class="pub-content">
-            <h3>Mechatronic Design of an Integrated Robotic Hand</h3>
-            <p>Research on robotic hand design and actuation. (Sample description)</p>
-            <a href="#" class="pub-link">Read more</a>
-          </div>
-        </article>
-        <article class="pub-card">
-          <div class="pub-image">
-            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=220&fit=crop" alt="Publication 3" />
-          </div>
-          <div class="pub-content">
-            <h3>Deep Learning with COTS HPC Systems</h3>
-            <p>Scaling up deep learning with commodity hardware. (Sample description)</p>
-            <a href="#" class="pub-link">Read more</a>
-          </div>
-        </article>
-      </div>
+  <section class="skills-strip">
+    <div class="wrap">
+      <div class="slabel">Tools &amp; Expertise</div>
+      <div class="skills-grid" id="skills-grid"></div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <div class="section-header">
-        <h2>Projects</h2>
+  <section class="home-sec">
+    <div class="wrap">
+      <div class="home-sec__head">
+        <h2 class="home-sec__h">Featured <em>Projects</em></h2>
+        <span class="home-sec__more" onclick="nav('projects')">All projects →</span>
       </div>
-      <div class="proj-grid">
-        <article class="proj-card">
-          <div class="proj-image">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=220&fit=crop" alt="Project 1" />
-          </div>
-          <div class="proj-content">
-            <h3>Geospatial Web Application</h3>
-            <p>Interactive platform for spatial data visualization and analysis with real-time PostGIS backend.</p>
-            <a href="#" class="proj-link">View Project</a>
-          </div>
-        </article>
-        <article class="proj-card">
-          <div class="proj-image">
-            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=220&fit=crop" alt="Project 2" />
-          </div>
-          <div class="proj-content">
-            <h3>Satellite Data Analysis Pipeline</h3>
-            <p>Automated pipeline for processing satellite imagery using ML algorithms for environmental monitoring.</p>
-            <a href="#" class="proj-link">View Project</a>
-          </div>
-        </article>
-        <article class="proj-card">
-          <div class="proj-image">
-            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=220&fit=crop" alt="Project 3" />
-          </div>
-          <div class="proj-content">
-            <h3>Hydrological Modeling System</h3>
-            <p>Advanced system for watershed analysis and flood prediction with interactive dashboards.</p>
-            <a href="#" class="proj-link">View Project</a>
-          </div>
-        </article>
-      </div>
+      <div class="proj-grid" id="home-projects"></div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="section-header">
-        <h2>Contact</h2>
-        <p>I'm always interested in new opportunities and collaborations. Whether you have a project in mind or just want to discuss geospatial technology, feel free to reach out.</p>
+  <section class="pod-strip">
+    <div class="wrap">
+      <div class="slabel slabel--lt">🎙️ Geospatially Africa</div>
+      <div class="home-sec__head">
+        <h2 class="home-sec__h">Latest <em>Episodes</em></h2>
+        <span class="home-sec__more" onclick="nav('podcast')">All episodes →</span>
       </div>
-      <div class="contact-links" style="display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center;justify-content:center;">
-        <a href="mailto:iniobong.benson@example.com" class="btn btn-secondary">Email</a>
-        <a href="https://linkedin.com/in/iniobong-benson" target="_blank" class="btn btn-secondary">LinkedIn</a>
-        <a href="https://github.com/linibensonjr" target="_blank" class="btn btn-secondary">GitHub</a>
-        <a href="https://twitter.com/iniobong_benson" target="_blank" class="btn btn-secondary">Twitter</a>
-      </div>
+      <div id="home-episodes"></div>
     </div>
   </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <p>&copy; 2024 Iniobong Benson. All rights reserved.</p>
-        <p>Built with ❤️ for geospatial innovation</p>
+  <section class="home-sec">
+    <div class="wrap">
+      <div class="home-sec__head">
+        <h2 class="home-sec__h">From the <em>Blog</em></h2>
+        <span class="home-sec__more" onclick="nav('blog')">All posts →</span>
+      </div>
+      <div class="blog-list" id="home-blog"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ABOUT -->
+<div id="page-about" class="page pt-nav">
+  <div class="phead">
+    <div class="wrap">
+      <p class="phead__tag">Background &amp; CV</p>
+      <h1 class="phead__title">About <em>Me</em></h1>
+    </div>
+  </div>
+  <div class="about-body">
+    <div class="wrap">
+      <div class="about-layout">
+        <aside>
+          <div class="avatar"><div class="avatar__init">IN</div></div>
+          <h2 class="sb__name" id="sb-name"></h2>
+          <p class="sb__title">Geospatial Analyst · Earth Observation<br>GEM Erasmus+ MSc · Podcast Founder</p>
+          <div class="sb__socials" id="sb-socials"></div>
+          <div class="sb__info" id="sb-info"></div>
+          <a href="#" id="cv-link" class="btn btn-outline" style="font-size:.6rem;padding:.6rem 1.2rem;">Download CV (PDF)</a>
+        </aside>
+        <div>
+          <div class="cv-sec">
+            <h2 class="cv-sec__title">About</h2>
+            <p class="cv-intro">I'm Iniobong Benson — a geospatial analyst and earth observation specialist based in Tartu, Estonia. I hold an MSc in Geo-information Science and Earth Observation for Environmental Modelling and Management (GEM Erasmus+), awarded jointly by the University of Tartu and ITC, University of Twente. My MSc thesis developed the GHDI — a novel probabilistic copula-based drought index integrating GRACE TWS, precipitation, evapotranspiration, and soil moisture for monitoring drought in the Greater Horn of Africa.</p>
+            <p class="cv-intro" style="margin-top:.8rem;">I currently work as a DGGS & Geospatial Data Platform Advocate at Geolynx OÜ in Estonia, where I build technical resources for developers and GIS analysts. Previously I interned at Deltares in the Netherlands, working on hydrodynamic model validation for ocean systems.</p>
+            <p class="cv-intro" style="margin-top:.8rem;">Since 2021 I've been the founder and host of <em>Geospatially Africa</em> — a podcast dedicated to showcasing geospatial innovations from Africa and the world, with over 21 episodes covering everything from SAR and drone mapping to open data and GIS careers.</p>
+          </div>
+          <div class="cv-sec">
+            <h2 class="cv-sec__title">Education</h2>
+            <div id="cv-education"></div>
+          </div>
+          <div class="cv-sec">
+            <h2 class="cv-sec__title">Experience</h2>
+            <div id="cv-experience"></div>
+          </div>
+          <div class="cv-sec">
+            <h2 class="cv-sec__title">Skills</h2>
+            <div id="cv-skills"></div>
+          <div class="cv-sec">
+            <h2 class="cv-sec__title">Research Interests</h2>
+            <div class="chips">
+              <span class="chip">Probabilistic modelling of hydroclimate extremes</span>
+              <span class="chip">Drought & flood risk mapping</span>
+              <span class="chip">Climate–hydrology interactions</span>
+              <span class="chip">Remote sensing & geospatial AI for water resources</span>
+              <span class="chip">Earth observation data validation</span>
+              <span class="chip">Open-source computational hydrology</span>
+            </div>
+          </div>
+          <div class="cv-sec">
+            <h2 class="cv-sec__title">Affiliations & Awards</h2>
+            <div class="cv-entry">
+              <div class="cv-entry__period"><span class="cv-entry__year">2023–2025</span>Scholarship</div>
+              <div><div class="cv-entry__role">Erasmus+ Scholarship</div><div class="cv-entry__place">MSc in Geo-information Science and Earth Observation</div></div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry__period"><span class="cv-entry__year">2021</span>Conference</div>
+              <div><div class="cv-entry__role">Youth Forum on Digital Earth — ISDE21</div><div class="cv-entry__place">Presented work on digital geospatial innovations for Africa</div></div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry__period"><span class="cv-entry__year">Active</span>Volunteer</div>
+              <div>
+                <div class="cv-entry__role">GISCorps (URISA) — Volunteer Analyst</div>
+                <div class="cv-entry__place">GIS-E Geospatial Volunteer · Geohazard Risk Mapping Initiative — Lead Flood Analyst</div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
       </div>
     </div>
-    </footer>
-  
-  <script>
-    // Simple mobile navigation toggle
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('active');
-      this.classList.toggle('active');
-    });
+  </div>
+</div>
 
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
+<!-- BLOG LIST -->
+<div id="page-blog" class="page pt-nav">
+  <div class="phead">
+    <div class="wrap">
+      <p class="phead__tag">Field Notes &amp; Essays</p>
+      <h1 class="phead__title">The <em>Blog</em></h1>
+      <p class="phead__desc">Reflections on geospatial methods, remote sensing, open data, and mapping Africa's many landscapes.</p>
+    </div>
+  </div>
+  <div class="blog-body">
+    <div class="wrap">
+      <div class="filter-bar" id="blog-filters"></div>
+      <div class="blog-full-list" id="blog-full-list"></div>
+    </div>
+  </div>
+</div>
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
+<!-- BLOG POST -->
+<div id="page-post" class="page pt-nav">
+  <div class="post-header">
+    <div class="wrap">
+      <span class="post-back" onclick="nav('blog')">← Back to Blog</span>
+      <div class="post-tags" id="post-tags"></div>
+      <h1 class="post-title-h" id="post-title"></h1>
+      <div class="post-meta" id="post-meta"></div>
+    </div>
+  </div>
+  <div class="post-body">
+    <div class="wrap">
+      <div class="post-layout">
+        <article>
+          <div class="post-content" id="post-content"></div>
+          <nav class="post-nav" id="post-nav"></nav>
+        </article>
+        <aside class="post-sidebar">
+          <div class="sidebar-card" id="toc-card" style="display:none">
+            <div class="sidebar-card__label">Contents</div>
+            <ul class="toc-list" id="toc-list"></ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
 
-    // Add fade-in animation on scroll
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
+<!-- PUBLICATIONS -->
+<div id="page-publications" class="page pt-nav">
+  <div class="phead">
+    <div class="wrap">
+      <p class="phead__tag">Peer-Reviewed &amp; Conference</p>
+      <h1 class="phead__title"><em>Publications</em></h1>
+      <p class="phead__desc">Journal articles, conference papers, and technical reports in geospatial science and remote sensing.</p>
+    </div>
+  </div>
+  <div class="pub-body">
+    <div class="wrap" id="pub-list"></div>
+  </div>
+</div>
 
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
+<!-- PROJECTS -->
+<div id="page-projects" class="page pt-nav">
+  <div class="phead">
+    <div class="wrap">
+      <p class="phead__tag">Research &amp; Development</p>
+      <h1 class="phead__title">Pro<em>jects</em></h1>
+      <p class="phead__desc">Geospatial analyses, tools, and data projects across research and applied domains.</p>
+    </div>
+  </div>
+  <div class="proj-body">
+    <div class="wrap">
+      <div class="filter-bar" id="proj-filters"></div>
+      <div class="proj-full-grid" id="proj-full-grid"></div>
+    </div>
+  </div>
+</div>
 
-    // Observe all sections for fade-in effect
-    document.querySelectorAll('section').forEach(section => {
-      section.style.opacity = '0';
-      section.style.transform = 'translateY(20px)';
-      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(section);
-    });
-  </script>
+<!-- PODCAST -->
+<div id="page-podcast" class="page pt-nav">
+  <section class="pod-hero">
+    <div class="wrap">
+      <div>
+        <p class="pod-hero__tag">Audio Series</p>
+        <h1 class="pod-hero__title"><em>Geospatially</em><br>Africa</h1>
+        <p class="pod-hero__desc">A podcast exploring the power of geospatial science in understanding Africa — from urban growth and climate change to land use and infrastructure. Conversations with researchers, practitioners, and innovators shaping the continent's spatial story.</p>
+        <div class="listen-links" id="listen-links"></div>
+      </div>
+      <div class="pod-art" aria-hidden="true">
+        <div class="pod-art__inner">
+          <div class="pod-art__icon">🎙️</div>
+          <div class="pod-art__title">Geospatially Africa</div>
+          <div class="pod-art__sub">New episodes monthly</div>
+          <div class="waves">
+            <div class="wave"></div><div class="wave"></div><div class="wave"></div>
+            <div class="wave"></div><div class="wave"></div><div class="wave"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="ep-body">
+    <div class="wrap">
+      <div class="slabel">All Episodes</div>
+      <div id="ep-full-list"></div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="page-contact" class="page pt-nav">
+  <div class="phead">
+    <div class="wrap">
+      <p class="phead__tag">Let's Connect</p>
+      <h1 class="phead__title"><em>Contact</em></h1>
+      <p class="phead__desc">For research collaborations, podcast enquiries, consulting, or just to talk maps.</p>
+    </div>
+  </div>
+  <div class="contact-body">
+    <div class="wrap">
+      <div class="contact-layout">
+        <div>
+          <h2 class="contact-heading">Let's talk spatial data</h2>
+          <p class="contact-text">Whether you're interested in collaborating on research, want to be a guest on Geospatially Africa, need geospatial consulting, or just want to geek out about maps — I'd love to connect.</p>
+          <div class="contact-links" id="contact-links"></div>
+        </div>
+        <div class="form-card">
+          <div class="form-card__title">Send a Message</div>
+          <div class="success-msg" id="success-msg">✓ Message sent — I'll be in touch soon!</div>
+          <div class="frow">
+            <div class="fg"><label class="fl">Name</label><input type="text" class="fi" id="c-name" placeholder="Your name"></div>
+            <div class="fg"><label class="fl">Email</label><input type="email" class="fi" id="c-email" placeholder="your@email.com"></div>
+          </div>
+          <div class="fg"><label class="fl">Subject</label><input type="text" class="fi" id="c-subject" placeholder="Research collab, podcast guest, consulting..."></div>
+          <div class="fg"><label class="fl">Message</label><textarea class="fi" id="c-message" placeholder="Tell me what's on your mind..."></textarea></div>
+          <button class="btn btn-dark" onclick="submitForm()">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" id="site-footer">
+  <div class="footer__inner">
+    <span class="footer__logo" onclick="nav('home')">Iniobong</span>
+    <div class="footer__socials" id="footer-socials"></div>
+    <p class="footer__copy" id="footer-copy"></p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════
+     RENDERER — do not edit below unless you're customising layout
+═══════════════════════════════════════════════════════════ -->
+<script>
+/* ── SVG ICONS ── */
+const ICONS = {
+  twitter:  `<svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.732-8.854L1.757 2.25H8.21l4.262 5.634 5.772-5.634Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>`,
+  linkedin: `<svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>`,
+  github:   `<svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>`,
+  email:    `<svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>`,
+  researchgate:`<svg viewBox="0 0 24 24"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a12.108 12.108 0 0 0-.198.809l-.013.055c-.361 1.521-.71 3.001-2.085 4.079C12.947 8.47 11.5 9.19 10.5 9.5c-.346.108-.645.22-.893.34-.246.118-.51.27-.77.459-.544.382-1.037.932-1.388 1.642-.35.71-.533 1.541-.533 2.477 0 1.2.3 2.295.88 3.11.58.82 1.404 1.365 2.445 1.365 1.035 0 1.91-.434 2.457-1.14.547-.707.75-1.604.75-2.502v-.27a3.45 3.45 0 0 1-.694.084 4.48 4.48 0 0 1-.587-.038v.224c0 .646-.126 1.273-.407 1.698-.28.425-.66.655-1.119.655-.505 0-.888-.29-1.177-.776-.29-.486-.44-1.133-.44-1.88 0-.73.14-1.36.4-1.857.26-.498.622-.843 1.117-.843.327 0 .614.102.86.28.246.178.466.427.654.737l.553-.435c-.252-.386-.572-.7-.953-.936a2.475 2.475 0 0 0-1.314-.358c-.762 0-1.425.333-1.957.917-.53.584-.879 1.37-1.015 2.262a7.093 7.093 0 0 0-.06.941c0 .913.176 1.74.524 2.386.348.646.884 1.077 1.608 1.077.8 0 1.395-.43 1.785-1.067.39-.636.567-1.467.567-2.31v-.093c.18.022.363.033.55.033.384 0 .764-.05 1.136-.148l-.012.1c-.057.543-.154 1.067-.36 1.51-.33.7-.869 1.165-1.783 1.165-1.012 0-1.748-.534-2.243-1.351-.494-.817-.7-1.91-.7-3.069 0-.881.175-1.7.516-2.397.34-.697.825-1.246 1.405-1.607.29-.181.564-.307.842-.408.98-.348 2.24-.98 3.474-2.007 1.574-1.295 1.987-3.073 2.365-4.67l.013-.055c.04-.162.084-.333.133-.499.19-.626.473-1.054.857-1.312.384-.257.88-.385 1.505-.385.454 0 .898.094 1.32.265v-.765A4.87 4.87 0 0 0 19.586 0z"/></svg>`,
+  orcid:    `<svg viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 3.972-2.484 3.972-3.722 0-2.016-1.284-3.722-3.972-3.722h-2.297z"/></svg>`,
+};
+
+/* ── ROUTER ── */
+let currentPage = 'home';
+function nav(page, data){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+page).classList.add('active');
+  document.querySelectorAll('.nav__links button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));
+  window.scrollTo({top:0,behavior:'smooth'});
+  currentPage = page;
+  if(page==='post' && data) renderPost(data);
+}
+
+/* ── SOCIAL ICONS HELPER ── */
+function socialIconsHTML(cls, social){
+  let h = '';
+  if(social.twitter)     h += `<a href="${social.twitter}"     class="${cls}" title="Twitter / X" target="_blank" rel="noopener">${ICONS.twitter}</a>`;
+  if(social.linkedin)    h += `<a href="${social.linkedin}"    class="${cls}" title="LinkedIn"      target="_blank" rel="noopener">${ICONS.linkedin}</a>`;
+  if(social.github)      h += `<a href="${social.github}"      class="${cls}" title="GitHub"        target="_blank" rel="noopener">${ICONS.github}</a>`;
+  if(social.researchgate)h += `<a href="${social.researchgate}"class="${cls}" title="ResearchGate"  target="_blank" rel="noopener">${ICONS.researchgate}</a>`;
+  if(social.orcid)       h += `<a href="${social.orcid}"       class="${cls}" title="ORCID"         target="_blank" rel="noopener">${ICONS.orcid}</a>`;
+  h += `<a href="mailto:${ME.email}" class="${cls}" title="Email">${ICONS.email}</a>`;
+  return h;
+}
+
+/* ── TAG PILLS ── */
+function tagsHTML(tags){ return tags.map(t=>`<span class="tag">${t}</span>`).join(''); }
+
+/* ── PROJECT CARD ── */
+function projCardHTML(p, large=''){
+  return `<div class="pcard ${large}" onclick="">
+    <div class="pcard__top"><div class="pcard__geo"></div><span class="pcard__icon">${p.icon}</span></div>
+    <div class="pcard__body">
+      <div class="pcard__status">● ${p.status}</div>
+      <div class="pcard__title">${p.title}</div>
+      <div class="pcard__desc">${p.desc}</div>
+      <div class="pcard__tech">${p.tech.map(t=>`<span>${t}</span>`).join('')}</div>
+    </div>
+  </div>`;
+}
+
+/* ── EPISODE ROW (home pod strip) ── */
+function epRowHTML(e){
+  return `<div class="ep-row" onclick="window.open('${e.url||'#'}','_blank')">
+    <div class="ep-row__num">EP ${String(e.num).padStart(2,'0')}</div>
+    <div><div class="ep-row__date">${e.date}</div><div class="ep-row__title">${e.title}</div><div class="ep-row__desc">${e.desc}</div></div>
+    <div class="ep-play">▶</div>
+  </div>`;
+}
+
+/* ── BLOG CARD (home) ── */
+function blogCardHTML(p){
+  return `<div class="bcard"><div class="bcard__inner" onclick="nav('post','${p.slug}')">
+    <div class="bcard__date"><strong>${p.date.split(' ')[0]}</strong>${p.date.split(' ')[1]}</div>
+    <div><div class="bcard__tags">${tagsHTML(p.tags)}</div>
+    <div class="bcard__title">${p.title}</div>
+    <div class="bcard__exc">${p.excerpt}</div>
+    <div class="bcard__meta"><span class="bcard__rt">${p.readTime} min read</span><span class="bcard__rd">Read →</span></div></div>
+  </div></div>`;
+}
+
+/* ── RENDER HOME ── */
+function renderHome(){
+  const heroTag  = document.getElementById('hero-tag');
+  const heroName = document.getElementById('hero-name');
+  if(heroTag) heroTag.textContent = ME.subtitle;
+  if(heroName){
+    const prefix = ME.name.replace(ME.nameItalic,'');
+    heroName.innerHTML = prefix + `<em>${ME.nameItalic}</em>`;
+  }
+  document.getElementById('hero-sub').textContent  = ME.tagline;
+  document.getElementById('hero-desc').innerHTML   = ME.intro;
+
+  // Skills
+  document.getElementById('skills-grid').innerHTML = SKILLS.map(s=>`
+    <div class="skill-block">
+      <div class="skill-block__icon">${s.icon}</div>
+      <div class="skill-block__name">${s.name}</div>
+      <div class="skill-block__tags">${s.tags.map(t=>`<span class="skill-block__tag">${t}</span>`).join('')}</div>
+    </div>`).join('');
+
+  // Featured projects
+  document.getElementById('home-projects').innerHTML = FEATURED_PROJECTS.map(p=>projCardHTML(p)).join('');
+
+  // Latest 3 episodes
+  document.getElementById('home-episodes').innerHTML = EPISODES.slice(0,3).map(e=>epRowHTML(e)).join('');
+
+  // Latest 3 blog posts
+  const sorted = [...POSTS].sort((a,b)=>b.dateSort.localeCompare(a.dateSort));
+  document.getElementById('home-blog').innerHTML = sorted.slice(0,3).map(p=>blogCardHTML(p)).join('');
+}
+
+/* ── RENDER ABOUT ── */
+function renderAbout(){
+  document.getElementById('sb-name').textContent = ME.name;
+  document.getElementById('sb-info').innerHTML = `
+    <div class="sb__info-item"><span class="sb__info-icon">📍</span><span>Tartu, Estonia</span></div>
+    <div class="sb__info-item"><span class="sb__info-icon">🎓</span><span>MSc — University of Tartu & ITC Twente (GEM Erasmus+)</span></div>
+    <div class="sb__info-item"><span class="sb__info-icon">💼</span><span>Geospatial Advocate · Geolynx OÜ</span></div>
+    <div class="sb__info-item"><span class="sb__info-icon">🎙️</span><span>Founder & Host — Geospatially Africa</span></div>
+    <div class="sb__info-item"><span class="sb__info-icon">✉️</span><span>${ME.email}</span></div>`;
+  document.getElementById('sb-socials').innerHTML = socialIconsHTML('sicon-lg', SOCIAL);
+  document.getElementById('cv-link').href = ME.cv_url;
+
+  document.getElementById('cv-education').innerHTML = EDUCATION.map(e=>`
+    <div class="cv-entry">
+      <div class="cv-entry__period"><span class="cv-entry__year">${e.period}</span>${e.short}</div>
+      <div><div class="cv-entry__role">${e.role}</div><div class="cv-entry__place">${e.place}</div>
+      <ul class="cv-entry__bullets">${e.bullets.map(b=>`<li>${b}</li>`).join('')}</ul></div>
+    </div>`).join('');
+
+  document.getElementById('cv-experience').innerHTML = EXPERIENCE.map(e=>`
+    <div class="cv-entry">
+      <div class="cv-entry__period"><span class="cv-entry__year">${e.period}</span>${e.short}</div>
+      <div><div class="cv-entry__role">${e.role}</div><div class="cv-entry__place">${e.place}</div>
+      <ul class="cv-entry__bullets">${e.bullets.map(b=>`<li>${b}</li>`).join('')}</ul></div>
+    </div>`).join('');
+
+  document.getElementById('cv-skills').innerHTML = CV_SKILLS.map(s=>`
+    <div class="skills-block">
+      <div class="skills-block__label">${s.label}</div>
+      <div class="chips">${s.chips.map(c=>`<span class="chip">${c}</span>`).join('')}</div>
+    </div>`).join('');
+}
+
+/* ── RENDER BLOG LIST ── */
+let activeBlogTag = 'all';
+function renderBlogList(){
+  const allTags = ['all',...new Set(POSTS.flatMap(p=>p.tags))];
+  document.getElementById('blog-filters').innerHTML = allTags.map(t=>
+    `<button class="fbtn ${t===activeBlogTag?'active':''}" onclick="setBlogTag('${t}')">${t==='all'?'All':t}</button>`
+  ).join('');
+
+  const sorted = [...POSTS].sort((a,b)=>b.dateSort.localeCompare(a.dateSort));
+  const filtered = activeBlogTag==='all' ? sorted : sorted.filter(p=>p.tags.includes(activeBlogTag));
+  document.getElementById('blog-full-list').innerHTML = filtered.map(p=>`
+    <div class="bitem" onclick="nav('post','${p.slug}')">
+      <div class="bitem__date"><strong>${p.date.split(' ')[0]}</strong>${p.date.split(' ')[1]}</div>
+      <div>
+        <div class="bitem__tags">${tagsHTML(p.tags)}</div>
+        <div class="bitem__title">${p.title}</div>
+        <div class="bitem__exc">${p.excerpt}</div>
+        <div class="bitem__meta"><span>${p.readTime} min read</span><span class="bitem__rd">Read →</span></div>
+      </div>
+    </div>`).join('');
+}
+function setBlogTag(tag){ activeBlogTag=tag; renderBlogList(); }
+
+/* ── RENDER POST ── */
+function renderPost(slug){
+  const post = POSTS.find(p=>p.slug===slug);
+  if(!post) return;
+  document.getElementById('post-tags').innerHTML  = tagsHTML(post.tags);
+  document.getElementById('post-title').textContent = post.title;
+  document.getElementById('post-meta').innerHTML  = `<span>${post.date}</span><span>${post.readTime} min read</span>`;
+  document.getElementById('post-content').innerHTML = post.content;
+
+  // Prev / next
+  const sorted = [...POSTS].sort((a,b)=>b.dateSort.localeCompare(a.dateSort));
+  const idx    = sorted.findIndex(p=>p.slug===slug);
+  const prev   = sorted[idx+1];
+  const next   = sorted[idx-1];
+  document.getElementById('post-nav').innerHTML =
+    (prev ? `<div class="pnav-item" onclick="nav('post','${prev.slug}')"><div class="pnav-dir">← Previous</div><div class="pnav-title">${prev.title}</div></div>` : '<div></div>') +
+    (next ? `<div class="pnav-item pnav-item--next" onclick="nav('post','${next.slug}')"><div class="pnav-dir">Next →</div><div class="pnav-title">${next.title}</div></div>` : '');
+
+  // TOC
+  setTimeout(()=>{
+    const headings = document.querySelectorAll('.post-content h2');
+    const tocList  = document.getElementById('toc-list');
+    const tocCard  = document.getElementById('toc-card');
+    tocList.innerHTML = '';
+    headings.forEach((h,i)=>{ h.id='s'+i; const li=document.createElement('li'); li.innerHTML=`<a href="#s${i}">${h.textContent}</a>`; tocList.appendChild(li); });
+    tocCard.style.display = headings.length>1 ? '' : 'none';
+  }, 50);
+}
+
+/* ── RENDER PUBLICATIONS ── */
+function renderPublications(){
+  const years = [...new Set(PUBLICATIONS.map(p=>p.year))].sort((a,b)=>b-a);
+  document.getElementById('pub-list').innerHTML = years.map(yr=>{
+    const pubs = PUBLICATIONS.filter(p=>p.year===yr);
+    return `<div class="pub-year-group">
+      <div class="pub-year">${yr}</div>
+      ${pubs.map(p=>`<div class="pub-item">
+        <div class="pub-item__line"></div>
+        <div>
+          <div class="pub-item__type">${p.type}</div>
+          <div class="pub-item__title">${p.title}</div>
+          <p class="pub-item__authors">${p.authors}</p>
+          <p class="pub-item__venue">${p.venue}</p>
+          <div class="pub-item__links">${p.links.map(l=>`<a class="pub-link" href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join('')}</div>
+        </div>
+      </div>`).join('')}
+    </div>`;
+  }).join('');
+}
+
+/* ── RENDER PROJECTS ── */
+let activeProjFilter = 'all';
+function renderProjects(){
+  const statuses = ['all',...new Set(ALL_PROJECTS.map(p=>p.status.split('—')[0].trim().toLowerCase()))];
+  document.getElementById('proj-filters').innerHTML = statuses.map(s=>
+    `<button class="fbtn ${s===activeProjFilter?'active':''}" onclick="setProjFilter('${s}')">${s==='all'?'All':s.charAt(0).toUpperCase()+s.slice(1)}</button>`
+  ).join('');
+  const filtered = activeProjFilter==='all' ? ALL_PROJECTS : ALL_PROJECTS.filter(p=>p.status.toLowerCase().includes(activeProjFilter));
+  document.getElementById('proj-full-grid').innerHTML = filtered.map(p=>projCardHTML(p,'pcard-lg')).join('');
+}
+function setProjFilter(f){ activeProjFilter=f; renderProjects(); }
+
+/* ── RENDER PODCAST ── */
+function renderPodcast(){
+  const links = [];
+  if(PODCAST.spotify) links.push(`<a class="lbtn" href="${PODCAST.spotify}" target="_blank" rel="noopener">🎵 Spotify</a>`);
+  if(PODCAST.apple)   links.push(`<a class="lbtn" href="${PODCAST.apple}"   target="_blank" rel="noopener">🎧 Apple Podcasts</a>`);
+  if(PODCAST.rss)     links.push(`<a class="lbtn" href="${PODCAST.rss}"     target="_blank" rel="noopener">📻 RSS</a>`);
+  document.getElementById('listen-links').innerHTML = links.join('');
+
+  document.getElementById('ep-full-list').innerHTML = EPISODES.map(e=>`
+    <div class="ep-full-row">
+      <div class="ep-full-row__num">EP ${String(e.num).padStart(2,'0')}</div>
+      <div>
+        <div class="ep-full-row__date">${e.date}</div>
+        <div class="ep-full-row__title">${e.title}</div>
+        <div class="ep-full-row__desc">${e.desc}</div>
+      </div>
+      <a class="ep-full-play" href="${e.url||'#'}" target="_blank" rel="noopener" aria-label="Listen to episode ${e.num}">▶</a>
+    </div>`).join('');
+}
+
+/* ── RENDER CONTACT ── */
+function renderContact(){
+  document.getElementById('contact-links').innerHTML = [
+    {icon:ICONS.email,    label:'Email',        val:ME.email,           href:`mailto:${ME.email}`},
+    {icon:ICONS.twitter,  label:'Twitter / X',  val:'@yourhandle',      href:SOCIAL.twitter},
+    {icon:ICONS.linkedin, label:'LinkedIn',      val:'linkedin.com/in/yourprofile', href:SOCIAL.linkedin},
+    {icon:ICONS.github,   label:'GitHub',        val:'github.com/yourhandle',       href:SOCIAL.github},
+  ].map(c=>`<a class="clink" href="${c.href}" target="_blank" rel="noopener">
+    <div class="clink__icon">${c.icon}</div>
+    <div><div class="clink__label">${c.label}</div><div class="clink__val">${c.val}</div></div>
+  </a>`).join('');
+}
+
+/* ── CONTACT FORM ── */
+function submitForm(){
+  const name    = document.getElementById('c-name').value.trim();
+  const email   = document.getElementById('c-email').value.trim();
+  const message = document.getElementById('c-message').value.trim();
+  if(!name || !email || !message){ alert('Please fill in name, email, and message.'); return; }
+  // Opens default mail client — replace with fetch() to a backend/Formspree endpoint
+  const subject = document.getElementById('c-subject').value.trim() || 'Portfolio enquiry';
+  window.location.href = `mailto:${ME.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} <${email}>\n\n${message}`)}`;
+  document.getElementById('success-msg').classList.add('show');
+}
+
+/* ── RENDER NAV SOCIALS & FOOTER ── */
+function renderGlobals(){
+  document.getElementById('nav-socials').innerHTML  = socialIconsHTML('sicon', SOCIAL);
+  document.getElementById('footer-socials').innerHTML = [
+    {k:'twitter',v:SOCIAL.twitter},{k:'linkedin',v:SOCIAL.linkedin},{k:'github',v:SOCIAL.github}
+  ].filter(s=>s.v).map(s=>`<a class="footer__si" href="${s.v}" target="_blank" rel="noopener">${ICONS[s.k]}</a>`).join('')
+    + `<a class="footer__si" href="mailto:${ME.email}">${ICONS.email}</a>`;
+  document.getElementById('footer-copy').textContent = `© ${new Date().getFullYear()} ${ME.name} · Geospatially Africa`;
+}
+
+/* ── SEO: INJECT JSON-LD STRUCTURED DATA ── */
+function renderSEO(){
+  const url = SITE_URL;
+
+  /* ── Person schema ──────────────────────────────────────────
+     Tells Google who you are. Powers the knowledge panel that
+     can appear when someone searches your name directly.
+  ────────────────────────────────────────────────────────────*/
+  document.getElementById('jsonld-person').textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": ["Person", "Researcher"],
+    "name": ME.fullName,
+    "alternateName": ME.name,
+    "url": url,
+    "email": ME.email,
+    "jobTitle": ME.jobTitle,
+    "description": ME.description,
+    "knowsAbout": [
+      "Geospatial Science", "Remote Sensing", "Geographic Information Systems",
+      "Spatial Data Science", "Earth Observation", "Africa Geography",
+      "Land Cover Change Detection", "Satellite Imagery Analysis",
+      "Google Earth Engine", "QGIS", "Python", "R"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": ME.university
+    },
+    "homeLocation": {
+      "@type": "Place",
+      "name": ME.location
+    },
+    "sameAs": ME.sameAs,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": url
+    }
+  });
+
+  /* ── PodcastSeries schema ───────────────────────────────────
+     Helps Google show your podcast in search results and
+     enables rich results like episode cards in Google Search.
+     Spotify and Apple also use schema.org signals.
+  ────────────────────────────────────────────────────────────*/
+  document.getElementById('jsonld-podcast').textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "PodcastSeries",
+    "name": "Geospatially Africa",
+    "description": "A podcast exploring the power of geospatial science in understanding Africa — from urban growth and climate change to land use and infrastructure. Conversations with researchers, practitioners, and innovators shaping the continent's spatial story.",
+    "url": url + "#podcast",
+    "author": {
+      "@type": "Person",
+      "name": ME.fullName,
+      "url": url
+    },
+    "inLanguage": "en",
+    "keywords": "geospatial, Africa, GIS, remote sensing, mapping, spatial data, podcast",
+    "webFeed": PODCAST.rss || undefined,
+    "episode": EPISODES.map(e => ({
+      "@type": "PodcastEpisode",
+      "name": e.title,
+      "description": e.desc,
+      "episodeNumber": e.num,
+      "datePublished": e.date,
+      "url": e.url || url + "#podcast"
+    }))
+  });
+
+  /* ── WebSite schema ─────────────────────────────────────────
+     Enables Google's sitelinks search box — the search field
+     that sometimes appears under your site in search results.
+  ────────────────────────────────────────────────────────────*/
+  document.getElementById('jsonld-website').textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": ME.name + " — Geospatial Researcher",
+    "url": url,
+    "description": ME.description,
+    "author": {
+      "@type": "Person",
+      "name": ME.fullName
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": url + "?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  });
+
+  /* ── Dynamic <title> and <meta> per active section ──────────
+     JS-routed sites need this — Google sees whatever the page
+     title says, so we update it as the user navigates.
+     This also means if Google indexes a shared link that lands
+     on a specific "page", the title is accurate.
+  ────────────────────────────────────────────────────────────*/
+  const pageMeta = {
+    home:         { title: `${ME.name} — Geospatial PhD Researcher, Analyst & Podcast Host`,         desc: ME.description },
+    about:        { title: `About ${ME.name} — Geospatial Researcher & CV`,                          desc: `CV and background of ${ME.name}, geospatial PhD candidate and analyst specialising in remote sensing and GIS applied to Africa.` },
+    projects:     { title: `Projects — ${ME.name}`,                                                   desc: `Geospatial research and analysis projects by ${ME.name}, covering remote sensing, land cover change, urban heat islands, and more.` },
+    publications: { title: `Publications — ${ME.name}`,                                               desc: `Peer-reviewed journal articles, conference papers, and technical reports in geospatial science by ${ME.name}.` },
+    blog:         { title: `Blog — ${ME.name}`,                                                       desc: `Essays and field notes on geospatial methods, remote sensing, open data, and mapping Africa, by ${ME.name}.` },
+    podcast:      { title: `Geospatially Africa Podcast — ${ME.name}`,                                desc: `Geospatially Africa is a podcast by ${ME.name} exploring geospatial science, mapping, and spatial data across the African continent.` },
+    contact:      { title: `Contact ${ME.name} — Geospatial Researcher`,                              desc: `Get in touch with ${ME.name} for research collaborations, podcast enquiries, or geospatial consulting.` },
+  };
+
+  /* Hook into nav() to update <title> and <meta> on each navigation */
+  const _origNav = window.nav;
+  window.nav = function(page, data){
+    _origNav(page, data);
+    const m = pageMeta[page] || pageMeta.home;
+    document.title = m.title;
+    document.querySelector('meta[name="description"]').setAttribute('content', m.desc);
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', m.title);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', m.desc);
+  };
+}
+
+/* ── BOOTSTRAP ── */
+renderSEO();
+renderGlobals();
+renderHome();
+renderAbout();
+renderBlogList();
+renderPublications();
+renderProjects();
+renderPodcast();
+renderContact();
+nav('home');
+</script>
 </body>
 </html>
