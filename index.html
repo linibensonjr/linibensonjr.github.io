@@ -3,183 +3,283 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Iniobong - Geospatial Developer</title>
+  <title>Iniobong Benson - Geospatial Developer</title>
   <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-        <div class="nav-left"></div>
-        <div class="nav-right">
-          <a href="index.html">Works</a>
-          <a href="blog.html">Blog</a>
-          <a href="#">Contact</a>
-        </div>
-      </nav>
-  </header>
-
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Hi, I am Iniobong,<br><span>Geospatial Specialist</span></h1>
-        <p>
-          I'm a geospatial full-stack developer and Earth observation specialist with a passion for building fast, intelligent, and purpose-driven digital tools. With a background in hydrology, drought risk, and satellite data analysis, I develop interactive web applications and analytical pipelines using React.js, Node.js, Python, and geospatial technologies
-        </p>
-        <a href="#" class="btn">Download Resume</a>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="#home">Iniobong Benson</a>
       </div>
-      <div class="hero-image">
-        <img src="https://media.licdn.com/dms/image/v2/D4E03AQHuKfvWIYtF1A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719133119718?e=1756339200&v=beta&t=MxmcbHZxtUbgZ62hvE0xEi9jrbZK8cBVr-UsTIGEJFo" alt="Profile photo" />
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-social">
+        <a href="https://linkedin.com/in/iniobong-benson" target="_blank" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width:22px;height:22px;"></a>
+        <a href="https://github.com/linibensonjr" target="_blank" aria-label="GitHub"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" style="width:22px;height:22px;"></a>
+        <a href="https://twitter.com/iniobong_benson" target="_blank" aria-label="Twitter"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" style="width:22px;height:22px;"></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container hero-2col">
+      <div class="hero-left">
+        <h1 class="hero-title">
+          Iniobong Benson
+          <span class="title">Geospatial Developer</span>
+        </h1>
+        <p class="hero-description">
+          I build intelligent geospatial applications and analyze Earth observation data to solve real-world environmental challenges. Specializing in full-stack development, remote sensing, and hydrological modeling.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Projects</a>
+          <a href="https://drive.google.com/file/d/1_6yCHbjnDmrkx2NBgbPN_92LQ79vCofe/view?usp=sharing" target="_blank" class="btn btn-secondary">Download CV</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="https://media.licdn.com/dms/image/v2/D4E03AQHuKfvWIYtF1A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719133119718?e=1756339200&v=beta&t=MxmcbHZxtUbgZ62hvE0xEi9jrbZK8cBVr-UsTIGEJFo" alt="Iniobong Benson" class="profile-image" />
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-<section class="skills">
-    <h2>Skills</h2>
-    <p>The skills, tools, and technologies I am really good at:</p>
-    <div class="skills-icons">
-      <div class="skill">
-        <img src="https://img.icons8.com/ios-filled/50/qgis.png" alt="Express.js" />
-        <p>QGIS</p>
-      </div>
-      <div class="skill">
-        <img src="https://img.icons8.com/color/48/000000/python.png" alt="Nest.js" />
-        <p>Python</p>
-      </div>
-      <div class="skill">
-        <img src="https://img.icons8.com/fluency/48/r-project.png" alt="Socket.io" />
-        <p>R</p>
-      </div>
-      <div class="skill">
-        <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" />
-        <p>Javascript</p>
-      </div>
-      <div class="skill">
-        <img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/24/external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-shadow-tal-revivo.png
-        " alt="Socket.io" />
-        <p>Django </p>
-      </div>
-      <div class="skill">
-        <img src="https://img.icons8.com/color/48/000000/postgresql.png" alt="PostgreSQL" />
-        <p>PostgreSQL</p>
-      </div>
-     
-      <div class="skill">
-        <img src="https://img.icons8.com/color/48/000000/tailwindcss.png" alt="Tailwindcss" />
-        <p>Tailwindcss</p>
-      </div>
-     
-      <div class="skill">
-        <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" />
-        <p>Git</p>
-      </div>
-    </div>
-  </section>
-  
 
-  <section class="posts">
-    <div class="posts-header">
-      <h2>Recent posts</h2>
-      <a href="#">View all</a>
-    </div>
-    <div class="post-cards">
-      <div class="post-card">
-        <h3>Making a design system from scratch</h3>
-        <p class="meta">12 Feb 2020 &nbsp; | &nbsp; Design, Pattern</p>
-        <p>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-          Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-        </p>
-      </div>
-      <div class="post-card">
-        <h3>Creating pixel perfect icons in Figma</h3>
-        <p class="meta">12 Feb 2020 &nbsp; | &nbsp; Figma, Icon Design</p>
-        <p>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-          Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-        </p>
+  <!-- Skills Section (simple line) -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2>Skills & Technologies</h2>
+        <p>Python, JavaScript, QGIS, PostGIS, R, Django, FastAPI, Docker, Git, Tailwind CSS</p>
       </div>
     </div>
   </section>
 
-  <!-- Featured Works Section -->
-<section class="featured-works">
-    <h2>Featured works</h2>
-    <div class="featured-cards">
-      <div class="featured-card">
-        <img src="https://via.placeholder.com/300x200" alt="Designing Dashboards" />
-        <div class="featured-info">
-          <h3>Designing Dashboards</h3>
-          <p class="meta">2020 &nbsp; | &nbsp; Dashboard</p>
-          <p>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-          </p>
+  <!-- Experience Section -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <div class="section-header">
+        <h2>My Work Experience</h2>
+        <p>My journey in geospatial technology</p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-left">
+              <h3>Geospatial Intern</h3>
+              <p class="timeline-company">Deltares, Netherlands</p>
+              <span class="timeline-date">Jun - Aug 2024</span>
+            </div>
+            <div class="timeline-right">
+              <h4>Hydrological Modeling</h4>
+              <p>Developed hydrological modeling systems and spatial analysis tools for water management and flood prediction.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-left">
+              <h3>GIS Analyst</h3>
+              <p class="timeline-company">ipNX Nigeria Ltd</p>
+              <span class="timeline-date">Mar - Jul 2023</span>
+            </div>
+            <div class="timeline-right">
+              <h4>Spatial Infrastructure</h4>
+              <p>Created spatial data infrastructure and mapping solutions for telecommunications network planning.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-left">
+              <h3>Lead GIS Analyst</h3>
+              <p class="timeline-company">Kyle Christian Nigeria Ltd</p>
+              <span class="timeline-date">Nov 2021 - Feb 2023</span>
+            </div>
+            <div class="timeline-right">
+              <h4>Project Leadership</h4>
+              <p>Led spatial analysis projects and team coordination for environmental impact assessments.</p>
+            </div>
+          </div>
         </div>
       </div>
-  
-      <div class="featured-card">
-        <img src="https://via.placeholder.com/300x200" alt="Vibrant Portraits of 2020" />
-        <div class="featured-info">
-          <h3>Vibrant Portraits of 2020</h3>
-          <p class="meta">2019 &nbsp; | &nbsp; Illustration</p>
-          <p>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-          </p>
-        </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section id="publications" class="publications">
+    <div class="container">
+      <div class="section-header">
+        <h2>Publications</h2>
       </div>
-  
-      <div class="featured-card">
-        <img src="https://via.placeholder.com/300x200" alt="36 Days of Malayalam Type" />
-        <div class="featured-info">
-          <h3>36 Days of Malayalam type</h3>
-          <p class="meta">2018 &nbsp; | &nbsp; Typography</p>
-          <p>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-          </p>
-        </div>
+      <div class="pub-grid">
+        <article class="pub-card">
+          <div class="pub-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=220&fit=crop" alt="Publication 1" />
+          </div>
+          <div class="pub-content">
+            <h3>Origins of the Modern MOOC (xMOOC)</h3>
+            <p>Online education at scale: lessons from the first 100,000+ learner courses. (Sample description)</p>
+            <a href="#" class="pub-link">Read more</a>
+          </div>
+        </article>
+        <article class="pub-card">
+          <div class="pub-image">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=220&fit=crop" alt="Publication 2" />
+          </div>
+          <div class="pub-content">
+            <h3>Mechatronic Design of an Integrated Robotic Hand</h3>
+            <p>Research on robotic hand design and actuation. (Sample description)</p>
+            <a href="#" class="pub-link">Read more</a>
+          </div>
+        </article>
+        <article class="pub-card">
+          <div class="pub-image">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=220&fit=crop" alt="Publication 3" />
+          </div>
+          <div class="pub-content">
+            <h3>Deep Learning with COTS HPC Systems</h3>
+            <p>Scaling up deep learning with commodity hardware. (Sample description)</p>
+            <a href="#" class="pub-link">Read more</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>Projects</h2>
+      </div>
+      <div class="proj-grid">
+        <article class="proj-card">
+          <div class="proj-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=220&fit=crop" alt="Project 1" />
+          </div>
+          <div class="proj-content">
+            <h3>Geospatial Web Application</h3>
+            <p>Interactive platform for spatial data visualization and analysis with real-time PostGIS backend.</p>
+            <a href="#" class="proj-link">View Project</a>
+          </div>
+        </article>
+        <article class="proj-card">
+          <div class="proj-image">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=220&fit=crop" alt="Project 2" />
+          </div>
+          <div class="proj-content">
+            <h3>Satellite Data Analysis Pipeline</h3>
+            <p>Automated pipeline for processing satellite imagery using ML algorithms for environmental monitoring.</p>
+            <a href="#" class="proj-link">View Project</a>
+          </div>
+        </article>
+        <article class="proj-card">
+          <div class="proj-image">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=220&fit=crop" alt="Project 3" />
+          </div>
+          <div class="proj-content">
+            <h3>Hydrological Modeling System</h3>
+            <p>Advanced system for watershed analysis and flood prediction with interactive dashboards.</p>
+            <a href="#" class="proj-link">View Project</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="contact">
-    <div class="contact-container">
-      <div class="contact-left">
-        <h2>Let's work together</h2>
-        <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</p>
-        <div class="social-icons">
-          <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/discord.png" alt="Discord"/></a>
-          <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/facebook.png" alt="Facebook"/></a>
-          <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/dribbble.png" alt="Dribbble"/></a>
-          <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/instagram-new.png" alt="Instagram"/></a>
-          <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/behance.png" alt="Behance"/></a>
-        </div>
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <p>I'm always interested in new opportunities and collaborations. Whether you have a project in mind or just want to discuss geospatial technology, feel free to reach out.</p>
       </div>
-      <div class="contact-right">
-        <form class="contact-form">
-          <input type="text" placeholder="Name" required>
-          <input type="email" placeholder="Email" required>
-          <textarea placeholder="Type your message here" rows="4" required></textarea>
-          <button type="submit" class="btn">Submit</button>
-        </form>
+      <div class="contact-links" style="display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center;justify-content:center;">
+        <a href="mailto:iniobong.benson@example.com" class="btn btn-secondary">Email</a>
+        <a href="https://linkedin.com/in/iniobong-benson" target="_blank" class="btn btn-secondary">LinkedIn</a>
+        <a href="https://github.com/linibensonjr" target="_blank" class="btn btn-secondary">GitHub</a>
+        <a href="https://twitter.com/iniobong_benson" target="_blank" class="btn btn-secondary">Twitter</a>
       </div>
     </div>
   </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="social-icons">
-        <a href="#"><img src="https://img.icons8.com/ios-filled/20/000000/facebook.png"/></a>
-        <a href="#"><img src="https://img.icons8.com/ios-filled/20/000000/twitter.png"/></a>
-        <a href="#"><img src="https://img.icons8.com/ios-filled/20/000000/instagram-new.png"/></a>
-        <a href="#"><img src="https://img.icons8.com/ios-filled/20/000000/linkedin.png"/></a>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 Iniobong Benson. All rights reserved.</p>
+        <p>Built with ❤️ for geospatial innovation</p>
       </div>
-      <p>Copyright ©2022 All rights reserved</p>
+    </div>
     </footer>
   
-  
+  <script>
+    // Simple mobile navigation toggle
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add fade-in animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections for fade-in effect
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
