@@ -699,20 +699,20 @@ const POSTS = [
     content:`
       <p>Let's say you made some changes to your geospatial data and wish you could go back and fix it or revert the changes to a specific time. Perhaps you want a smooth way to collaborate effortlessly with colleagues on maps and spatial data. While "version control" is an exciting possibility for developers, these are challenges faced by geospatial data analysts and users. But what if there is a free solution waiting to be discovered? I may have found the solution!</p>
       <p>While working on some web development projects and becoming accustomed to using Git version control and GitHub, I started thinking about how I could apply the same version control principles to geospatial data. Is there a tool that would allow me to track changes and revert to previous versions of my geospatial data? This was the question that lingered in my mind. This led me to search for a version management system specifically designed for geospatial data.</p>
-      <h2>What Deltares Does</h2>
-      <p>Deltares is a Dutch applied research institute specialising in water, subsurface, and infrastructure. Their Delft3D suite is one of the most widely used hydrodynamic modelling frameworks in the world - used for everything from flood forecasting to offshore engineering design. The FM variant handles flexible, unstructured grids that can represent complex coastal geometries much better than older rectangular grid models.</p>
-      <h2>The Validation Problem</h2>
-      <p>A model validation framework needs to answer a deceptively simple question: how well does the model reproduce reality? In practice, this requires collecting in situ observations (tide gauge data, current meter records, CTD casts), defining appropriate skill metrics, aligning temporal and spatial scales between model output and observations, and automating the whole process so it can run across multiple model runs and time periods.</p>
+      <h2>What is Kart?</h2>
+      
       <blockquote>Kart is an open-source software project for data version control for geospatial data. The purpose of Kart is to make it easy to store your spatial data so that you can make changes to it, see those changes and push and pull those changes to other people so they can have it on their data as well. - Hamish.</blockquote>
-      <h2>Technical Stack</h2>
-      <p>The entire framework was built in Python - primarily xarray for handling NetCDF model output, pandas for observation time series, and matplotlib/cartopy for spatial visualisation. The most challenging part was handling the spatial interpolation needed to compare model output at grid cell centres with point observations from buoys and tide gauges.</p>
+      Kart is an open-source software project for data version control for geospatial data, and the purpose of Kart was to make it easy to store spatial data in a way that you can make changes to it, see those changes and push and pull those changes to other people so they can have it on their data as well.
+      <p>Some of the benefits of Kart</p>
       <ul>
-        <li>xarray + scipy.interpolate for spatial matching between model grids and in situ locations</li>
-        <li>Taylor diagrams for visualising model skill across multiple stations simultaneously</li>
-        <li>Automated HTML report generation for routine model runs</li>
+        <li>See exactly what edits were made and when. version control,</li>
+        <li>Quickly revert to a previous version of your data.</li>
+        <li>Allows branching and merging of data versions.</li>
+        <li>Collaboration with colleagues and seamlessly push and pull changes.</li>
+        <li>Open-source software, which means it allows for extensibility and future development.</li>
+        <li>Interoperable with other GIS software and data formats for seamless data exchange.</li>
       </ul>
-      <h2>What I Took Away</h2>
-      <p>Beyond the technical skills, the internship showed me how scientific software is developed in a large applied research organisation - the importance of reproducibility, documentation, and building tools that other scientists can actually use without reading 200 lines of your undocumented code first.</p>`
+    `
   },
   {
     slug:"grace-tws-drought-monitoring-horn-of-africa",
