@@ -12,7 +12,7 @@
 <link rel="canonical"        href="https://www.iniobongbenson.com">
 
 <!-- ═══════════════════════════════════════════
-     OPEN GRAPH — controls how links look on
+     OPEN GRAPH - controls how links look on
      LinkedIn, WhatsApp, Facebook, Slack etc.
 ════════════════════════════════════════════ -->
 <meta property="og:type"         content="website">
@@ -22,7 +22,7 @@
 <meta property="og:image"        content="https://www.iniobongbenson.com/og-image.png">
 <meta property="og:image:width"  content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt"    content="Iniobong Benson — Geospatial Researcher & Podcast Host">
+<meta property="og:image:alt"    content="Iniobong Benson - Geospatial Researcher & Podcast Host">
 <meta property="og:locale"       content="en_GB">
 <meta property="og:site_name"    content="Iniobong Benson">
 
@@ -35,7 +35,7 @@
 <meta name="twitter:title"       content="Iniobong Benson - Geospatial Developer & Researcher">
 <meta name="twitter:description" content="Geospatial PhD researcher and analyst specialising in remote sensing and GIS applied to Africa. Host of the Geospatially Africa podcast.">
 <meta name="twitter:image"       content="https://www.iniobongbenson.com/og-image.png">
-<meta name="twitter:image:alt"   content="Iniobong Benson — Geospatial Researcher">
+<meta name="twitter:image:alt"   content="Iniobong Benson - Geospatial Researcher">
 
 <!-- ═══════════════════════════════════════════
      ACADEMIC / SCHOLAR SIGNALS
@@ -45,7 +45,7 @@
 <meta name="citation_language"       content="en">
 
 <!-- ═══════════════════════════════════════════
-     STRUCTURED DATA — JSON-LD
+     STRUCTURED DATA - JSON-LD
      This is what makes Google show rich results:
      knowledge panel, sitelinks, podcast cards
      Injected dynamically below in renderSEO()
@@ -298,7 +298,7 @@ button{cursor:pointer;border:none;background:none;font:inherit}
 .about-body{padding:3.5rem 0 5rem}
 .about-layout{display:grid;grid-template-columns:220px 1fr;gap:4rem;align-items:start}
 
-/* Profile photo — shows image if set, initials fallback if not */
+/* Profile photo - shows image if set, initials fallback if not */
 .avatar{width:180px;height:180px;background:var(--earth);overflow:hidden;margin-bottom:1.4rem}
 .avatar img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .avatar__init{font-family:var(--fd);font-size:2.5rem;color:var(--sand);background:radial-gradient(ellipse at 40% 40%,rgba(200,152,58,.2) 0%,transparent 70%),var(--earth);width:100%;height:100%;display:flex;align-items:center;justify-content:center}
@@ -326,7 +326,7 @@ button{cursor:pointer;border:none;background:none;font:inherit}
   transition:transform .4s ease;display:block;
 }
 .photo-grid__item:hover img{transform:scale(1.05)}
-/* Size variants — apply to specific grid items */
+/* Size variants - apply to specific grid items */
 .photo-grid__item--wide{grid-column:span 2}
 .photo-grid__item--tall{grid-row:span 2}
 .photo-grid__item--large{grid-column:span 2;grid-row:span 2}
@@ -570,7 +570,7 @@ textarea.fi{resize:vertical;min-height:110px}
 <body>
 
 <!-- ═══════════════════════════════════════════════════════════
-     !! EDIT YOUR CONTENT HERE — No need to touch anything below
+     !! EDIT YOUR CONTENT HERE - No need to touch anything below
 ═══════════════════════════════════════════════════════════ -->
 <script>
 /* ─── SITE URL ─────────────────────────────────────────────────
@@ -614,7 +614,7 @@ const ABOUT_PHOTOS = [
   { url:"", caption:"At ITC, University of Twente",  size:"wide"  },
   { url:"", caption:"Fieldwork in Nigeria",           size:""      },
   { url:"", caption:"Deltares internship, Delft",     size:""      },
-  { url:"", caption:"ISDE21 — Youth Forum",           size:""      },
+  { url:"", caption:"ISDE21 - Youth Forum",           size:""      },
   { url:"", caption:"Mapping session",                size:""      },
   { url:"", caption:"Tartu, Estonia",                 size:""      },
 ];
@@ -624,8 +624,8 @@ const SOCIAL = {
   twitter:     "https://x.com/linibenson",
   linkedin:    "https://linkedin.com/in/linibenson",
   github:      "https://github.com/linibensonjr",
-  researchgate:"",                                      /* add if you have one */
-  orcid:       "",                                      /* add if you have one */
+  researchgate:"https://www.researchgate.net/profile/Iniobong-Benson",                                      /* add if you have one */
+  orcid:       "https://orcid.org/0009-0002-6652-6147",                                      /* add if you have one */
 };
 
 /* ─── PODCAST ─── */
@@ -644,75 +644,100 @@ const SKILLS = [
   { icon:"💧", name:"Hydro & Climate",    tags:["Drought Indices","Copula Models","FEWS NET","SAR"] },
 ];
 
-/* ─── FEATURED PROJECTS (shown on home — max 3) ─── */
+/* ─── FEATURED PROJECTS (shown on home - max 3) ─── */
 /* img: direct URL to a project screenshot/map image, or "" for icon fallback */
 const FEATURED_PROJECTS = [
-  { icon:"", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW4Ezp5JH-P5qokTJJ7P4fW70yif5uCHt2Yg&s", status:"MSc Thesis — 2025",         title:"GHDI: Multi-Variate Drought Index for the Greater Horn of Africa",    desc:"Developed a probabilistic copula-based drought index integrating GRACE TWS, precipitation, evapotranspiration, and soil moisture. Validated against FEWS NET.", tech:["Python","GRACE","Copula","GEE"] },
-  { icon:"🌊", img:"", status:"Internship — Deltares 2024", title:"Delft3D FM Ocean Model Validation",                                    desc:"Developed a validation framework for Deltares hydrodynamic ocean models using in situ data, and integrated geospatial workflows into modelling pipelines.", tech:["Python","Delft3D","NetCDF","GeoPandas"] },
-  { icon:"🗺️", img:"", status:"BSc Thesis — 2019",          title:"TourUyo: Web-based GIS Tourism System",                               desc:"Designed a web-based tourism information system for Uyo City using QGIS and Leaflet. Live at touruyo.github.io.", tech:["QGIS","Leaflet","JavaScript","HTML"] },
+  { icon:"", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW4Ezp5JH-P5qokTJJ7P4fW70yif5uCHt2Yg&s", status:"MSc Thesis - 2025",         title:"GHDI: Multi-Variate Drought Index for the Greater Horn of Africa",    desc:"Developed a probabilistic copula-based drought index integrating GRACE TWS, precipitation, evapotranspiration, and soil moisture. Validated against FEWS NET.", tech:["Python","GRACE","Copula","GEE"] },
+  { icon:"🌊", img:"", status:"Internship - Deltares 2024", title:"Delft3D FM Ocean Model Validation",                                    desc:"Developed a validation framework for Deltares hydrodynamic ocean models using in situ data, and integrated geospatial workflows into modelling pipelines.", tech:["Python","Delft3D","NetCDF","GeoPandas"] },
+  { icon:"🗺️", img:"", status:"BSc Thesis - 2019",          title:"TourUyo: Web-based GIS Tourism System",                               desc:"Designed a web-based tourism information system for Uyo City using QGIS and Leaflet. Live at touruyo.github.io.", tech:["QGIS","Leaflet","JavaScript","HTML"] },
 ];
 
 /* ─── ALL PROJECTS ─── */
 const ALL_PROJECTS = [
-  { icon:"💧", img:"", status:"MSc Thesis — 2025",          title:"GHDI: Multi-Variate Drought Index for the Greater Horn of Africa",          desc:"Developed the GHDI — a probabilistic copula-based drought index integrating GRACE TWS, precipitation, evapotranspiration, and soil moisture. Validated using FEWS NET and compared with SPI and ENSO across timescales.", tech:["Python","GRACE","Copula Models","GEE","R"] },
-  { icon:"🌊", img:"", status:"Internship — Deltares 2024",  title:"Delft3D FM Ocean Model Validation Framework",                               desc:"Built a validation framework for Delft3D Flexible Mesh ocean models using in situ data. Processed and visualised hydrodynamic datasets, and integrated geospatial workflows into modelling pipelines at Deltares, Delft.", tech:["Python","Delft3D","NetCDF","GeoPandas","xarray"] },
-  { icon:"📻", img:"", status:"Active — 2021–Present",        title:"Geospatially Africa Podcast",                                               desc:"Founded and host a podcast platform showcasing African and global geospatial innovations. Built and maintained the website using Django, HTML, CSS, and PostgreSQL.", tech:["Django","PostgreSQL","HTML/CSS","Science Comm"], url:"https://geospatiallyafrica.com" },
-  { icon:"🗺️", img:"", status:"BSc Thesis — 2019",           title:"TourUyo: Web-based GIS Tourism System for Uyo City",                        desc:"Designed a web-based tourism information system for Uyo Metropolis using QGIS and Leaflet. Demonstrates spatial data integration for urban tourism planning.", tech:["QGIS","Leaflet","JavaScript","HTML"], url:"https://touruyo.github.io" },
-  { icon:"🌍", img:"", status:"Volunteer — GISCorps",          title:"Geohazard Risk Mapping — Lead Flood Analyst",                               desc:"Lead flood analyst for the Geohazard Risk Mapping Initiative. Volunteer GIS analysis for URISA GISCorps and GIS-E across humanitarian and development contexts.", tech:["QGIS","ArcGIS","Flood Mapping","OSM"] },
-  { icon:"🔗", img:"", status:"Professional — ipNX 2023",      title:"Enterprise Geospatial Database & Network Routing — ipNX Nigeria",          desc:"Designed and optimised enterprise geospatial databases. Implemented network routing optimisation for fibre optic infrastructure across Nigeria.", tech:["ArcGIS","Python","SQL","Network Analysis"] },
+  { icon:"💧", img:"", status:"MSc Thesis - 2025",          title:"GHDI: Multi-Variate Drought Index for the Greater Horn of Africa",          desc:"Developed the GHDI - a probabilistic copula-based drought index integrating GRACE TWS, precipitation, evapotranspiration, and soil moisture. Validated using FEWS NET and compared with SPI and ENSO across timescales.", tech:["Python","GRACE","Copula Models","GEE","R"] },
+  { icon:"🌊", img:"", status:"Internship - Deltares 2024",  title:"Delft3D FM Ocean Model Validation Framework",                               desc:"Built a validation framework for Delft3D Flexible Mesh ocean models using in situ data. Processed and visualised hydrodynamic datasets, and integrated geospatial workflows into modelling pipelines at Deltares, Delft.", tech:["Python","Delft3D","NetCDF","GeoPandas","xarray"] },
+  { icon:"📻", img:"", status:"Active - 2021–Present",        title:"Geospatially Africa Podcast",                                               desc:"Founded and host a podcast platform showcasing African and global geospatial innovations. Built and maintained the website using Django, HTML, CSS, and PostgreSQL.", tech:["Django","PostgreSQL","HTML/CSS","Science Comm"], url:"https://geospatiallyafrica.com" },
+  { icon:"🗺️", img:"", status:"BSc Thesis - 2019",           title:"TourUyo: Web-based GIS Tourism System for Uyo City",                        desc:"Designed a web-based tourism information system for Uyo Metropolis using QGIS and Leaflet. Demonstrates spatial data integration for urban tourism planning.", tech:["QGIS","Leaflet","JavaScript","HTML"], url:"https://touruyo.github.io" },
+  { icon:"🌍", img:"", status:"Volunteer - GISCorps",          title:"Geohazard Risk Mapping - Lead Flood Analyst",                               desc:"Lead flood analyst for the Geohazard Risk Mapping Initiative. Volunteer GIS analysis for URISA GISCorps and GIS-E across humanitarian and development contexts.", tech:["QGIS","ArcGIS","Flood Mapping","OSM"] },
+  { icon:"🔗", img:"", status:"Professional - ipNX 2023",      title:"Enterprise Geospatial Database & Network Routing - ipNX Nigeria",          desc:"Designed and optimised enterprise geospatial databases. Implemented network routing optimisation for fibre optic infrastructure across Nigeria.", tech:["ArcGIS","Python","SQL","Network Analysis"] },
 ];
 
-/* ─── EPISODES — all 21 from geospatiallyafrica.com (newest first) ─── */
+/* ─── EPISODES - all 21 from geospatiallyafrica.com (newest first) ─── */
 const EPISODES = [
   { num:21, season:3, ep:3, date:"Jul 2025",  tags:["Mapping","Software & Tools"], title:"OpenAerialMap: Building a Global Hub for Free Aerial Imagery",                          desc:"Discover OpenAerialMap (OAM), the 'OpenStreetMap of imagery,' with HOT's Christiana and DK. How OAM empowers drone pilots and satellite providers to share openly licensed imagery for humanitarian mapping.", url:"https://geospatiallyafrica.com/episodes/slug-21" },
-  { num:20, season:3, ep:2, date:"Sep 2023",  tags:["GIS","Mapping"],              title:"Accelerating New Space With Affordable Satellite Systems — A Satellogic Story",          desc:"How modern state-of-the-art satellite technology is enabling constant monitoring of anywhere on the planet, and the question of affordability in the new space economy.", url:"https://geospatiallyafrica.com/episodes/slug-20" },
+  { num:20, season:3, ep:2, date:"Sep 2023",  tags:["GIS","Mapping"],              title:"Accelerating New Space With Affordable Satellite Systems - A Satellogic Story",          desc:"How modern state-of-the-art satellite technology is enabling constant monitoring of anywhere on the planet, and the question of affordability in the new space economy.", url:"https://geospatiallyafrica.com/episodes/slug-20" },
   { num:19, season:3, ep:1, date:"Jan 2023",  tags:["Software & Tools"],           title:"The Intersection of GIS and SQL: How Spatial SQL is Changing the Game",                 desc:"Exploring the capabilities of Spatial SQL with Matt Forrest, and how it unlocks the power of geospatial data across fields and industries.", url:"https://geospatiallyafrica.com/episodes/slug-19" },
-  { num:18, season:2, ep:10,date:"Dec 2022",  tags:["GIS"],                        title:"Africa Geospatial Innovation — a spotlight on Locana in Africa",                         desc:"Geospatial innovation in Africa is growing and Locana is learning a lot from this through their work on the continent. With Todd Slind.", url:"https://geospatiallyafrica.com/episodes/slug-18" },
-  { num:17, season:2, ep:9, date:"Nov 2022",  tags:["Software & Tools"],           title:"Geospatial Data Version Control with Kart",                                               desc:"Kart provides distributed version control for geospatial and tabular data, storing it in Git at the row and cell level — enabling GIS workflows without plugins.", url:"https://geospatiallyafrica.com/episodes/slug-17" },
-  { num:16, season:2, ep:8, date:"Oct 2022",  tags:["GIS","Software & Tools"],     title:"Getting Started with Africa Geoportal",                                                   desc:"How young African geospatial professionals can access ESRI tools, ArcGIS Online, Story Map, Digital Earth Africa datasets and more — completely free.", url:"https://geospatiallyafrica.com/episodes/slug-16" },
-  { num:15, season:2, ep:7, date:"Sep 2022",  tags:["Others"],                     title:"Volunteering to Build Your Profile",                                                       desc:"Building your portfolio as a geospatial professional through volunteering — improving skills, gaining experience, and building a meaningful career foundation.", url:"https://geospatiallyafrica.com/episodes/slug-15" },
-  { num:14, season:2, ep:6, date:"Aug 2022",  tags:["Software & Tools"],           title:"Spatialnode — A Portfolio Platform for Geospatial People",                                desc:"Conversation with Emmanuel Jolaiya, founder of Spatial Node, on building a portfolio platform purpose-built for the geospatial community.", url:"https://geospatiallyafrica.com/episodes/slug-14" },
+  { num:18, season:2, ep:10,date:"Dec 2022",  tags:["GIS"],                        title:"Africa Geospatial Innovation - a spotlight on Locana in Africa",                         desc:"Geospatial innovation in Africa is growing and Locana is learning a lot from this through their work on the continent. With Todd Slind.", url:"https://geospatiallyafrica.com/episodes/slug-18" },
+  { num:17, season:2, ep:9, date:"Nov 2022",  tags:["Software & Tools"],           title:"Geospatial Data Version Control with Kart",                                               desc:"Kart provides distributed version control for geospatial and tabular data, storing it in Git at the row and cell level - enabling GIS workflows without plugins.", url:"https://geospatiallyafrica.com/episodes/slug-17" },
+  { num:16, season:2, ep:8, date:"Oct 2022",  tags:["GIS","Software & Tools"],     title:"Getting Started with Africa Geoportal",                                                   desc:"How young African geospatial professionals can access ESRI tools, ArcGIS Online, Story Map, Digital Earth Africa datasets and more - completely free.", url:"https://geospatiallyafrica.com/episodes/slug-16" },
+  { num:15, season:2, ep:7, date:"Sep 2022",  tags:["Others"],                     title:"Volunteering to Build Your Profile",                                                       desc:"Building your portfolio as a geospatial professional through volunteering - improving skills, gaining experience, and building a meaningful career foundation.", url:"https://geospatiallyafrica.com/episodes/slug-15" },
+  { num:14, season:2, ep:6, date:"Aug 2022",  tags:["Software & Tools"],           title:"Spatialnode - A Portfolio Platform for Geospatial People",                                desc:"Conversation with Emmanuel Jolaiya, founder of Spatial Node, on building a portfolio platform purpose-built for the geospatial community.", url:"https://geospatiallyafrica.com/episodes/slug-14" },
   { num:13, season:2, ep:5, date:"Jul 2022",  tags:["Software & Tools"],           title:"Getting Started with OSGeoLive",                                                          desc:"OSGeoLive is a self-contained bootable environment that lets you try a wide variety of open source geospatial software without installing anything.", url:"https://geospatiallyafrica.com/episodes/slug-13" },
-  { num:12, season:2, ep:4, date:"Jun 2022",  tags:["GIS"],                        title:"GIS in Business — AddisMap",                                                              desc:"How Alazar Tekle and the AddisMap team used open source geospatial data to build an interactive city guide of Addis Ababa, Ethiopia.", url:"https://geospatiallyafrica.com/episodes/slug-12" },
-  { num:11, season:2, ep:3, date:"May 2022",  tags:["Mapping"],                    title:"Using Drones in Remote Sensing",                                                           desc:"The role of drones in remote sensing — from small to large scale mapping projects, monitoring, and disaster response.", url:"https://geospatiallyafrica.com/episodes/slug-11" },
-  { num:10, season:2, ep:2, date:"Apr 2022",  tags:["GIS"],                        title:"GIS for Energy Needs Assessment",                                                          desc:"The role of GIS in the energy sector — from needs assessment to supply planning and distribution.", url:"https://geospatiallyafrica.com/episodes/slug-10" },
-  { num:9,  season:2, ep:1, date:"Jan 2022",  tags:["Others"],                     title:"The Future is Geospatial",                                                                 desc:"A discussion of geospatial trends to look forward to in 2022 — the first episode of Season 2.", url:"https://geospatiallyafrica.com/episodes/slug-9" },
+  { num:12, season:2, ep:4, date:"Jun 2022",  tags:["GIS"],                        title:"GIS in Business - AddisMap",                                                              desc:"How Alazar Tekle and the AddisMap team used open source geospatial data to build an interactive city guide of Addis Ababa, Ethiopia.", url:"https://geospatiallyafrica.com/episodes/slug-12" },
+  { num:11, season:2, ep:3, date:"May 2022",  tags:["Mapping"],                    title:"Using Drones in Remote Sensing",                                                           desc:"The role of drones in remote sensing - from small to large scale mapping projects, monitoring, and disaster response.", url:"https://geospatiallyafrica.com/episodes/slug-11" },
+  { num:10, season:2, ep:2, date:"Apr 2022",  tags:["GIS"],                        title:"GIS for Energy Needs Assessment",                                                          desc:"The role of GIS in the energy sector - from needs assessment to supply planning and distribution.", url:"https://geospatiallyafrica.com/episodes/slug-10" },
+  { num:9,  season:2, ep:1, date:"Jan 2022",  tags:["Others"],                     title:"The Future is Geospatial",                                                                 desc:"A discussion of geospatial trends to look forward to in 2022 - the first episode of Season 2.", url:"https://geospatiallyafrica.com/episodes/slug-9" },
   { num:8,  season:1, ep:8, date:"Dec 2021",  tags:["Others"],                     title:"2021 in Reviews and Awards in the Geosphere",                                             desc:"Highlights of the podcast's first year: geospatial engineering, mentoring, State of the Map Africa, and recognition awards in the geosphere.", url:"https://geospatiallyafrica.com/episodes/slug-8" },
   { num:7,  season:1, ep:7, date:"Nov 2021",  tags:["Others"],                     title:"Being a Geospatial Engineer",                                                              desc:"Laura Mugeha on what it takes to be a geospatial engineer, her journey, and advice for those looking to start out in the field.", url:"https://geospatiallyafrica.com/episodes/slug-7" },
-  { num:6,  season:1, ep:6, date:"Oct 2021",  tags:["Mapping","Humanitarian"],     title:"Digital Mapping in the Humanitarian Context with Janet Chapman (Crowd2Map)",             desc:"Crowd2Map Tanzania — an entirely volunteer crowdsourced mapping project that has been mapping rural Tanzania on OpenStreetMap since 2015.", url:"https://geospatiallyafrica.com/episodes/slug-6" },
-  { num:5,  season:1, ep:5, date:"Sep 2021",  tags:["Others"],                     title:"Mentoring and Volunteering in the Geospatial Industry",                                   desc:"Why everyone needs a mentor, whether just starting out or already an expert — exploring mentorship and volunteering in geospatial.", url:"https://geospatiallyafrica.com/episodes/slug-5" },
-  { num:4,  season:1, ep:4, date:"Aug 2021",  tags:["Others"],                     title:"Introductions, Our Why and Some News",                                                    desc:"The founding episode of Geospatially Africa — answering the Why behind the podcast and introducing the hosts.", url:"https://geospatiallyafrica.com/episodes/slug-4" },
-  { num:3,  season:1, ep:3, date:"Jul 2021",  tags:["Mapping"],                    title:"State of the Map Africa — Bringing OSM Communities in Africa Together",                  desc:"The State of the Map Africa conference celebrates the culture of open mapping, open data, GIS and its impact across Africa.", url:"https://geospatiallyafrica.com/episodes/slug-3" },
+  { num:6,  season:1, ep:6, date:"Oct 2021",  tags:["Mapping","Humanitarian"],     title:"Digital Mapping in the Humanitarian Context with Janet Chapman (Crowd2Map)",             desc:"Crowd2Map Tanzania - an entirely volunteer crowdsourced mapping project that has been mapping rural Tanzania on OpenStreetMap since 2015.", url:"https://geospatiallyafrica.com/episodes/slug-6" },
+  { num:5,  season:1, ep:5, date:"Sep 2021",  tags:["Others"],                     title:"Mentoring and Volunteering in the Geospatial Industry",                                   desc:"Why everyone needs a mentor, whether just starting out or already an expert - exploring mentorship and volunteering in geospatial.", url:"https://geospatiallyafrica.com/episodes/slug-5" },
+  { num:4,  season:1, ep:4, date:"Aug 2021",  tags:["Others"],                     title:"Introductions, Our Why and Some News",                                                    desc:"The founding episode of Geospatially Africa - answering the Why behind the podcast and introducing the hosts.", url:"https://geospatiallyafrica.com/episodes/slug-4" },
+  { num:3,  season:1, ep:3, date:"Jul 2021",  tags:["Mapping"],                    title:"State of the Map Africa - Bringing OSM Communities in Africa Together",                  desc:"The State of the Map Africa conference celebrates the culture of open mapping, open data, GIS and its impact across Africa.", url:"https://geospatiallyafrica.com/episodes/slug-3" },
   { num:2,  season:1, ep:2, date:"Jun 2021",  tags:["GIS","Mapping"],              title:"Introducing the Digital Earth Africa Platform",                                            desc:"Digital Earth Africa provides analysis-ready satellite data to address sustainable development challenges across all 54 countries in Africa.", url:"https://geospatiallyafrica.com/episodes/slug-2" },
-  { num:1,  season:1, ep:1, date:"May 2021",  tags:["Mapping","Humanitarian"],     title:"Using Geospatial Technology in Geohazard Mapping Saves Lives",                          desc:"How geospatial technology is applied in mapping, visualising, and identifying geohazards — contributing to early warning systems and risk management.", url:"https://geospatiallyafrica.com/episodes/slug" },
+  { num:1,  season:1, ep:1, date:"May 2021",  tags:["Mapping","Humanitarian"],     title:"Using Geospatial Technology in Geohazard Mapping Saves Lives",                          desc:"How geospatial technology is applied in mapping, visualising, and identifying geohazards - contributing to early warning systems and risk management.", url:"https://geospatiallyafrica.com/episodes/slug" },
 ];
 
 /* ─── BLOG POSTS ─── */
 const POSTS = [
   {
+    slug:"to-kart-or-not-to-kart-that-is-the-question",
+    date:"Oct 2025", dateSort:"2025-10-01",
+    tags:["GIS","Python", "QGIS", "Software & Tools"],
+    title:"To Kart or not to Kart? — That is the Question",
+    excerpt:"Kart is an open-source software project for data version control for geospatial data. The purpose of Kart is to make it easy to store your spatial data so that you can make changes to it, see those changes and push and pull those changes to other people so they can have it on their data as well.",
+    readTime:7,
+    content:`
+      <p>Let's say you made some changes to your geospatial data and wish you could go back and fix it or revert the changes to a specific time. Perhaps you want a smooth way to collaborate effortlessly with colleagues on maps and spatial data. While "version control" is an exciting possibility for developers, these are challenges faced by geospatial data analysts and users. But what if there is a free solution waiting to be discovered? I may have found the solution!</p>
+      <p>While working on some web development projects and becoming accustomed to using Git version control and GitHub, I started thinking about how I could apply the same version control principles to geospatial data. Is there a tool that would allow me to track changes and revert to previous versions of my geospatial data? This was the question that lingered in my mind. This led me to search for a version management system specifically designed for geospatial data.</p>
+      <h2>What Deltares Does</h2>
+      <p>Deltares is a Dutch applied research institute specialising in water, subsurface, and infrastructure. Their Delft3D suite is one of the most widely used hydrodynamic modelling frameworks in the world - used for everything from flood forecasting to offshore engineering design. The FM variant handles flexible, unstructured grids that can represent complex coastal geometries much better than older rectangular grid models.</p>
+      <h2>The Validation Problem</h2>
+      <p>A model validation framework needs to answer a deceptively simple question: how well does the model reproduce reality? In practice, this requires collecting in situ observations (tide gauge data, current meter records, CTD casts), defining appropriate skill metrics, aligning temporal and spatial scales between model output and observations, and automating the whole process so it can run across multiple model runs and time periods.</p>
+      <blockquote>Kart is an open-source software project for data version control for geospatial data. The purpose of Kart is to make it easy to store your spatial data so that you can make changes to it, see those changes and push and pull those changes to other people so they can have it on their data as well. - Hamish.</blockquote>
+      <h2>Technical Stack</h2>
+      <p>The entire framework was built in Python - primarily xarray for handling NetCDF model output, pandas for observation time series, and matplotlib/cartopy for spatial visualisation. The most challenging part was handling the spatial interpolation needed to compare model output at grid cell centres with point observations from buoys and tide gauges.</p>
+      <ul>
+        <li>xarray + scipy.interpolate for spatial matching between model grids and in situ locations</li>
+        <li>Taylor diagrams for visualising model skill across multiple stations simultaneously</li>
+        <li>Automated HTML report generation for routine model runs</li>
+      </ul>
+      <h2>What I Took Away</h2>
+      <p>Beyond the technical skills, the internship showed me how scientific software is developed in a large applied research organisation - the importance of reproducibility, documentation, and building tools that other scientists can actually use without reading 200 lines of your undocumented code first.</p>`
+  },
+  {
     slug:"grace-tws-drought-monitoring-horn-of-africa",
     date:"Feb 2025", dateSort:"2025-02-01",
     tags:["Drought","Remote Sensing","Research"],
     title:"What GRACE Gravity Data Can Tell Us About Drought in the Horn of Africa",
-    excerpt:"How measuring tiny changes in Earth's gravitational field from space gives us one of the best tools for monitoring terrestrial water storage — and drought — at continental scale.",
+    excerpt:"How measuring tiny changes in Earth's gravitational field from space gives us one of the best tools for monitoring terrestrial water storage - and drought - at continental scale.",
     readTime:9,
     content:`
-      <p>The Horn of Africa is no stranger to drought. The region experiences some of the most severe and recurrent drought cycles on the planet, affecting food security and livelihoods for hundreds of millions of people. Yet monitoring drought here is genuinely difficult — ground-based hydrological station networks are sparse, and satellite optical imagery tells you about the land surface but not what's happening underground.</p>
-      <h2>Enter GRACE — Gravity Recovery and Climate Experiment</h2>
-      <p>GRACE and its successor GRACE-FO are perhaps the most underappreciated satellite missions in earth observation. Instead of imaging the land surface, they measure tiny changes in Earth's gravitational field caused by shifting masses of water. When groundwater is depleted, when soil moisture drops, when lakes shrink — the mass of water in that region decreases, and GRACE detects it.</p>
-      <blockquote>GRACE is essentially a scale for the planet. It weighs water — and it tells us when water is disappearing.</blockquote>
-      <h2>Building the GHDI — A Multi-Variate Drought Index</h2>
-      <p>For my MSc thesis, I developed the GHDI (Greater Horn Drought Index) — a probabilistic drought index that integrates GRACE Terrestrial Water Storage (TWS) anomalies with precipitation, evapotranspiration, and soil moisture data. The core challenge with existing indices like SPI is that they're univariate — they measure one variable at a time. Real drought is multivariate: groundwater, soil moisture, and atmospheric demand all contribute simultaneously.</p>
-      <div class="callout"><strong>Copula modelling</strong> allows you to model the joint probability distribution of multiple correlated variables — capturing the combined drought signal that no single variable can represent alone. This is the mathematical foundation of the GHDI.</div>
+      <p>The Horn of Africa is no stranger to drought. The region experiences some of the most severe and recurrent drought cycles on the planet, affecting food security and livelihoods for hundreds of millions of people. Yet monitoring drought here is genuinely difficult - ground-based hydrological station networks are sparse, and satellite optical imagery tells you about the land surface but not what's happening underground.</p>
+      <h2>Enter GRACE - Gravity Recovery and Climate Experiment</h2>
+      <p>GRACE and its successor GRACE-FO are perhaps the most underappreciated satellite missions in earth observation. Instead of imaging the land surface, they measure tiny changes in Earth's gravitational field caused by shifting masses of water. When groundwater is depleted, when soil moisture drops, when lakes shrink - the mass of water in that region decreases, and GRACE detects it.</p>
+      <blockquote>GRACE is essentially a scale for the planet. It weighs water - and it tells us when water is disappearing.</blockquote>
+      <h2>Building the GHDI - A Multi-Variate Drought Index</h2>
+      <p>For my MSc thesis, I developed the GHDI (Greater Horn Drought Index) - a probabilistic drought index that integrates GRACE Terrestrial Water Storage (TWS) anomalies with precipitation, evapotranspiration, and soil moisture data. The core challenge with existing indices like SPI is that they're univariate - they measure one variable at a time. Real drought is multivariate: groundwater, soil moisture, and atmospheric demand all contribute simultaneously.</p>
+      <div class="callout"><strong>Copula modelling</strong> allows you to model the joint probability distribution of multiple correlated variables - capturing the combined drought signal that no single variable can represent alone. This is the mathematical foundation of the GHDI.</div>
       <h2>Validation Against FEWS NET</h2>
-      <p>The GHDI was validated against FEWS NET (Famine Early Warning Systems Network) drought classifications — the gold standard for humanitarian drought assessment in the region. The index showed strong correspondence with documented drought events, including the 2010–2011 and 2016–2017 droughts, which were among the most severe in recorded history for the Horn.</p>
+      <p>The GHDI was validated against FEWS NET (Famine Early Warning Systems Network) drought classifications - the gold standard for humanitarian drought assessment in the region. The index showed strong correspondence with documented drought events, including the 2010–2011 and 2016–2017 droughts, which were among the most severe in recorded history for the Horn.</p>
       <ul>
         <li>GHDI captured drought onset 1–3 months earlier than SPI in several test periods</li>
         <li>Stronger correlation with FEWS NET IPC classifications than individual satellite variables</li>
-        <li>ENSO signal clearly captured — La Niña-driven droughts clearly identifiable in the index time series</li>
+        <li>ENSO signal clearly captured - La Niña-driven droughts clearly identifiable in the index time series</li>
       </ul>
       <h2>Why This Matters</h2>
-      <p>Earlier drought detection means earlier humanitarian response — and in contexts where food insecurity escalates rapidly, weeks matter. Probabilistic indices also give decision-makers uncertainty estimates, not just point predictions. The GHDI is a step toward more operationally useful drought monitoring for one of the world's most climate-vulnerable regions.</p>
+      <p>Earlier drought detection means earlier humanitarian response - and in contexts where food insecurity escalates rapidly, weeks matter. Probabilistic indices also give decision-makers uncertainty estimates, not just point predictions. The GHDI is a step toward more operationally useful drought monitoring for one of the world's most climate-vulnerable regions.</p>
     `
   },
   {
@@ -720,47 +745,47 @@ const POSTS = [
     date:"Oct 2024", dateSort:"2024-10-01",
     tags:["Hydrodynamics","Python","Earth Observation"],
     title:"Validating Ocean Models with In Situ Data: Lessons from My Deltares Internship",
-    excerpt:"How you actually check whether a state-of-the-art hydrodynamic model is telling the truth — and what I learned building a validation framework at Deltares.",
+    excerpt:"How you actually check whether a state-of-the-art hydrodynamic model is telling the truth - and what I learned building a validation framework at Deltares.",
     readTime:7,
     content:`
-      <p>Hydrodynamic models are everywhere in climate science, coastal engineering, and flood risk assessment. But how do you know if a model is actually right? That's the question I spent my internship at Deltares working on — building a systematic validation framework for Delft3D Flexible Mesh (FM) ocean models.</p>
+      <p>Hydrodynamic models are everywhere in climate science, coastal engineering, and flood risk assessment. But how do you know if a model is actually right? That's the question I spent my internship at Deltares working on - building a systematic validation framework for Delft3D Flexible Mesh (FM) ocean models.</p>
       <h2>What Deltares Does</h2>
-      <p>Deltares is a Dutch applied research institute specialising in water, subsurface, and infrastructure. Their Delft3D suite is one of the most widely used hydrodynamic modelling frameworks in the world — used for everything from flood forecasting to offshore engineering design. The FM variant handles flexible, unstructured grids that can represent complex coastal geometries much better than older rectangular grid models.</p>
+      <p>Deltares is a Dutch applied research institute specialising in water, subsurface, and infrastructure. Their Delft3D suite is one of the most widely used hydrodynamic modelling frameworks in the world - used for everything from flood forecasting to offshore engineering design. The FM variant handles flexible, unstructured grids that can represent complex coastal geometries much better than older rectangular grid models.</p>
       <h2>The Validation Problem</h2>
       <p>A model validation framework needs to answer a deceptively simple question: how well does the model reproduce reality? In practice, this requires collecting in situ observations (tide gauge data, current meter records, CTD casts), defining appropriate skill metrics, aligning temporal and spatial scales between model output and observations, and automating the whole process so it can run across multiple model runs and time periods.</p>
-      <blockquote>The hardest part of model validation isn't the statistics — it's the data engineering. Getting observations and model output to speak the same language is where most of the work lives.</blockquote>
+      <blockquote>The hardest part of model validation isn't the statistics - it's the data engineering. Getting observations and model output to speak the same language is where most of the work lives.</blockquote>
       <h2>Technical Stack</h2>
-      <p>The entire framework was built in Python — primarily xarray for handling NetCDF model output, pandas for observation time series, and matplotlib/cartopy for spatial visualisation. The most challenging part was handling the spatial interpolation needed to compare model output at grid cell centres with point observations from buoys and tide gauges.</p>
+      <p>The entire framework was built in Python - primarily xarray for handling NetCDF model output, pandas for observation time series, and matplotlib/cartopy for spatial visualisation. The most challenging part was handling the spatial interpolation needed to compare model output at grid cell centres with point observations from buoys and tide gauges.</p>
       <ul>
         <li>xarray + scipy.interpolate for spatial matching between model grids and in situ locations</li>
         <li>Taylor diagrams for visualising model skill across multiple stations simultaneously</li>
         <li>Automated HTML report generation for routine model runs</li>
       </ul>
       <h2>What I Took Away</h2>
-      <p>Beyond the technical skills, the internship showed me how scientific software is developed in a large applied research organisation — the importance of reproducibility, documentation, and building tools that other scientists can actually use without reading 200 lines of your undocumented code first.</p>
+      <p>Beyond the technical skills, the internship showed me how scientific software is developed in a large applied research organisation - the importance of reproducibility, documentation, and building tools that other scientists can actually use without reading 200 lines of your undocumented code first.</p>
     `
   },
   {
     slug:"geospatially-africa-podcast-story",
     date:"May 2024", dateSort:"2024-05-01",
     tags:["Podcast","Africa","Community"],
-    title:"Three Years of Geospatially Africa — What Starting a Podcast Taught Me About the GIS Community",
+    title:"Three Years of Geospatially Africa - What Starting a Podcast Taught Me About the GIS Community",
     excerpt:"In 2021 I started a podcast to spotlight geospatial innovation in Africa. Here's what I've learned about community, consistency, and the state of the discipline on the continent.",
     readTime:6,
     content:`
-      <p>In May 2021 I launched the first episode of Geospatially Africa from Nigeria with very little idea what I was doing. Three years and 21 episodes later, the podcast has grown into something I'm genuinely proud of — a platform that has hosted conversations with researchers, engineers, and practitioners from across Africa and the world.</p>
+      <p>In May 2021 I launched the first episode of Geospatially Africa from Nigeria with very little idea what I was doing. Three years and 21 episodes later, the podcast has grown into something I'm genuinely proud of - a platform that has hosted conversations with researchers, engineers, and practitioners from across Africa and the world.</p>
       <h2>Why I Started It</h2>
-      <p>The immediate motivation was simple: I was consuming a lot of geospatial content — podcasts, YouTube channels, conferences — and very little of it reflected the African context I was working in. The tools being discussed were often inaccessible or irrelevant to practitioners in Lagos or Nairobi. The case studies were almost never African. I wanted to change that ratio, even by a small amount.</p>
+      <p>The immediate motivation was simple: I was consuming a lot of geospatial content - podcasts, YouTube channels, conferences - and very little of it reflected the African context I was working in. The tools being discussed were often inaccessible or irrelevant to practitioners in Lagos or Nairobi. The case studies were almost never African. I wanted to change that ratio, even by a small amount.</p>
       <blockquote>There is an enormous amount of excellent geospatial work happening in Africa. It just wasn't being amplified the way comparable work in Europe or North America was.</blockquote>
       <h2>What 21 Episodes Taught Me</h2>
-      <p>Consistency is the hardest part of any independent media project. Life — an MSc, internships, moving countries — competes with a production schedule. The episodes I'm most proud of are the ones that required the most preparation: the Spatial SQL conversation with Matt Forrest, the OpenAerialMap episode with HOT, the Digital Earth Africa platform introduction.</p>
+      <p>Consistency is the hardest part of any independent media project. Life - an MSc, internships, moving countries - competes with a production schedule. The episodes I'm most proud of are the ones that required the most preparation: the Spatial SQL conversation with Matt Forrest, the OpenAerialMap episode with HOT, the Digital Earth Africa platform introduction.</p>
       <ul>
-        <li>The GIS community in Africa is deeply connected internationally — guests consistently led to other guests across the continent</li>
+        <li>The GIS community in Africa is deeply connected internationally - guests consistently led to other guests across the continent</li>
         <li>Technical topics attract a smaller but more engaged audience than career and community episodes</li>
-        <li>Building a Django-backed website for the podcast was a project in itself — and taught me more about web development than any course did</li>
+        <li>Building a Django-backed website for the podcast was a project in itself - and taught me more about web development than any course did</li>
       </ul>
       <h2>What's Next</h2>
-      <p>Season 4 is in planning. I want to do more deep-dive technical episodes — bringing in researchers working on specific datasets, methods, and tools — alongside the broader community conversations. If you're doing interesting geospatial work in or about Africa, I'd love to hear from you.</p>
+      <p>Season 4 is in planning. I want to do more deep-dive technical episodes - bringing in researchers working on specific datasets, methods, and tools - alongside the broader community conversations. If you're doing interesting geospatial work in or about Africa, I'd love to hear from you.</p>
     `
   },
   {
@@ -771,12 +796,12 @@ const POSTS = [
     excerpt:"Discrete Global Grid Systems are quietly reshaping how geospatial data is indexed, stored, and queried at global scale. Here's what they are and why they matter.",
     readTime:8,
     content:`
-      <p>If you've spent time in the geospatial world, you're used to data organised around rectangular grids, vector polygons, or point clouds. DGGS — Discrete Global Grid Systems — offer something fundamentally different: a globally consistent, hierarchical spatial index that covers the entire Earth without the distortions and edge effects that plague traditional projections and grids.</p>
+      <p>If you've spent time in the geospatial world, you're used to data organised around rectangular grids, vector polygons, or point clouds. DGGS - Discrete Global Grid Systems - offer something fundamentally different: a globally consistent, hierarchical spatial index that covers the entire Earth without the distortions and edge effects that plague traditional projections and grids.</p>
       <h2>The Problem DGGS Solves</h2>
-      <p>Traditional spatial data architectures were designed for regional or national scale. When you try to work at global scale — integrating data from multiple satellite sensors, multiple projections, multiple resolutions — the seams show. Tiles don't align, projections distort, queries become expensive. DGGS was designed for a world where global-scale spatial analysis is routine.</p>
+      <p>Traditional spatial data architectures were designed for regional or national scale. When you try to work at global scale - integrating data from multiple satellite sensors, multiple projections, multiple resolutions - the seams show. Tiles don't align, projections distort, queries become expensive. DGGS was designed for a world where global-scale spatial analysis is routine.</p>
       <h2>How It Works</h2>
-      <p>A DGGS divides the Earth's surface into a hierarchy of discrete cells — typically hexagons or triangles — that tessellate without gaps or overlaps at each resolution level. Each cell has a unique identifier, and cells at different resolutions nest consistently. This makes multi-resolution analysis, data aggregation, and spatial joins fundamentally simpler operations than in traditional grid or vector systems.</p>
-      <blockquote>Think of DGGS like a postal code system for the entire planet — but hierarchical, globally consistent, and designed for computation rather than human readability.</blockquote>
+      <p>A DGGS divides the Earth's surface into a hierarchy of discrete cells - typically hexagons or triangles - that tessellate without gaps or overlaps at each resolution level. Each cell has a unique identifier, and cells at different resolutions nest consistently. This makes multi-resolution analysis, data aggregation, and spatial joins fundamentally simpler operations than in traditional grid or vector systems.</p>
+      <blockquote>Think of DGGS like a postal code system for the entire planet - but hierarchical, globally consistent, and designed for computation rather than human readability.</blockquote>
       <h2>Real-World Applications</h2>
       <ul>
         <li>H3 (Uber's hexagonal DGGS) is now widely used for mobility analytics, logistics, and urban data aggregation</li>
@@ -784,7 +809,7 @@ const POSTS = [
         <li>Digital Earth Australia and Digital Earth Africa use DGGS concepts to provide consistent analysis-ready data</li>
       </ul>
       <h2>Getting Started</h2>
-      <p>The easiest entry point is H3-pandas — a Python library that bridges the H3 DGGS with the pandas/GeoPandas ecosystem. For global remote sensing applications, the OGC DGGS standard and associated open implementations are the more rigorous starting point. At Geolynx, I work directly on DGGS platform advocacy — helping developers and analysts understand and adopt these standards.</p>
+      <p>The easiest entry point is H3-pandas - a Python library that bridges the H3 DGGS with the pandas/GeoPandas ecosystem. For global remote sensing applications, the OGC DGGS standard and associated open implementations are the more rigorous starting point. At Geolynx, I work directly on DGGS platform advocacy - helping developers and analysts understand and adopt these standards.</p>
     `
   },
 ];
@@ -795,14 +820,14 @@ const PUBLICATIONS = [
     year:2025, type:"MSc Thesis",
     title:"A Novel Multi-Variate Drought Index Based on GRACE TWS, Precipitation, Evapotranspiration, and Soil Moisture for Drought Monitoring in the Greater Horn of Africa",
     authors:"<strong>Iniobong Benson</strong>",
-    venue:"University of Twente / ITC — GEM Erasmus+ MSc Thesis, 2025",
+    venue:"University of Twente / ITC - GEM Erasmus+ MSc Thesis, 2025",
     links:[{label:"Full Thesis",url:"https://purl.utwente.nl/essays/108070"}]
   },
   {
     year:2021, type:"Preprint",
     title:"Flood Susceptibility Mapping of Internally Displaced Person Camps in Maiduguri, Borno State, Nigeria",
     authors:"Ogunwumi, T., Njoku, C., Uzoezie, A., & <strong>Benson, I.</strong>",
-    venue:"Research Square — Preprint, 2021",
+    venue:"Research Square - Preprint, 2021",
     links:[{label:"DOI",url:"https://doi.org/10.21203/rs.3.rs-1721944/v1"}]
   },
 ];
@@ -816,7 +841,7 @@ const EDUCATION = [
     bullets:[
       "Erasmus+ Scholarship recipient",
       "Thesis: A Novel Multi-Variate Drought Index Based on GRACE TWS, Precipitation, Evapotranspiration, and Soil Moisture for Drought Monitoring in the Greater Horn of Africa",
-      "Developed the GHDI — a probabilistic copula-based drought index; validated using FEWS NET and compared with SPI and ENSO across timescales",
+      "Developed the GHDI - a probabilistic copula-based drought index; validated using FEWS NET and compared with SPI and ENSO across timescales",
       '<a href="https://purl.utwente.nl/essays/108070" target="_blank" style="color:var(--accent)">Read thesis →</a>',
     ]
   },
@@ -1036,9 +1061,9 @@ const CV_SKILLS = [
         <div>
           <div class="cv-sec">
             <h2 class="cv-sec__title">About</h2>
-            <p class="cv-intro">I'm Iniobong Benson — a geospatial analyst and earth observation specialist based in Tartu, Estonia. I hold an MSc in Geo-information Science and Earth Observation for Environmental Modelling and Management (GEM Erasmus+), awarded jointly by the University of Tartu and ITC, University of Twente. My MSc thesis developed the GHDI — a novel probabilistic copula-based drought index integrating GRACE TWS, precipitation, evapotranspiration, and soil moisture for monitoring drought in the Greater Horn of Africa.</p>
-            <p class="cv-intro" style="margin-top:.8rem;">I currently work as a DGGS & Geospatial Data Platform Advocate at Geolynx OÜ in Estonia, where I build technical resources for developers and GIS analysts. Previously I interned at Deltares in the Netherlands, working on hydrodynamic model validation for ocean systems.</p>
-            <p class="cv-intro" style="margin-top:.8rem;">Since 2021 I've been the founder and host of <em>Geospatially Africa</em> — a podcast dedicated to showcasing geospatial innovations from Africa and the world, with over 21 episodes covering everything from SAR and drone mapping to open data and GIS careers.</p>
+            <p class="cv-intro">A geospatial developer and earth observation specialist based in Tartu, Estonia. I hold an MSc in Geo-information Science and Earth Observation for Environmental Modelling and Management (GEM Erasmus+), awarded jointly by the University of Tartu and ITC, University of Twente. My MSc thesis developed the GHDI - a novel probabilistic copula-based drought index integrating GRACE TWS, precipitation, evapotranspiration, and soil moisture for monitoring drought in the Greater Horn of Africa.</p>
+            <!-- <p class="cv-intro" style="margin-top:.8rem;">I currently work as a DGGS & Geospatial Data Platform Advocate at Geolynx OÜ in Estonia, where I build technical resources for developers and GIS analysts. Previously I interned at Deltares in the Netherlands, working on hydrodynamic model validation for ocean systems.</p> -->
+            <p class="cv-intro" style="margin-top:.8rem;">Since 2021 I've been the founder and host of <em>Geospatially Africa</em> - a podcast dedicated to showcasing geospatial innovations from Africa and the world, with over 21 episodes covering everything from SAR and drone mapping to open data and GIS careers.</p>
           </div>
           <div class="cv-sec">
             <h2 class="cv-sec__title">Education</h2>
@@ -1070,13 +1095,13 @@ const CV_SKILLS = [
             </div>
             <div class="cv-entry">
               <div class="cv-entry__period"><span class="cv-entry__year">2021</span>Conference</div>
-              <div><div class="cv-entry__role">Youth Forum on Digital Earth — ISDE21</div><div class="cv-entry__place">Presented work on digital geospatial innovations for Africa</div></div>
+              <div><div class="cv-entry__role">Youth Forum on Digital Earth - ISDE21</div><div class="cv-entry__place">Presented work on digital geospatial innovations for Africa</div></div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry__period"><span class="cv-entry__year">Active</span>Volunteer</div>
               <div>
-                <div class="cv-entry__role">GISCorps (URISA) — Volunteer Analyst</div>
-                <div class="cv-entry__place">GIS-E Geospatial Volunteer · Geohazard Risk Mapping Initiative — Lead Flood Analyst</div>
+                <div class="cv-entry__role">GISCorps (URISA) - Volunteer Analyst</div>
+                <div class="cv-entry__place">GIS-E Geospatial Volunteer · Geohazard Risk Mapping Initiative - Lead Flood Analyst</div>
               </div>
             </div>
           </div>
@@ -1084,7 +1109,7 @@ const CV_SKILLS = [
         </div>
       </div>
 
-      <!-- PHOTO GRID — full width below the two-column layout -->
+      <!-- PHOTO GRID - full width below the two-column layout -->
       <div class="cv-sec" style="margin-top:1rem">
         <h2 class="cv-sec__title">In the Field &amp; Beyond</h2>
         <div class="photo-grid" id="about-photo-grid"></div>
@@ -1175,7 +1200,7 @@ const CV_SKILLS = [
       <div>
         <p class="pod-hero__tag">Audio Series</p>
         <h1 class="pod-hero__title"><em>Geospatially</em><br>Africa</h1>
-        <p class="pod-hero__desc">A podcast exploring the power of geospatial science in understanding Africa — from urban growth and climate change to land use and infrastructure. Conversations with researchers, practitioners, and innovators shaping the continent's spatial story.</p>
+        <p class="pod-hero__desc">A podcast exploring the power of geospatial science in understanding Africa - from urban growth and climate change to land use and infrastructure. Conversations with researchers, practitioners, and innovators shaping the continent's spatial story.</p>
         <div class="listen-links" id="listen-links"></div>
       </div>
       <div class="pod-art" aria-hidden="true">
@@ -1213,12 +1238,12 @@ const CV_SKILLS = [
       <div class="contact-layout">
         <div>
           <h2 class="contact-heading">Let's talk spatial data</h2>
-          <p class="contact-text">Whether you're interested in collaborating on research, want to be a guest on Geospatially Africa, need geospatial consulting, or just want to geek out about maps — I'd love to connect.</p>
+          <p class="contact-text">Whether you're interested in collaborating on research, want to be a guest on Geospatially Africa, need geospatial consulting, or just want to geek out about maps - I'd love to connect.</p>
           <div class="contact-links" id="contact-links"></div>
         </div>
         <div class="form-card">
           <div class="form-card__title">Send a Message</div>
-          <div class="success-msg" id="success-msg">✓ Message sent — I'll be in touch soon!</div>
+          <div class="success-msg" id="success-msg">✓ Message sent - I'll be in touch soon!</div>
           <div class="frow">
             <div class="fg"><label class="fl">Name</label><input type="text" class="fi" id="c-name" placeholder="Your name"></div>
             <div class="fg"><label class="fl">Email</label><input type="email" class="fi" id="c-email" placeholder="your@email.com"></div>
@@ -1244,7 +1269,7 @@ const CV_SKILLS = [
 </footer>
 
 <!-- ═══════════════════════════════════════════════════════════
-     RENDERER — do not edit below unless you're customising layout
+     RENDERER - do not edit below unless you're customising layout
 ═══════════════════════════════════════════════════════════ -->
 <script>
 /* ── SVG ICONS ── */
@@ -1354,7 +1379,7 @@ function renderHome(){
 function renderAbout(){
   document.getElementById('sb-name').textContent = ME.fullName;
 
-  // Profile photo — real image if set, initials fallback otherwise
+  // Profile photo - real image if set, initials fallback otherwise
   const avatarEl = document.querySelector('.avatar');
   if(ME.photo){
     avatarEl.innerHTML = `<img src="${ME.photo}" alt="${ME.fullName}">`;
@@ -1366,7 +1391,7 @@ function renderAbout(){
     <div class="sb__info-item"><span class="sb__info-icon">📍</span><span>Worldwide; Tartu, Estonia</span></div>
     <div class="sb__info-item"><span class="sb__info-icon">🎓</span><span>MSc - University of Tartu & ITC Twente (GEM Erasmus+)</span></div>
     <div class="sb__info-item"><span class="sb__info-icon">💼</span><span>Geospatial Advocate - Remote</span></div>
-    <div class="sb__info-item"><span class="sb__info-icon">🎙️</span><span>Founder & Host — Geospatially Africa</span></div>
+    <div class="sb__info-item"><span class="sb__info-icon">🎙️</span><span>Founder & Host - Geospatially Africa</span></div>
     <div class="sb__info-item"><span class="sb__info-icon">✉️</span><span>${ME.email}</span></div>`;
   document.getElementById('sb-socials').innerHTML = socialIconsHTML('sicon-lg', SOCIAL);
   document.getElementById('cv-link').href = ME.cv_url;
@@ -1489,7 +1514,7 @@ function renderPublications(){
 /* ── RENDER PROJECTS ── */
 let activeProjFilter = 'all';
 function renderProjects(){
-  const statuses = ['all',...new Set(ALL_PROJECTS.map(p=>p.status.split('—')[0].trim().toLowerCase()))];
+  const statuses = ['all',...new Set(ALL_PROJECTS.map(p=>p.status.split('-')[0].trim().toLowerCase()))];
   document.getElementById('proj-filters').innerHTML = statuses.map(s=>
     `<button class="fbtn ${s===activeProjFilter?'active':''}" onclick="setProjFilter('${s}')">${s==='all'?'All':s.charAt(0).toUpperCase()+s.slice(1)}</button>`
   ).join('');
@@ -1537,7 +1562,7 @@ function submitForm(){
   const email   = document.getElementById('c-email').value.trim();
   const message = document.getElementById('c-message').value.trim();
   if(!name || !email || !message){ alert('Please fill in name, email, and message.'); return; }
-  // Opens default mail client — replace with fetch() to a backend/Formspree endpoint
+  // Opens default mail client - replace with fetch() to a backend/Formspree endpoint
   const subject = document.getElementById('c-subject').value.trim() || 'Portfolio enquiry';
   window.location.href = `mailto:${ME.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} <${email}>\n\n${message}`)}`;
   document.getElementById('success-msg').classList.add('show');
@@ -1623,7 +1648,7 @@ function renderSEO(){
     "@context": "https://schema.org",
     "@type": "PodcastSeries",
     "name": "Geospatially Africa",
-    "description": "A podcast exploring the power of geospatial science in understanding Africa — from urban growth and climate change to land use and infrastructure. Conversations with researchers, practitioners, and innovators shaping the continent's spatial story.",
+    "description": "A podcast exploring the power of geospatial science in understanding Africa - from urban growth and climate change to land use and infrastructure. Conversations with researchers, practitioners, and innovators shaping the continent's spatial story.",
     "url": url + "#podcast",
     "author": {
       "@type": "Person",
@@ -1644,13 +1669,13 @@ function renderSEO(){
   });
 
   /* ── WebSite schema ─────────────────────────────────────────
-     Enables Google's sitelinks search box — the search field
+     Enables Google's sitelinks search box - the search field
      that sometimes appears under your site in search results.
   ────────────────────────────────────────────────────────────*/
   document.getElementById('jsonld-website').textContent = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": ME.name + " — Geospatial Researcher",
+    "name": ME.name + " - Geospatial Researcher",
     "url": url,
     "description": ME.description,
     "author": {
@@ -1665,19 +1690,19 @@ function renderSEO(){
   });
 
   /* ── Dynamic <title> and <meta> per active section ──────────
-     JS-routed sites need this — Google sees whatever the page
+     JS-routed sites need this - Google sees whatever the page
      title says, so we update it as the user navigates.
      This also means if Google indexes a shared link that lands
      on a specific "page", the title is accurate.
   ────────────────────────────────────────────────────────────*/
   const pageMeta = {
-    home:         { title: `${ME.name} — Geospatial PhD Researcher, Analyst & Podcast Host`,         desc: ME.description },
-    about:        { title: `About ${ME.name} — Geospatial Researcher & CV`,                          desc: `CV and background of ${ME.name}, geospatial PhD candidate and analyst specialising in remote sensing and GIS applied to Africa.` },
-    projects:     { title: `Projects — ${ME.name}`,                                                   desc: `Geospatial research and analysis projects by ${ME.name}, covering remote sensing, land cover change, urban heat islands, and more.` },
-    publications: { title: `Publications — ${ME.name}`,                                               desc: `Peer-reviewed journal articles, conference papers, and technical reports in geospatial science by ${ME.name}.` },
-    blog:         { title: `Blog — ${ME.name}`,                                                       desc: `Essays and field notes on geospatial methods, remote sensing, open data, and mapping Africa, by ${ME.name}.` },
-    podcast:      { title: `Geospatially Africa Podcast — ${ME.name}`,                                desc: `Geospatially Africa is a podcast by ${ME.name} exploring geospatial science, mapping, and spatial data across the African continent.` },
-    contact:      { title: `Contact ${ME.name} — Geospatial Researcher`,                              desc: `Get in touch with ${ME.name} for research collaborations, podcast enquiries, or geospatial consulting.` },
+    home:         { title: `${ME.name} - Geospatial PhD Researcher, Analyst & Podcast Host`,         desc: ME.description },
+    about:        { title: `About ${ME.name} - Geospatial Researcher & CV`,                          desc: `CV and background of ${ME.name}, geospatial PhD candidate and analyst specialising in remote sensing and GIS applied to Africa.` },
+    projects:     { title: `Projects - ${ME.name}`,                                                   desc: `Geospatial research and analysis projects by ${ME.name}, covering remote sensing, land cover change, urban heat islands, and more.` },
+    publications: { title: `Publications - ${ME.name}`,                                               desc: `Peer-reviewed journal articles, conference papers, and technical reports in geospatial science by ${ME.name}.` },
+    blog:         { title: `Blog - ${ME.name}`,                                                       desc: `Essays and field notes on geospatial methods, remote sensing, open data, and mapping Africa, by ${ME.name}.` },
+    podcast:      { title: `Geospatially Africa Podcast - ${ME.name}`,                                desc: `Geospatially Africa is a podcast by ${ME.name} exploring geospatial science, mapping, and spatial data across the African continent.` },
+    contact:      { title: `Contact ${ME.name} - Geospatial Researcher`,                              desc: `Get in touch with ${ME.name} for research collaborations, podcast enquiries, or geospatial consulting.` },
   };
 
   /* Hook into nav() to update <title> and <meta> on each navigation */
