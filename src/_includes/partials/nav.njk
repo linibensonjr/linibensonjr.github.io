@@ -1,0 +1,20 @@
+<nav class="nav" id="main-nav">
+  <div class="nav__inner wrap">
+    <a class="nav__logo" href="/">{{ site.name }}</a>
+    <div class="nav__links">
+      {% for item in nav %}
+      <a href="{{ item.url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% endfor %}
+    </div>
+    <div class="nav__socials">{% include "partials/social-icons.njk" %}</div>
+    <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-drawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav__drawer" id="nav-drawer">
+  {% for item in nav %}
+  <a href="{{ item.url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.label }}</a>
+  {% endfor %}
+  <div class="nav__drawer__socials">{% include "partials/social-icons.njk" %}</div>
+</div>

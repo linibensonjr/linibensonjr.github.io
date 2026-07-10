@@ -1,0 +1,34 @@
+---
+layout: layouts/base.njk
+---
+<article class="post">
+  <header class="post-head">
+    <div class="wrap">
+      <div class="post-tags">{% for t in tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+      <h1 class="post-title">{{ title }}</h1>
+      <div class="post-meta"><span>{{ page.date | readableDate }}</span><span>{{ readTime }} min read</span></div>
+    </div>
+  </header>
+
+  <div class="wrap post-layout">
+    <div class="post-content">{{ content | safe }}</div>
+    <aside class="toc-card" id="toc-card">
+      <div class="toc-label">On this page</div>
+      <ul class="toc-list" id="toc-list"></ul>
+    </aside>
+  </div>
+
+  <nav class="wrap post-nav" aria-label="Post navigation">
+    {% set posts = collections.posts %}
+    {% set idx = 0 %}
+    {% for p in posts %}{% if p.url == page.url %}{% set idx = loop.index0 %}{% endif %}{% endfor %}
+    {% set prev = posts[idx + 1] %}
+    {% set next = posts[idx - 1] if idx > 0 else null %}
+    {% if prev %}
+    <a class="pnav-item" href="{{ prev.url }}"><div class="pnav-dir">← Previous</div><div class="pnav-title">{{ prev.data.title }}</div></a>
+    {% else %}<div></div>{% endif %}
+    {% if next %}
+    <a class="pnav-item pnav-item--next" href="{{ next.url }}"><div class="pnav-dir">Next →</div><div class="pnav-title">{{ next.data.title }}</div></a>
+    {% endif %}
+  </nav>
+</article>

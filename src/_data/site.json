@@ -1,0 +1,139 @@
+{
+  "url": "https://www.iniobongbenson.com",
+  "name": "Iniobong",
+  "fullName": "Iniobong Benson",
+  "nameItalic": "obong",
+  "tagline": "Mapping Africa's story — one dataset at a time.",
+  "subtitle": "Geospatial developer building earth-observation tools & spatial data products · Podcast Host · GEM Erasmus+ Alumni",
+  "intro": "I'm Iniobong Benson — a geospatial analyst and earth observation specialist with an MSc from the University of Tartu & ITC, University of Twente. I build geospatial tools and earth-observation products at the intersection of remote sensing, hydrological modelling, and spatial data science, with a focus on Africa. I also founded and host <em>Geospatially Africa</em>, a podcast dedicated to geospatial innovation across the continent.",
+  "location": "Tartu, Estonia",
+  "university": "University of Tartu & ITC, University of Twente",
+  "email": "linibensonjr@yahoo.com",
+  "cv_url": "/assets/files/cv.pdf",
+  "thesis_url": "https://purl.utwente.nl/essays/108070",
+  "jobTitle": "Geospatial Analyst & Earth Observation Specialist",
+  "description": "Geospatial analyst and earth observation specialist with an Erasmus+ MSc, specialising in remote sensing, hydrological modelling, and spatial data science applied to Africa. Founder and host of the Geospatially Africa podcast.",
+  "photo": "",
+  "sameAs": [
+    "https://linkedin.com/in/linibenson",
+    "https://github.com/linibensonjr",
+    "https://geospatiallyafrica.com"
+  ],
+  "social": {
+    "twitter": "https://x.com/linibenson",
+    "linkedin": "https://linkedin.com/in/linibenson",
+    "github": "https://github.com/linibensonjr",
+    "researchgate": "https://www.researchgate.net/profile/Iniobong-Benson",
+    "orcid": "https://orcid.org/0009-0002-6652-6147"
+  },
+  "podcast": {
+    "spotify": "https://open.spotify.com/show/7aqyurtRoF42hTysOqNa9v",
+    "apple": "https://podcasts.apple.com/us/podcast/geospatially-africa-podcast-the-podcast-for/id1561204113",
+    "rss": "https://anchor.fm/s/4d881ba0/podcast/rss",
+    "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy80ZDg4MWJhMC9wb2RjYXN0L3Jzcw"
+  },
+  "skills": [
+    { "icon": "🛰️", "name": "Earth Observation", "tags": ["Sentinel-1/2", "Landsat", "MODIS", "GRACE"] },
+    { "icon": "🗺️", "name": "GIS & Modelling", "tags": ["QGIS", "ArcGIS", "Delft3D FM", "SNAP"] },
+    { "icon": "💻", "name": "Programming", "tags": ["Python", "R", "GeoPandas", "Django"] },
+    { "icon": "💧", "name": "Hydro & Climate", "tags": ["Drought Indices", "Copula Models", "FEWS NET", "SAR"] }
+  ],
+  "aboutPhotos": [
+    { "url": "", "caption": "At ITC, University of Twente", "size": "wide" },
+    { "url": "", "caption": "Fieldwork in Nigeria", "size": "" },
+    { "url": "", "caption": "Deltares internship, Delft", "size": "" },
+    { "url": "", "caption": "ISDE21 — Youth Forum", "size": "" },
+    { "url": "", "caption": "Mapping session", "size": "" },
+    { "url": "", "caption": "Tartu, Estonia", "size": "" }
+  ],
+  "education": [
+    {
+      "period": "2023 – 2025", "short": "MSc",
+      "role": "MSc in Geo-information Science and Earth Observation for Environmental Modelling and Management (GEM Erasmus+)",
+      "place": "University of Tartu, Estonia & ITC, University of Twente, The Netherlands",
+      "bullets": [
+        "Erasmus+ Scholarship recipient",
+        "Thesis: A Novel Multi-Variate Drought Index Based on GRACE TWS, Precipitation, Evapotranspiration, and Soil Moisture for Drought Monitoring in the Greater Horn of Africa",
+        "Developed the GHDI — a probabilistic copula-based drought index; validated using FEWS NET and compared with SPI and ENSO across timescales"
+      ],
+      "link": { "label": "Read thesis →", "url": "https://purl.utwente.nl/essays/108070" }
+    },
+    {
+      "period": "2022 – 2023", "short": "Dip.",
+      "role": "Diploma in Backend Engineering",
+      "place": "Altschool Africa, Nigeria",
+      "bullets": ["Diploma in Backend Engineering (2023)"]
+    },
+    {
+      "period": "2022", "short": "Dip.",
+      "role": "Fullstack Developer Nanodegree",
+      "place": "Udacity, USA",
+      "bullets": ["Udacity Fullstack Developer Nanodegree Scholarship (2022)"]
+    },
+    {
+      "period": "2014 – 2019", "short": "BSc",
+      "role": "BSc in Geoinformatics and Surveying",
+      "place": "University of Uyo, Nigeria",
+      "bullets": [
+        "Thesis: A Web-based Tourism Information System Using GIS for Uyo Metropolis"
+      ],
+      "link": { "label": "View project →", "url": "https://touruyo.github.io" }
+    }
+  ],
+  "experience": [
+    {
+      "period": "Sep 2025 – Present", "short": "Advocate",
+      "role": "DGGS & Geospatial Data Platform Advocate",
+      "place": "Geolynx OÜ · Tartu, Estonia",
+      "bullets": [
+        "Develop technical resources including Python notebooks, QGIS tutorials, and API documentation to support developers and GIS analysts",
+        "Produce promotional content (blogs, social media) to highlight platform features, datasets, and partnerships"
+      ]
+    },
+    {
+      "period": "Jun 2024 – Aug 2024", "short": "Intern",
+      "role": "Geospatial Data Science Intern",
+      "place": "Deltares · Delft, The Netherlands",
+      "bullets": [
+        "Developed a validation framework for Delft3D Flexible Mesh (FM) ocean models using in situ data",
+        "Processed, analysed, and visualised hydrodynamic datasets",
+        "Integrated geospatial workflows into hydrodynamic modelling pipelines"
+      ]
+    },
+    {
+      "period": "Mar 2023 – Jul 2023", "short": "GIS Spec.",
+      "role": "GIS Specialist",
+      "place": "ipNX Nigeria Ltd · Nigeria",
+      "bullets": [
+        "Designed and optimised enterprise geospatial databases",
+        "Implemented network routing optimisation for fibre optic systems",
+        "Conducted advanced spatial analyses for infrastructure planning"
+      ]
+    },
+    {
+      "period": "Nov 2021 – Feb 2023", "short": "Lead GIS",
+      "role": "Lead GIS Analyst",
+      "place": "Kyle Christian Nigeria Ltd · Nigeria",
+      "bullets": [
+        "Automated workflows with Python, significantly reducing processing time",
+        "Built and deployed ArcGIS Field Apps for property data digitisation",
+        "Processed LiDAR data to generate elevation and topographic outputs"
+      ]
+    },
+    {
+      "period": "Jun 2020 – Oct 2020", "short": "GIS Tech.",
+      "role": "GIS Technician",
+      "place": "Global Education Infrastructure Service LLC",
+      "bullets": [
+        "Integrated field-collected data for unified geospatial databases",
+        "Produced demographic and allocation maps for 50+ communities"
+      ]
+    }
+  ],
+  "cvSkills": [
+    { "label": "GIS & Earth Observation", "chips": ["QGIS", "ArcGIS", "Google Earth Engine", "SNAP", "GDAL / OGR", "Delft3D FM"] },
+    { "label": "Programming & Data Science", "chips": ["Python", "R", "GeoPandas", "Rasterio", "xarray", "Django", "PostgreSQL"] },
+    { "label": "Satellite & Sensor Data", "chips": ["Sentinel-1 SAR", "Sentinel-2", "Landsat 8/9", "MODIS", "GRACE TWS", "SRTM DEM"] },
+    { "label": "Hydrology & Climate", "chips": ["Copula Modelling", "Drought Indices", "FEWS NET", "SPI", "Hydrodynamic Modelling"] }
+  ]
+}

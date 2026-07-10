@@ -1,0 +1,11 @@
+{% macro card(p) %}
+<a class="bcard" href="{{ p.url }}">
+  <div class="bcard__date"><strong>{{ p.date | dateMonth }}</strong>{{ p.date | dateYear }}</div>
+  <div class="bcard__body">
+    <div class="bcard__tags">{% for t in p.data.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+    <div class="bcard__title">{{ p.data.title }}</div>
+    <div class="bcard__exc">{{ p.data.description }}</div>
+    <div class="bcard__meta"><span class="bcard__rt">{{ p.data.readTime }} min read</span><span class="bcard__rd">Read →</span></div>
+  </div>
+</a>
+{% endmacro %}

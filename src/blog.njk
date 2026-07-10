@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+permalink: /blog/
+title: "Blog — Iniobong Benson"
+description: "Essays and field notes on geospatial methods, remote sensing, open data, and mapping Africa."
+---
+
+<header class="page-head">
+  <div class="wrap">
+    <h1 class="page-head__h">Bl<em>og</em></h1>
+    <p class="page-head__desc">Field notes on geospatial methods, remote sensing, open data, and mapping Africa.</p>
+  </div>
+</header>
+
+<section class="page-sec">
+  <div class="wrap">
+    <div class="filter-bar blog-filters" data-blog-filters>
+      <button class="fbtn active" data-tag="all">All</button>
+      {% for t in collections.posts | uniqueTags %}
+      <button class="fbtn" data-tag="{{ t }}">{{ t }}</button>
+      {% endfor %}
+    </div>
+
+    <div class="blog-list">
+      {% for p in collections.posts %}
+      <a class="bitem" data-blog-item data-tags="{{ p.data.tags | join('|') }}" href="{{ p.url }}">
+        <div class="bitem__date"><strong>{{ p.date | dateMonth }}</strong>{{ p.date | dateYear }}</div>
+        <div>
+          <div class="bitem__tags">{% for t in p.data.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+          <div class="bitem__title">{{ p.data.title }}</div>
+          <div class="bitem__exc">{{ p.data.description }}</div>
+          <div class="bitem__meta"><span>{{ p.data.readTime }} min read</span><span class="bitem__rd">Read →</span></div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
