@@ -8,10 +8,10 @@ shortly after this branch goes live.
 
 None of these exist yet. Drop the file in and flip the one line noted — nothing else to wire up.
 
-- [ ] **Headshot** — save as `src/assets/img/headshot.jpg` (or `.png`) and set `"photo"` in
+- [x] **Headshot** — save as `src/assets/img/headshot.jpg` (or `.png`) and set `"photo"` in
       `src/_data/site.json` to `/assets/img/headshot.jpg`. Until then the About page shows an
       "IB" initials avatar, which is the intended fallback, not a bug.
-- [ ] **About page gallery (6 photos)** — `src/_data/aboutPhotos` entries in `site.json` already
+- [x] **About page gallery (6 photos)** — `src/_data/aboutPhotos` entries in `site.json` already
       have captions written; add each image under `src/assets/img/` and set that entry's `"url"`.
       Captions expected, in order: *At ITC, University of Twente* (wide), *Fieldwork in Nigeria*,
       *Deltares internship, Delft*, *ISDE21 — Youth Forum*, *Mapping session*, *Tartu, Estonia*.

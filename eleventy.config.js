@@ -43,6 +43,10 @@ module.exports = function (eleventyConfig) {
     return String(num).padStart(2, "0");
   });
 
+  eleventyConfig.addFilter("initial", (str) => {
+    return String(str).trim().charAt(0).toUpperCase();
+  });
+
   eleventyConfig.addFilter("uniqueTags", (posts) => {
     const seen = new Set();
     posts.forEach((p) => (p.data.tags || []).forEach((t) => seen.add(t)));

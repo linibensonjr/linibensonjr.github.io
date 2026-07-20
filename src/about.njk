@@ -12,11 +12,11 @@ description: "CV and background of Iniobong Benson, geospatial analyst specialis
     </div>
     <h1 class="sb__name">{{ site.fullName }}</h1>
     <div class="sb__info">
-      <div class="sb__info-item"><span>📍</span><span>Worldwide; {{ site.location }}</span></div>
-      <div class="sb__info-item"><span>🎓</span><span>MSc — University of Tartu &amp; ITC Twente (GEM Erasmus+)</span></div>
-      <div class="sb__info-item"><span>💼</span><span>Geospatial Advocate — Remote</span></div>
-      <div class="sb__info-item"><span>🎙️</span><span>Founder &amp; Host — Geospatially Africa</span></div>
-      <div class="sb__info-item"><span>✉️</span><span>{{ site.email }}</span></div>
+      <div class="sb__info-item"><span class="sb__info-label">Location</span><span>Worldwide; {{ site.location }}</span></div>
+      <div class="sb__info-item"><span class="sb__info-label">Education</span><span>MSc — University of Tartu &amp; ITC Twente (GEM Erasmus+)</span></div>
+      <div class="sb__info-item"><span class="sb__info-label">Role</span><span>Geospatial Advocate — Remote</span></div>
+      <div class="sb__info-item"><span class="sb__info-label">Podcast</span><span>Founder &amp; Host — Geospatially Africa</span></div>
+      <div class="sb__info-item"><span class="sb__info-label">Email</span><span>{{ site.email }}</span></div>
     </div>
     <div class="sb__socials">{% include "partials/social-icons.njk" %}</div>
     <div class="cv-buttons">
@@ -28,6 +28,13 @@ description: "CV and background of Iniobong Benson, geospatial analyst specialis
   <div class="about-main">
     <p class="about-lede">{{ site.intro | safe }}</p>
 
+    {% if site.researchInterests.length %}
+    <div class="research-interests">
+      <div class="skills-block__label">Research Interests</div>
+      <div class="chips">{% for r in site.researchInterests %}<span class="chip chip--accent">{{ r }}</span>{% endfor %}</div>
+    </div>
+    {% endif %}
+
     {% if site.aboutPhotos.length %}
     <div class="photo-grid">
       {% for p in site.aboutPhotos %}
@@ -36,7 +43,7 @@ description: "CV and background of Iniobong Benson, geospatial analyst specialis
         <img src="{{ p.url }}" alt="{{ p.caption }}" loading="lazy">
         {% if p.caption %}<div class="photo-grid__item__cap">{{ p.caption }}</div>{% endif %}
         {% else %}
-        <div class="photo-grid__item__ph"><span>📷</span><p>{{ p.caption or "Add photo" }}</p></div>
+        <div class="photo-grid__item__ph"><p>{{ p.caption or "Add photo" }}</p></div>
         {% endif %}
       </div>
       {% endfor %}

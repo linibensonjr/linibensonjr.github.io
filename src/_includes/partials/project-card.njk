@@ -3,7 +3,7 @@
   {% if p.url %}<a class="pcard__link" href="{{ p.url }}" target="_blank" rel="noopener" aria-label="{{ p.title }}">{% endif %}
   <div class="pcard__top">
     <div class="pcard__geo"></div>
-    {% if p.img %}<img src="{{ p.img }}" alt="{{ p.title }}" loading="lazy">{% else %}<span class="pcard__icon">{{ p.icon }}</span>{% endif %}
+    {% if p.img %}<img src="{{ p.img }}" alt="{{ p.title }}" loading="lazy">{% else %}<span class="pcard__mono" aria-hidden="true">{{ p.title | initial }}</span>{% endif %}
   </div>
   <div class="pcard__body">
     <div class="pcard__status"><span class="pcard__dot"></span>{{ p.status }}</div>

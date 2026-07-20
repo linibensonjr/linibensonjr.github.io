@@ -3,9 +3,9 @@
   "name": "Iniobong",
   "fullName": "Iniobong Benson",
   "nameItalic": "obong",
-  "tagline": "Mapping Africa's story — one dataset at a time.",
+  "tagline": "Mapping Africa's story - one dataset at a time.",
   "subtitle": "Geospatial developer building earth-observation tools & spatial data products · Podcast Host · GEM Erasmus+ Alumni",
-  "intro": "I'm Iniobong Benson — a geospatial analyst and earth observation specialist with an MSc from the University of Tartu & ITC, University of Twente. I build geospatial tools and earth-observation products at the intersection of remote sensing, hydrological modelling, and spatial data science, with a focus on Africa. I also founded and host <em>Geospatially Africa</em>, a podcast dedicated to geospatial innovation across the continent.",
+  "intro": "I'm Iniobong Benson - a geospatial analyst and earth observation specialist with an MSc from the University of Tartu & ITC, University of Twente. I build geospatial tools and earth-observation products at the intersection of remote sensing, hydrological modelling, and spatial data science, with a focus on Africa. I also founded and host <em>Geospatially Africa</em>, a podcast dedicated to geospatial innovation across the continent.",
   "location": "Tartu, Estonia",
   "university": "University of Tartu & ITC, University of Twente",
   "email": "linibensonjr@yahoo.com",
@@ -13,7 +13,7 @@
   "thesis_url": "https://purl.utwente.nl/essays/108070",
   "jobTitle": "Geospatial Analyst & Earth Observation Specialist",
   "description": "Geospatial analyst and earth observation specialist with an Erasmus+ MSc, specialising in remote sensing, hydrological modelling, and spatial data science applied to Africa. Founder and host of the Geospatially Africa podcast.",
-  "photo": "",
+  "photo": "/assets/img/ini_deltares.jpg",
   "sameAs": [
     "https://linkedin.com/in/linibenson",
     "https://github.com/linibensonjr",
@@ -33,18 +33,26 @@
     "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy80ZDg4MWJhMC9wb2RjYXN0L3Jzcw"
   },
   "skills": [
-    { "icon": "🛰️", "name": "Earth Observation", "tags": ["Sentinel-1/2", "Landsat", "MODIS", "GRACE"] },
-    { "icon": "🗺️", "name": "GIS & Modelling", "tags": ["QGIS", "ArcGIS", "Delft3D FM", "SNAP"] },
-    { "icon": "💻", "name": "Programming", "tags": ["Python", "R", "GeoPandas", "Django"] },
-    { "icon": "💧", "name": "Hydro & Climate", "tags": ["Drought Indices", "Copula Models", "FEWS NET", "SAR"] }
+    { "name": "Earth Observation", "tags": ["Sentinel-1/2", "Landsat", "MODIS", "GRACE"] },
+    { "name": "GIS & Modelling", "tags": ["QGIS", "ArcGIS", "Delft3D FM", "SNAP"] },
+    { "name": "Programming", "tags": ["Python", "R", "GeoPandas", "Django"] },
+    { "name": "Hydro & Climate", "tags": ["Drought Indices", "Copula Models", "FEWS NET", "SAR"] }
+  ],
+  "researchInterests": [
+    "Drought & Water Scarcity Monitoring",
+    "GRACE Terrestrial Water Storage",
+    "Hydrological & Hydrodynamic Modelling",
+    "Discrete Global Grid Systems (DGGS)",
+    "Spatial Data Science for Africa",
+    "Earth Observation for Environmental Change"
   ],
   "aboutPhotos": [
-    { "url": "", "caption": "At ITC, University of Twente", "size": "wide" },
-    { "url": "", "caption": "Fieldwork in Nigeria", "size": "" },
-    { "url": "", "caption": "Deltares internship, Delft", "size": "" },
-    { "url": "", "caption": "ISDE21 — Youth Forum", "size": "" },
-    { "url": "", "caption": "Mapping session", "size": "" },
-    { "url": "", "caption": "Tartu, Estonia", "size": "" }
+    { "url": "/assets/img/ini_itc.jpg", "caption": "At ITC, University of Twente", "size": "wide" },
+    { "url": "/assets/img/ini_fieldwork.jpeg", "caption": "Fieldwork in Nigeria", "size": "" },
+    { "url": "/assets/img/ini_deltares.jpg", "caption": "Deltares internship, Delft", "size": "" },
+    { "url": "/assets/img/ini_presentation.jpeg", "caption": "ISDE21 - Youth Forum", "size": "" },
+    { "url": "/assets/img/ini_deltares_team.jpeg", "caption": "Mapping session", "size": "" },
+    { "url": "/assets/img/ini_tartu.jpg", "caption": "Tartu, Estonia", "size": "" }
   ],
   "education": [
     {
@@ -54,7 +62,7 @@
       "bullets": [
         "Erasmus+ Scholarship recipient",
         "Thesis: A Novel Multi-Variate Drought Index Based on GRACE TWS, Precipitation, Evapotranspiration, and Soil Moisture for Drought Monitoring in the Greater Horn of Africa",
-        "Developed the GHDI — a probabilistic copula-based drought index; validated using FEWS NET and compared with SPI and ENSO across timescales"
+        "Developed the GHDI - a probabilistic copula-based drought index; validated using FEWS NET and compared with SPI and ENSO across timescales"
       ],
       "link": { "label": "Read thesis →", "url": "https://purl.utwente.nl/essays/108070" }
     },
@@ -82,7 +90,7 @@
   ],
   "experience": [
     {
-      "period": "Sep 2025 – Present", "short": "Advocate",
+      "period": "Sep 2025 – Nov 2025", "short": "Advocate",
       "role": "DGGS & Geospatial Data Platform Advocate",
       "place": "Geolynx OÜ · Tartu, Estonia",
       "bullets": [

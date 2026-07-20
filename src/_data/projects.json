@@ -1,15 +1,13 @@
 [
   {
-    "icon": "🛰️",
-    "img": "",
+    "img": "/assets/img/project_nigeria_drone.jpg",
     "status": "In development",
     "featured": true,
-    "title": "Drone Airspace Restriction Map — Abuja",
+    "title": "Nigeria Drone Airspace Restriction Map",
     "desc": "Interactive map of NCAA/NAMA-style airspace restriction zones for drone operators in Nigeria. Leaflet/GeoJSON frontend built with a data-provider architecture designed for a future FastAPI + PostGIS backend.",
     "tech": ["TypeScript", "Leaflet", "Turf.js", "GeoJSON", "FastAPI (planned)", "PostGIS (planned)"]
   },
   {
-    "icon": "🌡️",
     "img": "",
     "status": "In development",
     "featured": false,
@@ -18,7 +16,6 @@
     "tech": ["Python", "rasterio", "FastAPI", "React", "Mapbox GL JS", "Deck.gl"]
   },
   {
-    "icon": "🏖️",
     "img": "",
     "status": "In development",
     "featured": false,
@@ -27,16 +24,14 @@
     "tech": ["Next.js", "FastAPI", "PostGIS", "Docker"]
   },
   {
-    "icon": "💧",
     "img": "",
     "status": "MSc Thesis - 2025",
     "featured": true,
     "title": "GHDI: Multi-Variate Drought Index for the Greater Horn of Africa",
-    "desc": "Developed the GHDI — a probabilistic copula-based drought index integrating GRACE TWS, precipitation, evapotranspiration, and soil moisture. Validated using FEWS NET and compared with SPI and ENSO across timescales.",
+    "desc": "Developed the GHDI - a probabilistic copula-based drought index integrating GRACE TWS, precipitation, evapotranspiration, and soil moisture. Validated using FEWS NET and compared with SPI and ENSO across timescales.",
     "tech": ["Python", "GRACE", "Copula Models", "GEE", "R"]
   },
   {
-    "icon": "🌊",
     "img": "",
     "status": "Internship - Deltares 2024",
     "featured": true,
@@ -45,16 +40,14 @@
     "tech": ["Python", "Delft3D", "NetCDF", "GeoPandas", "xarray"]
   },
   {
-    "icon": "🔗",
     "img": "",
     "status": "Professional - ipNX 2023",
     "featured": false,
-    "title": "Enterprise Geospatial Database & Network Routing — ipNX Nigeria",
+    "title": "Enterprise Geospatial Database & Network Routing - ipNX Nigeria",
     "desc": "Designed and optimised enterprise geospatial databases. Implemented network routing optimisation for fibre optic infrastructure across Nigeria.",
     "tech": ["ArcGIS", "Python", "SQL", "Network Analysis"]
   },
   {
-    "icon": "📻",
     "img": "",
     "status": "Active - 2021–Present",
     "featured": false,
@@ -64,7 +57,6 @@
     "url": "https://geospatiallyafrica.com"
   },
   {
-    "icon": "🗺️",
     "img": "",
     "status": "BSc Thesis - 2019",
     "featured": false,
@@ -74,11 +66,10 @@
     "url": "https://touruyo.github.io"
   },
   {
-    "icon": "🌍",
     "img": "",
     "status": "Volunteer - GISCorps",
     "featured": false,
-    "title": "Geohazard Risk Mapping — Lead Flood Analyst",
+    "title": "Geohazard Risk Mapping - Lead Flood Analyst",
     "desc": "Lead flood analyst for the Geohazard Risk Mapping Initiative. Volunteer GIS analysis for URISA GISCorps and GIS-E across humanitarian and development contexts.",
     "tech": ["QGIS", "ArcGIS", "Flood Mapping", "OSM"]
   }
