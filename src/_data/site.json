@@ -5,11 +5,11 @@
   "nameItalic": "obong",
   "tagline": "Mapping Africa's story - one dataset at a time.",
   "subtitle": "Geospatial developer building earth-observation tools & spatial data products · Podcast Host · GEM Erasmus+ Alumni",
-  "intro": "I'm Iniobong Benson - a geospatial analyst and earth observation specialist with an MSc from the University of Tartu & ITC, University of Twente. I build geospatial tools and earth-observation products at the intersection of remote sensing, hydrological modelling, and spatial data science, with a focus on Africa. I also founded and host <em>Geospatially Africa</em>, a podcast dedicated to geospatial innovation across the continent.",
-  "location": "Tartu, Estonia",
+  "intro": "I'm Iniobong Benson, a geospatial analyst and earth observation specialist pursuing a PhD at Southern Illinois University, Carbondale. I build geospatial tools and earth-observation products, working mainly in remote sensing and hydrological modelling. I also founded and host <em>Geospatially Africa</em>, a podcast about geospatial work across the continent.",
+  "location": "USA",
   "university": "University of Tartu & ITC, University of Twente",
   "email": "linibensonjr@yahoo.com",
-  "cv_url": "/assets/files/cv.pdf",
+  "cv_url": "https://drive.google.com/file/d/1-dld7n2gq06zrBRo33JWyZA9UIeR7HFr/view?usp=sharing",
   "thesis_url": "https://purl.utwente.nl/essays/108070",
   "jobTitle": "Geospatial Analyst & Earth Observation Specialist",
   "description": "Geospatial analyst and earth observation specialist with an Erasmus+ MSc, specialising in remote sensing, hydrological modelling, and spatial data science applied to Africa. Founder and host of the Geospatially Africa podcast.",
@@ -56,7 +56,16 @@
   ],
   "education": [
     {
-      "period": "2023 – 2025", "short": "MSc",
+      "period": "2026 - Present", "short": "PhD",
+      "role": "PhD in Environmental Resources and Policy",
+      "place": "Southern Illinois University, Carbondale, USA",
+      "bullets": [
+        "Researching water resources monitoring and climate impact assessment using Earth observation",
+        "Focus areas: GRACE TWS downscaling, NISAR InSAR, cloud-native geospatial systems"
+      ]
+    },
+    {
+      "period": "2023 - 2025", "short": "MSc",
       "role": "MSc in Geo-information Science and Earth Observation for Environmental Modelling and Management (GEM Erasmus+)",
       "place": "University of Tartu, Estonia & ITC, University of Twente, The Netherlands",
       "bullets": [
@@ -67,7 +76,7 @@
       "link": { "label": "Read thesis →", "url": "https://purl.utwente.nl/essays/108070" }
     },
     {
-      "period": "2022 – 2023", "short": "Dip.",
+      "period": "2022 - 2023", "short": "Dip.",
       "role": "Diploma in Backend Engineering",
       "place": "Altschool Africa, Nigeria",
       "bullets": ["Diploma in Backend Engineering (2023)"]
@@ -79,7 +88,7 @@
       "bullets": ["Udacity Fullstack Developer Nanodegree Scholarship (2022)"]
     },
     {
-      "period": "2014 – 2019", "short": "BSc",
+      "period": "2014 - 2019", "short": "BSc",
       "role": "BSc in Geoinformatics and Surveying",
       "place": "University of Uyo, Nigeria",
       "bullets": [
@@ -90,7 +99,7 @@
   ],
   "experience": [
     {
-      "period": "Sep 2025 – Nov 2025", "short": "Advocate",
+      "period": "Sep 2025 - Nov 2025", "short": "Advocate",
       "role": "DGGS & Geospatial Data Platform Advocate",
       "place": "Geolynx OÜ · Tartu, Estonia",
       "bullets": [
@@ -99,7 +108,7 @@
       ]
     },
     {
-      "period": "Jun 2024 – Aug 2024", "short": "Intern",
+      "period": "Jun 2024 - Aug 2024", "short": "Intern",
       "role": "Geospatial Data Science Intern",
       "place": "Deltares · Delft, The Netherlands",
       "bullets": [
@@ -109,7 +118,7 @@
       ]
     },
     {
-      "period": "Mar 2023 – Jul 2023", "short": "GIS Spec.",
+      "period": "Mar 2023 - Jul 2023", "short": "GIS Spec.",
       "role": "GIS Specialist",
       "place": "ipNX Nigeria Ltd · Nigeria",
       "bullets": [
@@ -119,7 +128,7 @@
       ]
     },
     {
-      "period": "Nov 2021 – Feb 2023", "short": "Lead GIS",
+      "period": "Nov 2021 - Feb 2023", "short": "Lead GIS",
       "role": "Lead GIS Analyst",
       "place": "Kyle Christian Nigeria Ltd · Nigeria",
       "bullets": [
@@ -129,7 +138,7 @@
       ]
     },
     {
-      "period": "Jun 2020 – Oct 2020", "short": "GIS Tech.",
+      "period": "Jun 2020 - Oct 2020", "short": "GIS Tech.",
       "role": "GIS Technician",
       "place": "Global Education Infrastructure Service LLC",
       "bullets": [

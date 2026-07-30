@@ -1,5 +1,5 @@
 ---
-title: "To Kart or not to Kart? — That is the Question"
+title: "To Kart or not to Kart? - That is the Question"
 date: 2025-10-01
 tags: ["GIS", "Python", "QGIS", "Software & Tools"]
 description: "Kart is an open-source software project for data version control for geospatial data. The purpose of Kart is to make it easy to store your spatial data so that you can make changes to it, see those changes and push and pull those changes to other people so they can have it on their data as well."

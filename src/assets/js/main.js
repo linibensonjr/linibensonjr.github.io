@@ -27,7 +27,7 @@
   drawer.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeDrawer));
 })();
 
-// Blog tag filter (progressive enhancement — all posts are visible without JS)
+// Blog tag filter (progressive enhancement - all posts are visible without JS)
 (function () {
   const filterBar = document.querySelector("[data-blog-filters]");
   if (!filterBar) return;
