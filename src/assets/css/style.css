@@ -1,3 +1,8 @@
+/* Hidden elements must stay hidden even when a component sets its own
+   display (e.g. .bitem/.pcard use display:grid, which otherwise beats
+   the UA [hidden] rule and breaks JS filtering). */
+[hidden] { display: none !important; }
+
 /* ─────────────────────────────────────────────────────────────
    DESIGN TOKENS
 ───────────────────────────────────────────────────────────── */
