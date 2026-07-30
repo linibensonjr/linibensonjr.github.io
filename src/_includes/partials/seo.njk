@@ -1,0 +1,80 @@
+{% set pageTitle = title or site.name + " - Geospatial Analyst, Earth Observation & Podcast Host" %}
+{% set pageDesc = description or site.description %}
+{% set pageUrl = site.url + page.url %}
+{% set ogImage = site.url + (image or "/assets/img/og-image.png") %}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ pageTitle }}</title>
+<meta name="description" content="{{ pageDesc }}">
+<meta name="author" content="{{ site.fullName }}">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="{{ pageUrl }}">
+
+<meta property="og:type" content="{{ 'article' if collections.posts and page.url.startsWith('/blog/') and page.url != '/blog/' else 'website' }}">
+<meta property="og:url" content="{{ pageUrl }}">
+<meta property="og:title" content="{{ pageTitle }}">
+<meta property="og:description" content="{{ pageDesc }}">
+<meta property="og:image" content="{{ ogImage }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="{{ site.fullName }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@linibenson">
+<meta name="twitter:creator" content="@linibenson">
+<meta name="twitter:title" content="{{ pageTitle }}">
+<meta name="twitter:description" content="{{ pageDesc }}">
+<meta name="twitter:image" content="{{ ogImage }}">
+
+<meta name="citation_author" content="Benson, Iniobong">
+<meta name="citation_author_email" content="{{ site.email }}">
+<meta name="citation_language" content="en">
+
+<link rel="alternate" type="application/rss+xml" title="{{ site.fullName }} - Blog" href="/feed.xml">
+
+{% if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Person", "Researcher"],
+  "name": "{{ site.fullName }}",
+  "alternateName": "{{ site.name }}",
+  "url": "{{ site.url }}",
+  "email": "{{ site.email }}",
+  "jobTitle": "{{ site.jobTitle }}",
+  "description": "{{ site.description }}",
+  "knowsAbout": ["Geospatial Science", "Remote Sensing", "Geographic Information Systems", "Spatial Data Science", "Earth Observation", "Africa Geography", "Land Cover Change Detection", "Satellite Imagery Analysis", "Google Earth Engine", "QGIS", "Python", "R"],
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "{{ site.university }}" },
+  "homeLocation": { "@type": "Place", "name": "{{ site.location }}" },
+  "sameAs": {{ site.sameAs | dump | safe }},
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ site.url }}" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.name }} - Geospatial Researcher",
+  "url": "{{ site.url }}",
+  "description": "{{ site.description }}",
+  "author": { "@type": "Person", "name": "{{ site.fullName }}" }
+}
+</script>
+{% endif %}
+
+{% if page.url == "/podcast/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastSeries",
+  "name": "Geospatially Africa",
+  "description": "A podcast exploring the power of geospatial science in understanding Africa - from urban growth and climate change to land use and infrastructure. Conversations with researchers, practitioners, and innovators shaping the continent's spatial story.",
+  "url": "{{ site.url }}/podcast/",
+  "author": { "@type": "Person", "name": "{{ site.fullName }}", "url": "{{ site.url }}" },
+  "inLanguage": "en",
+  "webFeed": "{{ site.podcast.rss }}"
+}
+</script>
+{% endif %}

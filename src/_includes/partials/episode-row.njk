@@ -1,0 +1,11 @@
+{% macro row(e, full=false) %}
+<a class="ep-row {{ 'ep-row--full' if full }}" href="{{ e.url }}" target="_blank" rel="noopener" aria-label="Listen to episode {{ e.num }}: {{ e.title }}">
+  <div class="ep-row__num">EP {{ e.num | pad2 }}</div>
+  <div class="ep-row__body">
+    <div class="ep-row__date">{{ e.date }}</div>
+    <div class="ep-row__title">{{ e.title }}</div>
+    {% if full %}<div class="ep-row__desc">{{ e.desc }}</div>{% endif %}
+  </div>
+  <div class="ep-row__play" aria-hidden="true">▶</div>
+</a>
+{% endmacro %}

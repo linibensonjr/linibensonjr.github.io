@@ -1,0 +1,53 @@
+[
+  {
+    "img": "/assets/img/project_nigeria_drone.jpg",
+    "status": "Active",
+    "featured": true,
+    "title": "Nigeria Drone Airspace Restriction Map",
+    "desc": "Interactive map of NCAA/NAMA-style airspace restriction zones for drone operators in Nigeria. Leaflet/GeoJSON frontend built with a data-provider architecture designed for a future FastAPI + PostGIS backend.",
+    "tech": ["TypeScript", "Leaflet", "Turf.js", "GeoJSON", "FastAPI (planned)", "PostGIS (planned)"],
+    "url": "https://nga-uav-platform.netlify.app/"
+  },
+  {
+    "img": "",
+    "status": "In development",
+    "featured": false,
+    "title": "Akwa Ibom Tourism Platform",
+    "desc": "Destination-marketing platform scaling my BSc TourUyo project into a full tourism platform for Akwa Ibom State, modeled on visitestonia.com.",
+    "tech": ["Next.js", "FastAPI", "PostGIS"]
+  },
+  {
+    "img": "",
+    "status": "MSc Thesis - 2025",
+    "featured": true,
+    "title": "GHDI: Multi-Variate Drought Index for the Greater Horn of Africa",
+    "desc": "Developed the GHDI - a probabilistic copula-based drought index integrating GRACE TWS, precipitation, evapotranspiration, and soil moisture. Validated using FEWS NET and compared with SPI and ENSO across timescales.",
+    "tech": ["Python", "GRACE", "Copula Models"]
+  },
+  {
+    "img": "",
+    "status": "Internship - Deltares 2024",
+    "featured": false,
+    "title": "Delft3D FM Ocean Model Validation Framework",
+    "desc": "Built a validation framework for Delft3D Flexible Mesh ocean models using in situ data. Processed and visualised hydrodynamic datasets, and integrated geospatial workflows into modelling pipelines at Deltares, Delft.",
+    "tech": ["Python", "Delft3D", "NetCDF", "GeoPandas", "xarray"]
+  },
+  {
+    "img": "/assets/img/project_geospatiallyafrica.png",
+    "status": "Active - 2021-Present",
+    "featured": true,
+    "title": "Geospatially Africa Podcast",
+    "desc": "Founded and host a podcast platform showcasing African and global geospatial innovations. Built and maintained the website using Django, HTML, CSS, and PostgreSQL.",
+    "tech": ["Django", "PostgreSQL", "HTML/CSS", "Science Comm"],
+    "url": "https://geospatiallyafrica.com"
+  },
+  {
+    "img": "/assets/img/project_tour_uyo.png",
+    "status": "BSc Thesis - 2019",
+    "featured": true,
+    "title": "TourUyo: Web-based GIS Tourism System for Uyo City",
+    "desc": "Designed a web-based tourism information system for Uyo Metropolis using QGIS and Leaflet. Demonstrates spatial data integration for urban tourism planning.",
+    "tech": ["QGIS", "Leaflet", "JavaScript", "HTML"],
+    "url": "https://touruyo.github.io"
+  }
+]

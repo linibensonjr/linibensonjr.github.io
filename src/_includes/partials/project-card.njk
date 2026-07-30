@@ -1,0 +1,16 @@
+{% macro card(p, large=false) %}
+<div class="pcard {{ 'pcard-lg' if large }}">
+  {% if p.url %}<a class="pcard__link" href="{{ p.url }}" target="_blank" rel="noopener" aria-label="{{ p.title }}">{% endif %}
+  <div class="pcard__top">
+    <div class="pcard__geo"></div>
+    {% if p.img %}<img src="{{ p.img }}" alt="{{ p.title }}" loading="lazy">{% else %}<span class="pcard__mono" aria-hidden="true">{{ p.title | initial }}</span>{% endif %}
+  </div>
+  <div class="pcard__body">
+    <div class="pcard__status"><span class="pcard__dot"></span>{{ p.status }}</div>
+    <div class="pcard__title">{{ p.title }}{% if p.url %} <span class="pcard__ext">↗</span>{% endif %}</div>
+    <div class="pcard__desc">{{ p.desc }}</div>
+    <div class="pcard__tech">{% for t in p.tech %}<span>{{ t }}</span>{% endfor %}</div>
+  </div>
+  {% if p.url %}</a>{% endif %}
+</div>
+{% endmacro %}

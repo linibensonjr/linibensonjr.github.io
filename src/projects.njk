@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+permalink: /projects/
+title: "Projects - Iniobong Benson"
+description: "Geospatial research and analysis projects, covering remote sensing, drought monitoring, hydrodynamic modelling, and more."
+---
+{% from "partials/project-card.njk" import card %}
+
+<header class="page-head">
+  <div class="wrap">
+    <h1 class="page-head__h">Pro<em>jects</em></h1>
+    <p class="page-head__desc">Geospatial tools, research, and products across remote sensing, hydrology, and earth observation - from MSc research to work in active development.</p>
+  </div>
+</header>
+
+<section class="page-sec">
+  <div class="wrap">
+    <div class="filter-bar" data-proj-filters>
+      <button class="fbtn active" data-status="all">All</button>
+      {% for s in projectStatuses %}
+      <button class="fbtn" data-status="{{ s }}">{{ s }}</button>
+      {% endfor %}
+    </div>
+
+    <div class="proj-full-grid">
+      {% for p in projects %}
+      <div data-proj-item data-status="{{ p.status | statusGroup }}">{{ card(p, true) }}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

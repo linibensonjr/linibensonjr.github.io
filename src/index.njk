@@ -1,0 +1,97 @@
+---
+layout: layouts/base.njk
+---
+{% from "partials/project-card.njk" import card %}
+{% from "partials/episode-row.njk" import row %}
+{% from "partials/blog-card.njk" import card as blogCard %}
+
+<section class="hero">
+  <div class="wrap hero__grid-outer">
+    <div class="hero__l">
+      <p class="hero__tag">{{ site.subtitle }}</p>
+      <h1 class="hero__name">{{ site.name | replace(site.nameItalic, "") }}<em>{{ site.nameItalic }}</em></h1>
+      <p class="hero__sub">{{ site.tagline }}</p>
+      <p class="hero__desc">{{ site.intro | safe }}</p>
+      <div class="hero__cta">
+        <a href="/projects/" class="btn btn-dark">View Projects →</a>
+        <a href="/podcast/" class="hero__link">Geospatially Africa Podcast ↗</a>
+      </div>
+    </div>
+    <div class="hero__r" aria-hidden="true">
+      <div class="hero__badge">
+        <div class="hero__badge-l">GEM Erasmus+ MSc</div>
+        <div class="hero__badge-v">ITC Twente &amp; Univ. of Tartu</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="skills-strip">
+  <div class="wrap">
+    <div class="slabel">Tools &amp; Expertise</div>
+    <div class="skills-grid">
+      {% for s in site.skills %}
+      <div class="skill-block">
+        <div class="skill-block__index">{{ loop.index | pad2 }}</div>
+        <div class="skill-block__name">{{ s.name }}</div>
+        <div class="skill-block__tags">{% for t in s.tags %}<span class="skill-block__tag">{{ t }}</span>{% endfor %}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="home-sec">
+  <div class="wrap">
+    <div class="home-sec__head">
+      <h2 class="home-sec__h">Featured <em>Projects</em></h2>
+      <a href="/projects/" class="home-sec__more">All projects →</a>
+    </div>
+    <div class="proj-grid">
+      {% for p in projects %}{% if p.featured %}{{ card(p) }}{% endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="home-sec">
+  <div class="wrap">
+    <div class="home-sec__head">
+      <h2 class="home-sec__h">Selected <em>Publications</em></h2>
+      <a href="/publications/" class="home-sec__more">All publications →</a>
+    </div>
+    <div class="pub-teaser">
+      {% for p in publications %}{% if loop.index <= 2 %}
+      <a class="pub-teaser__item" href="{{ p.links[0].url }}" target="_blank" rel="noopener">
+        <div class="pub-teaser__type">{{ p.type }} &middot; {{ p.year }}</div>
+        <div class="pub-teaser__title">{{ p.title }}</div>
+        <p class="pub-teaser__venue">{{ p.venue }}</p>
+      </a>
+      {% endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="pod-strip">
+  <div class="wrap">
+    <div class="slabel slabel--lt">Geospatially Africa</div>
+    <div class="home-sec__head">
+      <h2 class="home-sec__h">Latest <em>Episodes</em></h2>
+      <a href="/podcast/" class="home-sec__more">All episodes →</a>
+    </div>
+    <div class="ep-list">
+      {% for e in episodes %}{% if loop.index <= 3 %}{{ row(e) }}{% endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="home-sec">
+  <div class="wrap">
+    <div class="home-sec__head">
+      <h2 class="home-sec__h">From the <em>Blog</em></h2>
+      <a href="/blog/" class="home-sec__more">All posts →</a>
+    </div>
+    <div class="blog-list">
+      {% for p in collections.posts %}{% if loop.index <= 3 %}{{ blogCard(p) }}{% endif %}{% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+permalink: /publications/
+title: "Publications - Iniobong Benson"
+description: "Peer-reviewed journal articles, conference papers, and technical reports in geospatial science."
+---
+
+<header class="page-head">
+  <div class="wrap">
+    <h1 class="page-head__h">Publi<em>cations</em></h1>
+    <p class="page-head__desc">Peer-reviewed journal articles, conference papers, and technical reports in geospatial science.</p>
+  </div>
+</header>
+
+<section class="page-sec">
+  <div class="wrap">
+    {% for yr in publications | uniqueYearsDesc %}
+    <div class="pub-year-group">
+      <div class="pub-year">{{ yr }}</div>
+      {% for p in publications %}{% if p.year == yr %}
+      <div class="pub-item">
+        <div class="pub-item__line"></div>
+        <div>
+          <div class="pub-item__type">{{ p.type }}</div>
+          <div class="pub-item__title">{{ p.title }}</div>
+          <p class="pub-item__authors">{{ p.authors | safe }}</p>
+          <p class="pub-item__venue">{{ p.venue }}</p>
+          <div class="pub-item__links">{% for l in p.links %}<a class="pub-link" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endfor %}</div>
+        </div>
+      </div>
+      {% endif %}{% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</section>

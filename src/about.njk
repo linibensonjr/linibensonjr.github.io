@@ -1,0 +1,91 @@
+---
+layout: layouts/base.njk
+permalink: /about/
+title: "About - Iniobong Benson"
+description: "Background of Iniobong Benson, geospatial analyst specialising in remote sensing and GIS."
+---
+
+<div class="wrap about-layout">
+  <aside class="sb">
+    <div class="avatar">
+      {% if site.photo %}<img src="{{ site.photo }}" alt="{{ site.fullName }}">{% else %}<div class="avatar__init">IB</div>{% endif %}
+    </div>
+    <h1 class="sb__name">{{ site.fullName }}</h1>
+    <div class="sb__info">
+      <div class="sb__info-item"><span class="sb__info-label">Education</span><span>PhD in Environmental Resources &amp; Policy - Southern Illinois University, Carbondale</span></div>
+      <div class="sb__info-item"><span class="sb__info-label">Focus</span><span>Building AI systems that monitor water and land from space · GRACE Downscaling · NISAR InSAR · Cloud-Native Geospatial</span></div>
+      <div class="sb__info-item"><span class="sb__info-label">Podcast</span><span>Founder &amp; Host - Geospatially Africa</span></div>
+      <div class="sb__info-item"><span class="sb__info-label">Email</span><span>{{ site.email }}</span></div>
+    </div>
+    <div class="sb__socials">{% include "partials/social-icons.njk" %}</div>
+    <div class="cv-buttons">
+      <a href="{{ site.cv_url }}" class="btn btn-dark" download>Download CV ↓</a>
+      <a href="{{ site.thesis_url }}" class="btn btn-outline" target="_blank" rel="noopener">MSc Thesis ↗</a>
+    </div>
+  </aside>
+
+  <div class="about-main">
+    <p class="about-lede">{{ site.intro | safe }}</p>
+
+    {% if site.researchInterests.length %}
+    <div class="research-interests">
+      <div class="skills-block__label">Research Interests</div>
+      <div class="chips">{% for r in site.researchInterests %}<span class="chip chip--accent">{{ r }}</span>{% endfor %}</div>
+    </div>
+    {% endif %}
+
+    {% if site.aboutPhotos.length %}
+    <div class="photo-grid">
+      {% for p in site.aboutPhotos %}
+      <div class="photo-grid__item {{ 'photo-grid__item--' + p.size if p.size }}">
+        {% if p.url %}
+        <img src="{{ p.url }}" alt="{{ p.caption }}" loading="lazy">
+        {% if p.caption %}<div class="photo-grid__item__cap">{{ p.caption }}</div>{% endif %}
+        {% else %}
+        <div class="photo-grid__item__ph"><p>{{ p.caption or "Add photo" }}</p></div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <section class="cv-section">
+      <h2 class="cv-section__h">Education</h2>
+      {% for e in site.education %}
+      <div class="cv-entry">
+        <div class="cv-entry__period"><span class="cv-entry__year">{{ e.period }}</span>{{ e.short }}</div>
+        <div>
+          <div class="cv-entry__role">{{ e.role }}</div>
+          <div class="cv-entry__place">{{ e.place }}</div>
+          <ul class="cv-entry__bullets">{% for b in e.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+          {% if e.link %}<a class="cv-entry__link" href="{{ e.link.url }}" target="_blank" rel="noopener">{{ e.link.label }}</a>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+
+    <section class="cv-section">
+      <h2 class="cv-section__h">Experience</h2>
+      {% for e in site.experience %}
+      <div class="cv-entry">
+        <div class="cv-entry__period"><span class="cv-entry__year">{{ e.period }}</span>{{ e.short }}</div>
+        <div>
+          <div class="cv-entry__role">{{ e.role }}</div>
+          <div class="cv-entry__place">{{ e.place }}</div>
+          <ul class="cv-entry__bullets">{% for b in e.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+
+    <section class="cv-section">
+      <h2 class="cv-section__h">Skills</h2>
+      {% for s in site.cvSkills %}
+      <div class="skills-block">
+        <div class="skills-block__label">{{ s.label }}</div>
+        <div class="chips">{% for c in s.chips %}<span class="chip">{{ c }}</span>{% endfor %}</div>
+      </div>
+      {% endfor %}
+    </section>
+  </div>
+</div>
