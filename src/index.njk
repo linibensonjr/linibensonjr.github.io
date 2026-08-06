@@ -10,7 +10,7 @@ layout: layouts/base.njk
     <div class="hero__l">
       <p class="hero__tag">{{ site.subtitle }}</p>
       <h1 class="hero__name">{{ site.name | replace(site.nameItalic, "") }}<em>{{ site.nameItalic }}</em></h1>
-      <p class="hero__sub">{{ site.tagline }}</p>
+      {% if site.tagline %}<p class="hero__sub">{{ site.tagline }}</p>{% endif %}
       <p class="hero__desc">{{ site.intro | safe }}</p>
       <div class="hero__cta">
         <a href="/projects/" class="btn btn-dark">View Projects →</a>
@@ -40,6 +40,24 @@ layout: layouts/base.njk
     </div>
   </div>
 </section>
+
+{% if site.news.length %}
+<section class="home-sec">
+  <div class="wrap">
+    <div class="home-sec__head">
+      <h2 class="home-sec__h"><em>News</em></h2>
+    </div>
+    <ul class="news-list">
+      {% for n in site.news %}
+      <li class="news-list__item">
+        <span class="news-list__yr">{{ n.year }}</span>
+        <span class="news-list__ev">{{ n.text | safe }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
 
 <section class="home-sec">
   <div class="wrap">
