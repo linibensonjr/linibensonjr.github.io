@@ -25,7 +25,21 @@ description: "Background of Iniobong Benson, geospatial analyst specialising in 
   </aside>
 
   <div class="about-main">
+    {% if site.aboutBio.length %}
+    <div class="about-bio">
+      <div class="about-bio__label">About Me</div>
+      <p>{{ site.aboutBio[0] | safe }}</p>
+      {% if site.tagline %}
+      <div class="about-vision">
+        <span class="about-vision__label">Vision</span>
+        <p>{{ site.tagline }}</p>
+      </div>
+      {% endif %}
+      {% for para in site.aboutBio %}{% if loop.index0 > 0 %}<p>{{ para | safe }}</p>{% endif %}{% endfor %}
+    </div>
+    {% else %}
     <p class="about-lede">{{ site.intro | safe }}</p>
+    {% endif %}
 
     {% if site.researchInterests.length %}
     <div class="research-interests">
@@ -63,6 +77,37 @@ description: "Background of Iniobong Benson, geospatial analyst specialising in 
       </div>
       {% endfor %}
     </section>
+
+    {% if site.presentations.length %}
+    <section class="cv-section" id="presentations">
+      <h2 class="cv-section__h">Presentations</h2>
+      {% for p in site.presentations %}
+      <div class="cv-entry">
+        <div class="cv-entry__period"><span class="cv-entry__year">{{ p.period }}</span>{{ p.short }}</div>
+        <div>
+          <div class="cv-entry__role">{{ p.title }}</div>
+          <div class="cv-entry__place">{{ p.venue }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if site.teaching.length %}
+    <section class="cv-section" id="teaching">
+      <h2 class="cv-section__h">Teaching</h2>
+      {% for t in site.teaching %}
+      <div class="cv-entry">
+        <div class="cv-entry__period"><span class="cv-entry__year">{{ t.period }}</span>{{ t.short }}</div>
+        <div>
+          <div class="cv-entry__role">{{ t.role }}</div>
+          <div class="cv-entry__place">{{ t.place }}</div>
+          <ul class="cv-entry__bullets">{% for b in t.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
 
     <section class="cv-section">
       <h2 class="cv-section__h">Experience</h2>
