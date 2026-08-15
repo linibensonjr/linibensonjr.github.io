@@ -1,4 +1,5 @@
 [
+
   {
     "img": "/assets/img/project_nigeria_drone.jpg",
     "status": "Active",
@@ -19,7 +20,7 @@
   {
     "img": "",
     "status": "MSc Thesis - 2025",
-    "featured": true,
+    "featured": false,
     "title": "GHDI: Multi-Variate Drought Index for the Greater Horn of Africa",
     "desc": "Developed the GHDI - a probabilistic copula-based drought index integrating GRACE TWS, precipitation, evapotranspiration, and soil moisture. Validated using FEWS NET and compared with SPI and ENSO across timescales.",
     "tech": ["Python", "GRACE", "Copula Models"]

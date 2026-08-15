@@ -3,26 +3,29 @@
   "name": "Iniobong",
   "fullName": "Iniobong Benson",
   "nameItalic": "obong",
-  "tagline": "Mapping Africa's story - one dataset at a time.",
-  "subtitle": "Geospatial developer building earth-observation tools & spatial data products · Podcast Host · GEM Erasmus+ Alumni",
-  "intro": "I'm Iniobong Benson, a geospatial analyst and earth observation specialist pursuing a PhD at Southern Illinois University, Carbondale. I build geospatial tools and earth-observation products, working mainly in remote sensing and hydrological modelling. I also founded and host <em>Geospatially Africa</em>, a podcast about geospatial work across the continent.",
+  "tagline": "Building AI systems that monitor water and land from space.",
+  "subtitle": "PhD @ SIU · GRACE Downscaling · NISAR InSAR · Cloud-Native Geospatial · Host, Geospatially Africa",
+  "intro": "I'm Iniobong Benson, a geospatial analyst and earth observation specialist pursuing a PhD at Southern Illinois University, Carbondale. I build GeoAI and earth-observation products, working mainly in remote sensing and hydrological modelling. I also founded and host <em>Geospatially Africa</em>, a podcast about geospatial work across the continent.",
   "location": "USA",
   "university": "University of Tartu & ITC, University of Twente",
   "email": "linibensonjr@yahoo.com",
   "cv_url": "https://drive.google.com/file/d/1-dld7n2gq06zrBRo33JWyZA9UIeR7HFr/view?usp=sharing",
   "thesis_url": "https://purl.utwente.nl/essays/108070",
   "jobTitle": "Geospatial Analyst & Earth Observation Specialist",
-  "description": "Geospatial analyst and earth observation specialist with an Erasmus+ MSc, specialising in remote sensing, hydrological modelling, and spatial data science applied to Africa. Founder and host of the Geospatially Africa podcast.",
+  "description": "Geospatial analyst and earth observation specialist with an Erasmus+ MSc, specialising in remote sensing, hydrological modelling, and GeoAI. Founder and host of the Geospatially Africa podcast.",
   "photo": "/assets/img/ini_deltares.jpg",
   "sameAs": [
     "https://linkedin.com/in/linibenson",
     "https://github.com/linibensonjr",
+    "https://scholar.google.com/citations?user=4KL4uAQAAAAJ&hl=en",
+    "https://orcid.org/0009-0002-6652-6147",
     "https://geospatiallyafrica.com"
   ],
   "social": {
     "twitter": "https://x.com/linibenson",
     "linkedin": "https://linkedin.com/in/linibenson",
     "github": "https://github.com/linibensonjr",
+    "scholar": "https://scholar.google.com/citations?user=4KL4uAQAAAAJ&hl=en",
     "researchgate": "https://www.researchgate.net/profile/Iniobong-Benson",
     "orcid": "https://orcid.org/0009-0002-6652-6147"
   },
@@ -33,10 +36,11 @@
     "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy80ZDg4MWJhMC9wb2RjYXN0L3Jzcw"
   },
   "skills": [
-    { "name": "Earth Observation", "tags": ["Sentinel-1/2", "Landsat", "MODIS", "GRACE"] },
-    { "name": "GIS & Modelling", "tags": ["QGIS", "ArcGIS", "Delft3D FM", "SNAP"] },
+    { "name": "Earth Observation", "tags": ["Sentinel-1/2", "NISAR", "InSAR", "GRACE", "Landsat", "MODIS"] },
+    { "name": "GeoAI & Cloud", "tags": ["PyTorch", "xarray", "Dask", "STAC", "AWS", "Docker"] },
     { "name": "Programming", "tags": ["Python", "R", "GeoPandas", "Django"] },
-    { "name": "Hydro & Climate", "tags": ["Drought Indices", "Copula Models", "FEWS NET", "SAR"] }
+    { "name": "GIS & Modelling", "tags": ["QGIS", "ArcGIS", "Delft3D FM", "SNAP"] },
+    { "name": "Hydro & Climate", "tags": ["Drought Indices", "Copula Models", "FEWS NET", "SPI"] }
   ],
   "researchInterests": [
     "Drought & Water Scarcity Monitoring",
@@ -45,6 +49,12 @@
     "Discrete Global Grid Systems (DGGS)",
     "Spatial Data Science for Africa",
     "Earth Observation for Environmental Change"
+  ],
+  "news": [
+    { "year": "2026", "text": "Began my PhD in <b>Environmental Resources & Policy</b> at Southern Illinois University, Carbondale." },
+    { "year": "2025", "text": "Completed the GEM Erasmus+ MSc; thesis introduced the <b>GHDI</b> multivariate drought index for the Greater Horn of Africa." },
+    { "year": "2024", "text": "Research internship at <b>Deltares</b> (Delft) — a validation framework for Delft3D FM ocean models." },
+    { "year": "2021", "text": "Founded and began hosting the <b>Geospatially Africa</b> podcast." }
   ],
   "aboutPhotos": [
     { "url": "/assets/img/ini_itc.jpg", "caption": "At ITC, University of Twente", "size": "wide" },
@@ -148,9 +158,10 @@
     }
   ],
   "cvSkills": [
+    { "label": "GeoAI & Cloud-Native", "chips": ["PyTorch", "xarray", "Dask", "STAC", "AWS", "Docker", "Zarr"] },
     { "label": "GIS & Earth Observation", "chips": ["QGIS", "ArcGIS", "Google Earth Engine", "SNAP", "GDAL / OGR", "Delft3D FM"] },
     { "label": "Programming & Data Science", "chips": ["Python", "R", "GeoPandas", "Rasterio", "xarray", "Django", "PostgreSQL"] },
-    { "label": "Satellite & Sensor Data", "chips": ["Sentinel-1 SAR", "Sentinel-2", "Landsat 8/9", "MODIS", "GRACE TWS", "SRTM DEM"] },
+    { "label": "Satellite & Sensor Data", "chips": ["Sentinel-1 SAR", "NISAR", "InSAR", "Sentinel-2", "Landsat 8/9", "GRACE TWS", "SRTM DEM"] },
     { "label": "Hydrology & Climate", "chips": ["Copula Modelling", "Drought Indices", "FEWS NET", "SPI", "Hydrodynamic Modelling"] }
   ]
 }
